@@ -61,6 +61,7 @@
         },
         "wordCount": { "type": "integer", "minimum": 1 },
         "estimatedDuration": { "type": "number", "exclusiveMinimum": 0 },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
         "startTime": { "type": "number", "minimum": 0 },
         "endTime": { "type": "number", "exclusiveMinimum": 0 },
         "duration": { "type": "number", "exclusiveMinimum": 0 },
