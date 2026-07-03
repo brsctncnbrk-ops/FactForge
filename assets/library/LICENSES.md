@@ -14,8 +14,10 @@ Source and license notes for every asset in `/assets/library`. The machine recor
 
 | Source | License | Attribution | Notes |
 |---|---|---|---|
-| _(none yet)_ | | | |
+| Wikimedia Commons | Public domain (per file page) | Not required | License verified per file via the Commons API (`extmetadata.LicenseShortName`) at download time; verification date noted in each asset's manifest `notes`. |
+| Project original (FactForge in-house vectors) | CC0 | Not required | Simple flat SVG silhouettes/icons drawn for this project; freely reusable across videos. |
 
 ## Per-Asset Notes
 
-_(none yet — add an entry here when an asset needs licensing context beyond its manifest fields)_
+- **map-roman-empire** — `File:RomanEmpire_117.svg` by ArdadN (English Wikipedia), Public domain. Source page: https://commons.wikimedia.org/wiki/File:RomanEmpire_117.svg — verified 2026-07-03 via Commons API. No attribution required (credit kept here as a courtesy).
+- **icon-soldier, figure-warrior, figure-emperor, figure-civilian** — project-original CC0 SVGs (v1, deliberately minimal). Replace freely later; keep the manifest `id` stable so scene files don't churn.

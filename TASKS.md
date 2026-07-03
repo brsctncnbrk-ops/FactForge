@@ -30,20 +30,22 @@ Validation Results
 * derive_vo diff OK; 03 + 04 schema/scene checks OK; VERIFY violations 0; scriptCritical all VERIFIED; number-without-fact warnings 0; BLOCKED/Unknown 0; attribution not needed; sync fresh.
 Blockers
 
-* None for Phase 1. Voiced render path blocked on user inputs: audio/voiceover.mp3 (ElevenLabs, from 02-script-voiceover.txt) + faster-whisper install + sourcing the 5 new assets with licenses into manifest.json/LICENSES.md, then 05B.
-NEW ASSETS REQUIRED — why-the-roman-empire-really-collapsed
+* None for Phase 1. Voiced render path blocked ONLY on user inputs now: audio/voiceover.mp3 (ElevenLabs, from 02-script-voiceover.txt) + faster-whisper install; then align.py Mode A → 05B → gate.
+ASSETS — RESOLVED (2026-07-03, post-1E session; repo pushed to GitHub as brsctncnbrk-ops/FactForge, branch main)
 
-| id | what it is | scenes | suggested free source |
-|---|---|---|---|
-| map-roman-empire | vector empire map (provinces, E/W split layers) | 5, 13, 14, 24, 29, 31, 34, 45, 46, 49, 58, 65 | Wikimedia Commons (CC0/PD) |
-| icon-soldier | minimal soldier icon | 7, 8, 51 | CC0 icon set (SVG Repo) |
-| figure-warrior | generic warrior silhouette | 26, 27, 30, 38, 55, 57, 59 | CC0 silhouette pack / self-drawn |
-| figure-emperor | robed emperor silhouette | 12, 30, 53 | CC0 silhouette pack / self-drawn |
-| figure-civilian | civilian silhouette | 19, 22, 61 | CC0 silhouette pack / self-drawn |
+All 5 assets sourced/created and registered in manifest.json + LICENSES.md; 03-scenes.json switched to fromLibrary (newAssets empty everywhere); sync_manifest_usage.py wrote usedInVideos; validate.py PASS **without --bootstrap**; align.py re-run; quality-gate.py PASS (only the expected TC2 estimated-timing warning).
 
-Total new assets: 5 / 5 (bootstrap: yes)
+| id | file | license |
+|---|---|---|
+| map-roman-empire | assets/library/maps/map-roman-empire.svg | Public domain — Wikimedia Commons "RomanEmpire 117.svg" (verified via Commons API extmetadata) |
+| icon-soldier | assets/library/icons/icon-soldier.svg | CC0 — project-original (simple v1) |
+| figure-warrior | assets/library/figures/figure-warrior.svg | CC0 — project-original (simple v1) |
+| figure-emperor | assets/library/figures/figure-emperor.svg | CC0 — project-original (simple v1) |
+| figure-civilian | assets/library/figures/figure-civilian.svg | CC0 — project-original (simple v1) |
+
+Silhouettes/icon are deliberately minimal placeholder-quality vectors with real licenses; upgrade them later under the SAME manifest ids (no scene churn).
 Next Exact Step
-Run `git add -A && git commit -m "phase-1e complete"` + record /usage in Quota Notes. Then review the PRODUCT (per WORKFLOW "Sen neyi kontrol et (1E)": fact quality, hook strength, template fit) and decide on Phase 2 (/render) — Claude must not start it on its own.
+Commit the asset work (`git add -A && git commit -m "assets: library seeded for roman-empire video"` + push) + record /usage in Quota Notes. User is producing the ElevenLabs voiceover now → when audio/voiceover.mp3 lands: pip install faster-whisper (full interpreter path), align.py --mode auto, append 05B, re-run gate. Then review the PRODUCT (WORKFLOW "Sen neyi kontrol et (1E)") and decide on Phase 2 (/render) — Claude must not start it on its own.
 Quota Notes
 
 * Phase 0: before __% -> after __% (kullanıcı doldurur)

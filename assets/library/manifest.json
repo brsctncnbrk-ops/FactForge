@@ -1,5 +1,135 @@
 {
   "version": "2.1.1",
-  "updatedAt": "2026-07-02",
-  "assets": []
+  "updatedAt": "2026-07-03",
+  "assets": [
+    {
+      "id": "map-roman-empire",
+      "type": "map",
+      "source": "Wikimedia Commons — \"RomanEmpire 117.svg\" by ArdadN (English Wikipedia)",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:RomanEmpire_117.svg",
+      "license": "Public domain",
+      "attributionRequired": false,
+      "attributionText": "",
+      "filePath": "/assets/library/maps/map-roman-empire.svg",
+      "tags": [
+        "rome",
+        "roman-empire",
+        "map",
+        "117-ad",
+        "max-extent",
+        "vector"
+      ],
+      "createdAt": "2026-07-03",
+      "updatedAt": "2026-07-03",
+      "status": "ACTIVE",
+      "reusable": true,
+      "usedInVideos": [
+        "why-the-roman-empire-really-collapsed"
+      ],
+      "notes": "Roman Empire at its 117 AD maximum extent. License verified via Commons API (LicenseShortName: Public domain) on 2026-07-03."
+    },
+    {
+      "id": "icon-soldier",
+      "type": "icon",
+      "source": "Project original (drawn in-house for FactForge)",
+      "sourceUrl": "",
+      "license": "CC0",
+      "attributionRequired": false,
+      "attributionText": "",
+      "filePath": "/assets/library/icons/icon-soldier.svg",
+      "tags": [
+        "soldier",
+        "legionary",
+        "helmet",
+        "icon",
+        "flat",
+        "vector"
+      ],
+      "createdAt": "2026-07-03",
+      "updatedAt": "2026-07-03",
+      "status": "ACTIVE",
+      "reusable": true,
+      "usedInVideos": [
+        "why-the-roman-empire-really-collapsed"
+      ],
+      "notes": "Minimal crested-helmet bust, single fill (currentColor). Simple v1 — can be replaced by a nicer icon later without changing the id."
+    },
+    {
+      "id": "figure-warrior",
+      "type": "figure",
+      "source": "Project original (drawn in-house for FactForge)",
+      "sourceUrl": "",
+      "license": "CC0",
+      "attributionRequired": false,
+      "attributionText": "",
+      "filePath": "/assets/library/figures/figure-warrior.svg",
+      "tags": [
+        "warrior",
+        "soldier",
+        "federate",
+        "silhouette",
+        "spear",
+        "shield",
+        "vector"
+      ],
+      "createdAt": "2026-07-03",
+      "updatedAt": "2026-07-03",
+      "status": "ACTIVE",
+      "reusable": true,
+      "usedInVideos": [
+        "why-the-roman-empire-really-collapsed"
+      ],
+      "notes": "Generic armed silhouette (spear + round shield), deliberately usable as Roman or barbarian/federate. Simple v1."
+    },
+    {
+      "id": "figure-emperor",
+      "type": "figure",
+      "source": "Project original (drawn in-house for FactForge)",
+      "sourceUrl": "",
+      "license": "CC0",
+      "attributionRequired": false,
+      "attributionText": "",
+      "filePath": "/assets/library/figures/figure-emperor.svg",
+      "tags": [
+        "emperor",
+        "toga",
+        "laurel",
+        "silhouette",
+        "vector"
+      ],
+      "createdAt": "2026-07-03",
+      "updatedAt": "2026-07-03",
+      "status": "ACTIVE",
+      "reusable": true,
+      "usedInVideos": [
+        "why-the-roman-empire-really-collapsed"
+      ],
+      "notes": "Robed, laurel-crowned silhouette; scale down for the boy-emperor scenes. Simple v1."
+    },
+    {
+      "id": "figure-civilian",
+      "type": "figure",
+      "source": "Project original (drawn in-house for FactForge)",
+      "sourceUrl": "",
+      "license": "CC0",
+      "attributionRequired": false,
+      "attributionText": "",
+      "filePath": "/assets/library/figures/figure-civilian.svg",
+      "tags": [
+        "civilian",
+        "tunic",
+        "crowd",
+        "silhouette",
+        "vector"
+      ],
+      "createdAt": "2026-07-03",
+      "updatedAt": "2026-07-03",
+      "status": "ACTIVE",
+      "reusable": true,
+      "usedInVideos": [
+        "why-the-roman-empire-really-collapsed"
+      ],
+      "notes": "Neutral standing tunic figure for crowds and daily-life scenes. Simple v1."
+    }
+  ]
 }

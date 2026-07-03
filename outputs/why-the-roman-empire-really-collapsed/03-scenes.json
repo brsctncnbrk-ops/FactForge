@@ -82,14 +82,8 @@
         "onScreenText": "THE ETERNAL EMPIRE"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "map-roman-empire",
-            "description": "Clean vector map of the Roman Empire with layers for provinces, east/west split, and Mediterranean coastlines",
-            "suggestedSource": "Wikimedia Commons (CC0/PD vector search)"
-          }
-        ]
+        "fromLibrary": ["map-roman-empire"],
+        "newAssets": []
       },
       "emotionalTone": "Grand, admiring."
     },
@@ -123,14 +117,8 @@
         "countUp": false
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "icon-soldier",
-            "description": "Minimal flat soldier/legionary icon for grids and stat cards",
-            "suggestedSource": "CC0 icon set (e.g. SVG Repo, Wikimedia Commons)"
-          }
-        ]
+        "fromLibrary": ["icon-soldier"],
+        "newAssets": []
       },
       "emotionalTone": "Impressive, weighty."
     },
@@ -148,14 +136,8 @@
         "columns": 10
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "icon-soldier",
-            "description": "Minimal flat soldier/legionary icon for grids and stat cards",
-            "suggestedSource": "CC0 icon set (e.g. SVG Repo, Wikimedia Commons)"
-          }
-        ]
+        "fromLibrary": ["icon-soldier"],
+        "newAssets": []
       },
       "emotionalTone": "Mounting pressure."
     },
@@ -219,14 +201,8 @@
         "onScreenText": "A DEATH SENTENCE"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "figure-emperor",
-            "description": "Robed, laurel-crowned emperor silhouette (works at adult or child scale)",
-            "suggestedSource": "CC0 silhouette pack / self-drawn vector"
-          }
-        ]
+        "fromLibrary": ["figure-emperor"],
+        "newAssets": []
       },
       "emotionalTone": "Grim."
     },
@@ -245,14 +221,8 @@
         "onScreenText": "CIVIL WAR ON REPEAT"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "map-roman-empire",
-            "description": "Clean vector map of the Roman Empire with layers for provinces, east/west split, and Mediterranean coastlines",
-            "suggestedSource": "Wikimedia Commons (CC0/PD vector search)"
-          }
-        ]
+        "fromLibrary": ["map-roman-empire"],
+        "newAssets": []
       },
       "emotionalTone": "Cynical, chaotic."
     },
@@ -271,14 +241,8 @@
         "onScreenText": "ROME VS. ROME"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "map-roman-empire",
-            "description": "Clean vector map of the Roman Empire with layers for provinces, east/west split, and Mediterranean coastlines",
-            "suggestedSource": "Wikimedia Commons (CC0/PD vector search)"
-          }
-        ]
+        "fromLibrary": ["map-roman-empire"],
+        "newAssets": []
       },
       "emotionalTone": "Tragic irony."
     },
@@ -362,14 +326,8 @@
         "onScreenText": "YOUR PAY, EVAPORATING"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "figure-civilian",
-            "description": "Roman civilian silhouette in tunic, neutral pose",
-            "suggestedSource": "CC0 silhouette pack / self-drawn vector"
-          }
-        ]
+        "fromLibrary": ["figure-civilian"],
+        "newAssets": []
       },
       "emotionalTone": "Personal, unsettling."
     },
@@ -418,14 +376,8 @@
         "onScreenText": "THE MARKETS WENT DARK"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "figure-civilian",
-            "description": "Roman civilian silhouette in tunic, neutral pose",
-            "suggestedSource": "CC0 silhouette pack / self-drawn vector"
-          }
-        ]
+        "fromLibrary": ["figure-civilian"],
+        "newAssets": []
       },
       "emotionalTone": "Futile, dark."
     },
@@ -459,14 +411,8 @@
         "onScreenText": "PLAGUE EMPTIES THE EMPIRE"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "map-roman-empire",
-            "description": "Clean vector map of the Roman Empire with layers for provinces, east/west split, and Mediterranean coastlines",
-            "suggestedSource": "Wikimedia Commons (CC0/PD vector search)"
-          }
-        ]
+        "fromLibrary": ["map-roman-empire"],
+        "newAssets": []
       },
       "emotionalTone": "Somber."
     },
@@ -501,14 +447,8 @@
         "onScreenText": "ROME'S DANGEROUS SHORTCUT"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "figure-warrior",
-            "description": "Generic armed warrior silhouette (spear and shield), usable as Roman soldier or federate",
-            "suggestedSource": "CC0 silhouette pack / self-drawn vector"
-          }
-        ]
+        "fromLibrary": ["figure-warrior"],
+        "newAssets": []
       },
       "emotionalTone": "Uneasy pragmatism."
     },
@@ -527,14 +467,8 @@
         "onScreenText": "LOYALTY FOR HIRE"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "figure-warrior",
-            "description": "Generic armed warrior silhouette (spear and shield), usable as Roman soldier or federate",
-            "suggestedSource": "CC0 silhouette pack / self-drawn vector"
-          }
-        ]
+        "fromLibrary": ["figure-warrior"],
+        "newAssets": []
       },
       "emotionalTone": "Warning."
     },
@@ -567,14 +501,8 @@
         "onScreenText": "ADRIANOPLE, 378 AD"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "map-roman-empire",
-            "description": "Clean vector map of the Roman Empire with layers for provinces, east/west split, and Mediterranean coastlines",
-            "suggestedSource": "Wikimedia Commons (CC0/PD vector search)"
-          }
-        ]
+        "fromLibrary": ["map-roman-empire"],
+        "newAssets": []
       },
       "emotionalTone": "Catastrophic."
     },
@@ -593,19 +521,8 @@
         "onScreenText": "AN EMPEROR FALLS"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "figure-emperor",
-            "description": "Robed, laurel-crowned emperor silhouette (works at adult or child scale)",
-            "suggestedSource": "CC0 silhouette pack / self-drawn vector"
-          },
-          {
-            "id": "figure-warrior",
-            "description": "Generic armed warrior silhouette (spear and shield), usable as Roman soldier or federate",
-            "suggestedSource": "CC0 silhouette pack / self-drawn vector"
-          }
-        ]
+        "fromLibrary": ["figure-emperor", "figure-warrior"],
+        "newAssets": []
       },
       "emotionalTone": "Grave."
     },
@@ -624,14 +541,8 @@
         "onScreenText": "NATIONS INSIDE THE EMPIRE"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "map-roman-empire",
-            "description": "Clean vector map of the Roman Empire with layers for provinces, east/west split, and Mediterranean coastlines",
-            "suggestedSource": "Wikimedia Commons (CC0/PD vector search)"
-          }
-        ]
+        "fromLibrary": ["map-roman-empire"],
+        "newAssets": []
       },
       "emotionalTone": "Unprecedented, uneasy."
     },
@@ -680,14 +591,8 @@
         "onScreenText": "ONE EMPIRE BECOMES TWO"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "map-roman-empire",
-            "description": "Clean vector map of the Roman Empire with layers for provinces, east/west split, and Mediterranean coastlines",
-            "suggestedSource": "Wikimedia Commons (CC0/PD vector search)"
-          }
-        ]
+        "fromLibrary": ["map-roman-empire"],
+        "newAssets": []
       },
       "emotionalTone": "Fateful."
     },
@@ -753,14 +658,8 @@
         "onScreenText": "ROME SACKED, 410 AD"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "figure-warrior",
-            "description": "Generic armed warrior silhouette (spear and shield), usable as Roman soldier or federate",
-            "suggestedSource": "CC0 silhouette pack / self-drawn vector"
-          }
-        ]
+        "fromLibrary": ["figure-warrior"],
+        "newAssets": []
       },
       "emotionalTone": "Shock."
     },
@@ -873,14 +772,8 @@
         "onScreenText": "CARTHAGE FALLS, 439 AD"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "map-roman-empire",
-            "description": "Clean vector map of the Roman Empire with layers for provinces, east/west split, and Mediterranean coastlines",
-            "suggestedSource": "Wikimedia Commons (CC0/PD vector search)"
-          }
-        ]
+        "fromLibrary": ["map-roman-empire"],
+        "newAssets": []
       },
       "emotionalTone": "Decisive."
     },
@@ -899,14 +792,8 @@
         "onScreenText": "ROME'S BREADBASKET"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "map-roman-empire",
-            "description": "Clean vector map of the Roman Empire with layers for provinces, east/west split, and Mediterranean coastlines",
-            "suggestedSource": "Wikimedia Commons (CC0/PD vector search)"
-          }
-        ]
+        "fromLibrary": ["map-roman-empire"],
+        "newAssets": []
       },
       "emotionalTone": "Vital dependency."
     },
@@ -955,14 +842,8 @@
         "onScreenText": "PROVINCE AFTER PROVINCE, GONE"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "map-roman-empire",
-            "description": "Clean vector map of the Roman Empire with layers for provinces, east/west split, and Mediterranean coastlines",
-            "suggestedSource": "Wikimedia Commons (CC0/PD vector search)"
-          }
-        ]
+        "fromLibrary": ["map-roman-empire"],
+        "newAssets": []
       },
       "emotionalTone": "Inevitable decline."
     },
@@ -996,14 +877,8 @@
         "columns": 10
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "icon-soldier",
-            "description": "Minimal flat soldier/legionary icon for grids and stat cards",
-            "suggestedSource": "CC0 icon set (e.g. SVG Repo, Wikimedia Commons)"
-          }
-        ]
+        "fromLibrary": ["icon-soldier"],
+        "newAssets": []
       },
       "emotionalTone": "Powder keg."
     },
@@ -1036,14 +911,8 @@
         "onScreenText": "ROMULUS: FIRST AND LAST"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "figure-emperor",
-            "description": "Robed, laurel-crowned emperor silhouette (works at adult or child scale)",
-            "suggestedSource": "CC0 silhouette pack / self-drawn vector"
-          }
-        ]
+        "fromLibrary": ["figure-emperor"],
+        "newAssets": []
       },
       "emotionalTone": "Poetic irony."
     },
@@ -1078,14 +947,8 @@
         "onScreenText": "ROME'S OWN SOLDIERS"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "figure-warrior",
-            "description": "Generic armed warrior silhouette (spear and shield), usable as Roman soldier or federate",
-            "suggestedSource": "CC0 silhouette pack / self-drawn vector"
-          }
-        ]
+        "fromLibrary": ["figure-warrior"],
+        "newAssets": []
       },
       "emotionalTone": "Payoff, betrayal."
     },
@@ -1120,14 +983,8 @@
         "onScreenText": "A MUTINY, NOT INVASION"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "figure-warrior",
-            "description": "Generic armed warrior silhouette (spear and shield), usable as Roman soldier or federate",
-            "suggestedSource": "CC0 silhouette pack / self-drawn vector"
-          }
-        ]
+        "fromLibrary": ["figure-warrior"],
+        "newAssets": []
       },
       "emotionalTone": "Anticlimactic truth."
     },
@@ -1145,14 +1002,8 @@
         "onScreenText": "THE CROWN GOES EAST"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "map-roman-empire",
-            "description": "Clean vector map of the Roman Empire with layers for provinces, east/west split, and Mediterranean coastlines",
-            "suggestedSource": "Wikimedia Commons (CC0/PD vector search)"
-          }
-        ]
+        "fromLibrary": ["map-roman-empire"],
+        "newAssets": []
       },
       "emotionalTone": "Quiet finality."
     },
@@ -1170,14 +1021,8 @@
         "onScreenText": "NO EMPEROR NEEDED"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "figure-warrior",
-            "description": "Generic armed warrior silhouette (spear and shield), usable as Roman soldier or federate",
-            "suggestedSource": "CC0 silhouette pack / self-drawn vector"
-          }
-        ]
+        "fromLibrary": ["figure-warrior"],
+        "newAssets": []
       },
       "emotionalTone": "Deflating."
     },
@@ -1211,14 +1056,8 @@
         "onScreenText": "LIFE WENT ON"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "figure-civilian",
-            "description": "Roman civilian silhouette in tunic, neutral pose",
-            "suggestedSource": "CC0 silhouette pack / self-drawn vector"
-          }
-        ]
+        "fromLibrary": ["figure-civilian"],
+        "newAssets": []
       },
       "emotionalTone": "Eerie calm."
     },
@@ -1282,14 +1121,8 @@
         "onScreenText": "HALF OF ROME LIVED ON"
       },
       "assets": {
-        "fromLibrary": [],
-        "newAssets": [
-          {
-            "id": "map-roman-empire",
-            "description": "Clean vector map of the Roman Empire with layers for provinces, east/west split, and Mediterranean coastlines",
-            "suggestedSource": "Wikimedia Commons (CC0/PD vector search)"
-          }
-        ]
+        "fromLibrary": ["map-roman-empire"],
+        "newAssets": []
       },
       "emotionalTone": "Twist."
     },

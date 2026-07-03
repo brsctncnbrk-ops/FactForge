@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 220" width="120" height="220">
+  <!-- Generic armed warrior silhouette (spear + round shield), usable as Roman
+       soldier or federate. FactForge project-original asset (CC0). -->
+  <g fill="currentColor">
+    <!-- spear -->
+    <path d="M96 2 L90 20 L102 20 Z"/>
+    <rect x="94" y="18" width="4" height="188"/>
+    <!-- head -->
+    <circle cx="58" cy="26" r="13"/>
+    <!-- torso and legs -->
+    <path d="M44 42 L72 42 L78 122 L66 122 L70 206 L57 206 L56 138 L55 206 L42 206 L48 122 L36 122 Z"/>
+    <!-- spear arm -->
+    <path d="M70 58 L94 68 L92 78 L68 72 Z"/>
+    <!-- shield arm -->
+    <path d="M46 58 L30 84 L38 90 L52 70 Z"/>
+    <!-- round shield -->
+    <circle cx="26" cy="102" r="21"/>
+  </g>
+</svg>

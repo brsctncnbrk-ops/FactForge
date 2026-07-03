@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 220" width="120" height="220">
+  <!-- Roman civilian silhouette in a knee-length tunic, neutral standing pose.
+       FactForge project-original asset (CC0). -->
+  <g fill="currentColor">
+    <!-- head -->
+    <circle cx="60" cy="28" r="13"/>
+    <!-- tunic torso to knees -->
+    <path d="M46 44 L74 44 L82 132 L38 132 Z"/>
+    <!-- arms at sides -->
+    <path d="M46 50 L34 104 L42 107 L52 62 Z"/>
+    <path d="M74 50 L86 104 L78 107 L68 62 Z"/>
+    <!-- legs below tunic hem -->
+    <path d="M48 132 L46 206 L58 206 L59 140 Z"/>
+    <path d="M72 132 L74 206 L62 206 L61 140 Z"/>
+  </g>
+</svg>

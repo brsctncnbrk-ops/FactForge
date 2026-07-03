@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 220" width="120" height="220">
+  <!-- Robed, laurel-crowned emperor silhouette; scales to adult or child.
+       FactForge project-original asset (CC0). -->
+  <g fill="currentColor">
+    <!-- laurel wreath hints -->
+    <path d="M42 20 q-8 -4 -6 -12 q8 2 9 9 Z"/>
+    <path d="M78 20 q8 -4 6 -12 q-8 2 -9 9 Z"/>
+    <!-- head -->
+    <circle cx="60" cy="26" r="14"/>
+    <!-- long toga, floor length -->
+    <path d="M42 46 Q60 38 78 46 L86 118 L80 118 L88 204 Q60 214 32 204 L40 118 L34 118 Z"/>
+    <!-- toga fold across chest -->
+    <path d="M42 62 Q60 76 80 58 L82 70 Q60 88 40 74 Z" fill-opacity="0.35"/>
+    <!-- arms at sides, merged into robe -->
+    <path d="M42 50 L30 96 L38 100 L48 62 Z"/>
+    <path d="M78 50 L90 96 L82 100 L72 62 Z"/>
+  </g>
+</svg>

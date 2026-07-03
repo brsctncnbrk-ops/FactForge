@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- Minimal flat Roman soldier icon: crested helmet bust, single solid fill.
+       FactForge project-original asset (CC0). Fill inherits currentColor for theming. -->
+  <g fill="currentColor">
+    <path d="M7 3.4 Q12 0.2 17 3.4 L16.3 4.8 Q12 2.2 7.7 4.8 Z"/>
+    <path d="M12 3.6 a5.2 5.2 0 0 1 5.2 5.2 v2 H6.8 v-2 A5.2 5.2 0 0 1 12 3.6 Z"/>
+    <path d="M8.2 11.6 h7.6 v2 a3.8 3.8 0 0 1 -7.6 0 Z"/>
+    <path d="M3.6 21.6 q0 -5.4 8.4 -5.4 q8.4 0 8.4 5.4 Z"/>
+  </g>
+</svg>

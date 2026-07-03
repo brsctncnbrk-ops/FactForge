@@ -36,10 +36,10 @@ Last Updated: 2026-07-03
 
 <!-- QG:BEGIN — bu blok quality-gate.py tarafından üretilir, elle düzenleme -->
 Gate Result        : PASS (0 failure(s), 1 warning(s))
-Gate Run           : 2026-07-03 14:13 | bootstrap: no
+Gate Run           : 2026-07-03 14:39 | bootstrap: no
 Validation Status  : derive_vo diff: OK | 03-scenes.json: OK | 04-scenes-final-estimated.json: OK
 Fact Status        : 24 fact(s) used | VERIFY-status violations: 0 | scriptCritical all VERIFIED: yes | number-without-fact warnings: 0
-Asset Status       : 0 library asset(s), 5 new | BLOCKED/Unknown violations: 0 | attribution: not needed | usedInVideos sync: fresh
+Asset Status       : 5 library asset(s), 0 new | BLOCKED/Unknown violations: 0 | attribution: not needed | usedInVideos sync: fresh
 Timing Status      : timingMode: word-count-estimate | audio file present: no | min scene confidence: n/a | voiced final render allowed: NO
 
 Failures:
@@ -56,12 +56,11 @@ Warnings:
 
 - Timing is word-count-estimate only (no voiceover.mp3 yet): 04-scenes-final-estimated.json is a draft/silent preview input, never a voiced-final-render input. Expected at this stage.
 - align.py sanity checks: no LONG (>12s) or SHORT (<2s) scenes; estimated total 403.2s (~6:43) vs 7:00 target — acceptable.
-- Asset library is empty (bootstrap): all 5 assets are newAssets (map-roman-empire, icon-soldier, figure-warrior, figure-emperor, figure-civilian). validate.py run with --bootstrap; 5/5 within cap. See NEW ASSETS REQUIRED report in the session log / TASKS.md.
+- Assets RESOLVED (2026-07-03): all 5 assets are now in /assets/library with license metadata; 03-scenes.json uses fromLibrary (newAssets empty); validate.py PASS without --bootstrap. map-roman-empire = Wikimedia Commons "RomanEmpire 117.svg" (Public domain, verified via Commons API); icon-soldier / figure-warrior / figure-emperor / figure-civilian = project-original CC0 SVGs (simple v1 — replaceable later under the same ids).
 
 ## Required User Action
 
 - Record the voiceover (ElevenLabs) from 02-script-voiceover.txt and drop it at audio/voiceover.mp3, then install faster-whisper (use the full interpreter path: C:\Users\brsct\AppData\Local\Programs\Python\Python314\python.exe -m pip install faster-whisper) and re-run align.py for Mode A.
-- Source the 5 new assets (see Warnings) with license metadata, add them to /assets/library/manifest.json + LICENSES.md before any final render.
 
 ## Next Step
 
@@ -73,9 +72,9 @@ Current Phase: 1E (example topic production output)
 Completed This Session: 01-facts.json, 02-script-annotated.md, 02-script-voiceover.txt (derive_vo.py), 03-scenes.json (validate.py PASS, 0 warnings), 04-scenes-final-estimated.json (align.py --mode wordcount), 05-packaging.md (05A), Hook Promise Audit updated to PASS after 05A, STATUS.md
 Files Created: all of the above (01-research.md was already present from a prior session)
 Files Modified: 02-script-annotated.md (audit section only)
-Commands Run: derive_vo.py, validate.py --bootstrap, align.py --mode wordcount, sync_manifest_usage.py --check, quality-gate.py
+Commands Run: derive_vo.py, validate.py (--bootstrap first pass, clean pass after assets landed), align.py --mode wordcount (x2), sync_manifest_usage.py (--check + write), quality-gate.py (x2), Commons API license check + asset download
 Blockers: none
-Next Exact Step: commit phase-1e, then wait for user-supplied voiceover.mp3 + sourced assets
+Next Exact Step: commit asset work, then wait for user-supplied voiceover.mp3 → align.py Mode A → 05B → gate
 
 ## Quota Notes
 
