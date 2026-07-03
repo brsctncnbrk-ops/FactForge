@@ -11,7 +11,7 @@
         "F023"
       ],
       "wordCount": 11,
-      "estimatedDuration": 4.607,
+      "estimatedDuration": 6.42,
       "template": "text-emphasis",
       "props": {
         "text": "476 AD: NOBODY NOTICED",
@@ -26,8 +26,9 @@
       },
       "emotionalTone": "Mysterious, subversive.",
       "startTime": 0.0,
-      "endTime": 4.607,
-      "duration": 4.607
+      "endTime": 6.42,
+      "duration": 6.42,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 2,
@@ -36,7 +37,7 @@
         "F021"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 5.5,
       "template": "text-emphasis",
       "props": {
         "text": "NO BATTLE. NO FIRE.",
@@ -50,9 +51,10 @@
         "newAssets": []
       },
       "emotionalTone": "Quiet, eerie.",
-      "startTime": 4.607,
-      "endTime": 10.888,
-      "duration": 6.282
+      "startTime": 6.82,
+      "endTime": 12.32,
+      "duration": 5.5,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 3,
@@ -61,7 +63,7 @@
         "F001"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 4.86,
       "template": "timeline-scene",
       "props": {
         "title": "A 300-Year Collapse",
@@ -82,9 +84,10 @@
         "newAssets": []
       },
       "emotionalTone": "Ominous, intriguing.",
-      "startTime": 10.888,
-      "endTime": 17.17,
-      "duration": 6.282
+      "startTime": 12.52,
+      "endTime": 17.38,
+      "duration": 4.86,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 4,
@@ -93,7 +96,7 @@
         "F001"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 5.0,
       "template": "transition-break",
       "props": {
         "title": "THE REAL STORY",
@@ -106,16 +109,17 @@
         "newAssets": []
       },
       "emotionalTone": "Confident, contrarian.",
-      "startTime": 17.17,
-      "endTime": 23.452,
-      "duration": 6.282
+      "startTime": 17.54,
+      "endTime": 22.54,
+      "duration": 5.0,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 5,
       "narration": "Picture the empire everyone imagines: endless legions, marble cities, roads that ruled the world.",
       "usedFacts": [],
       "wordCount": 14,
-      "estimatedDuration": 5.863,
+      "estimatedDuration": 6.32,
       "template": "map-scene",
       "props": {
         "region": "roman-empire-max-extent",
@@ -133,9 +137,10 @@
         "newAssets": []
       },
       "emotionalTone": "Grand, admiring.",
-      "startTime": 23.452,
-      "endTime": 29.315,
-      "duration": 5.863
+      "startTime": 23.38,
+      "endTime": 29.7,
+      "duration": 6.32,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 6,
@@ -144,7 +149,7 @@
         "F010"
       ],
       "wordCount": 16,
-      "estimatedDuration": 6.7,
+      "estimatedDuration": 6.46,
       "template": "list-reveal",
       "props": {
         "title": "The Machine",
@@ -160,9 +165,10 @@
         "newAssets": []
       },
       "emotionalTone": "Analytical, clear.",
-      "startTime": 29.315,
-      "endTime": 36.015,
-      "duration": 6.7
+      "startTime": 30.0,
+      "endTime": 36.46,
+      "duration": 6.46,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 7,
@@ -171,7 +177,7 @@
         "F009"
       ],
       "wordCount": 13,
-      "estimatedDuration": 5.444,
+      "estimatedDuration": 4.92,
       "template": "stat-card",
       "props": {
         "value": "400,000–600,000",
@@ -187,9 +193,10 @@
         "newAssets": []
       },
       "emotionalTone": "Impressive, weighty.",
-      "startTime": 36.015,
-      "endTime": 41.459,
-      "duration": 5.444
+      "startTime": 36.94,
+      "endTime": 41.86,
+      "duration": 4.92,
+      "confidence": 0.846
     },
     {
       "sceneNumber": 8,
@@ -199,7 +206,7 @@
         "F010"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 6.6,
       "template": "icon-grid",
       "props": {
         "icon": "icon-soldier",
@@ -214,9 +221,10 @@
         "newAssets": []
       },
       "emotionalTone": "Mounting pressure.",
-      "startTime": 41.459,
-      "endTime": 47.741,
-      "duration": 6.282
+      "startTime": 42.58,
+      "endTime": 49.18,
+      "duration": 6.6,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 9,
@@ -225,7 +233,7 @@
         "F010"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 4.5,
       "template": "text-emphasis",
       "props": {
         "text": "ONE EXPENSE ABOVE ALL",
@@ -239,16 +247,17 @@
         "newAssets": []
       },
       "emotionalTone": "Foreboding.",
-      "startTime": 47.741,
-      "endTime": 54.023,
-      "duration": 6.282
+      "startTime": 49.9,
+      "endTime": 54.4,
+      "duration": 4.5,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 10,
       "narration": "Break the machine that pays that army, and you break Rome. So let's break it.",
       "usedFacts": [],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 4.5,
       "template": "transition-break",
       "props": {
         "title": "BREAK THE MACHINE",
@@ -260,9 +269,10 @@
         "newAssets": []
       },
       "emotionalTone": "Dark anticipation.",
-      "startTime": 54.023,
-      "endTime": 60.304,
-      "duration": 6.282
+      "startTime": 55.24,
+      "endTime": 59.74,
+      "duration": 4.5,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 11,
@@ -271,7 +281,7 @@
         "F003"
       ],
       "wordCount": 17,
-      "estimatedDuration": 7.119,
+      "estimatedDuration": 6.12,
       "template": "stat-card",
       "props": {
         "value": 26,
@@ -284,9 +294,10 @@
         "newAssets": []
       },
       "emotionalTone": "Chaotic, breathless.",
-      "startTime": 60.304,
-      "endTime": 67.424,
-      "duration": 7.119
+      "startTime": 59.86,
+      "endTime": 65.98,
+      "duration": 6.12,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 12,
@@ -295,7 +306,7 @@
         "F003"
       ],
       "wordCount": 17,
-      "estimatedDuration": 7.119,
+      "estimatedDuration": 6.18,
       "template": "silhouette-scene",
       "props": {
         "figures": [
@@ -314,9 +325,10 @@
         "newAssets": []
       },
       "emotionalTone": "Grim.",
-      "startTime": 67.424,
-      "endTime": 74.543,
-      "duration": 7.119
+      "startTime": 66.18,
+      "endTime": 72.36,
+      "duration": 6.18,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 13,
@@ -325,7 +337,7 @@
         "F002"
       ],
       "wordCount": 16,
-      "estimatedDuration": 6.7,
+      "estimatedDuration": 6.14,
       "template": "map-scene",
       "props": {
         "region": "roman-empire-max-extent",
@@ -343,9 +355,10 @@
         "newAssets": []
       },
       "emotionalTone": "Cynical, chaotic.",
-      "startTime": 74.543,
-      "endTime": 81.243,
-      "duration": 6.7
+      "startTime": 72.66,
+      "endTime": 78.8,
+      "duration": 6.14,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 14,
@@ -354,7 +367,7 @@
         "F002"
       ],
       "wordCount": 14,
-      "estimatedDuration": 5.863,
+      "estimatedDuration": 5.96,
       "template": "map-scene",
       "props": {
         "region": "roman-empire-max-extent",
@@ -372,16 +385,17 @@
         "newAssets": []
       },
       "emotionalTone": "Tragic irony.",
-      "startTime": 81.243,
-      "endTime": 87.106,
-      "duration": 5.863
+      "startTime": 78.8,
+      "endTime": 84.76,
+      "duration": 5.96,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 15,
       "narration": "Which brings us to the silver. Watch the silver, because this is where empires really die.",
       "usedFacts": [],
       "wordCount": 16,
-      "estimatedDuration": 6.7,
+      "estimatedDuration": 5.86,
       "template": "text-emphasis",
       "props": {
         "text": "FOLLOW THE SILVER",
@@ -395,9 +409,10 @@
         "newAssets": []
       },
       "emotionalTone": "Conspiratorial, intriguing.",
-      "startTime": 87.106,
-      "endTime": 93.807,
-      "duration": 6.7
+      "startTime": 85.08,
+      "endTime": 90.94,
+      "duration": 5.86,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 16,
@@ -406,7 +421,7 @@
         "F004"
       ],
       "wordCount": 13,
-      "estimatedDuration": 5.444,
+      "estimatedDuration": 5.4,
       "template": "stat-card",
       "props": {
         "value": "90%",
@@ -418,9 +433,10 @@
         "newAssets": []
       },
       "emotionalTone": "Solid, trustworthy.",
-      "startTime": 93.807,
-      "endTime": 99.251,
-      "duration": 5.444
+      "startTime": 91.76,
+      "endTime": 97.16,
+      "duration": 5.4,
+      "confidence": 0.846
     },
     {
       "sceneNumber": 17,
@@ -429,7 +445,7 @@
         "F005"
       ],
       "wordCount": 16,
-      "estimatedDuration": 6.7,
+      "estimatedDuration": 4.82,
       "template": "list-reveal",
       "props": {
         "title": "The Debasement Cycle",
@@ -446,9 +462,10 @@
         "newAssets": []
       },
       "emotionalTone": "Sneaky, corrupt.",
-      "startTime": 99.251,
-      "endTime": 105.951,
-      "duration": 6.7
+      "startTime": 97.88,
+      "endTime": 102.7,
+      "duration": 4.82,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 18,
@@ -457,7 +474,7 @@
         "F004"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 6.4,
       "template": "chart-scene",
       "props": {
         "chartType": "line",
@@ -486,9 +503,10 @@
         "newAssets": []
       },
       "emotionalTone": "Shocking.",
-      "startTime": 105.951,
-      "endTime": 112.233,
-      "duration": 6.282
+      "startTime": 103.34,
+      "endTime": 109.74,
+      "duration": 6.4,
+      "confidence": 0.867
     },
     {
       "sceneNumber": 19,
@@ -497,7 +515,7 @@
         "F005"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 5.0,
       "template": "silhouette-scene",
       "props": {
         "figures": [
@@ -516,9 +534,10 @@
         "newAssets": []
       },
       "emotionalTone": "Personal, unsettling.",
-      "startTime": 112.233,
-      "endTime": 118.515,
-      "duration": 6.282
+      "startTime": 110.22,
+      "endTime": 115.22,
+      "duration": 5.0,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 20,
@@ -527,7 +546,7 @@
         "F005"
       ],
       "wordCount": 16,
-      "estimatedDuration": 6.7,
+      "estimatedDuration": 6.68,
       "template": "text-emphasis",
       "props": {
         "text": "INFLATION EATS ROME",
@@ -541,9 +560,10 @@
         "newAssets": []
       },
       "emotionalTone": "Alarming.",
-      "startTime": 118.515,
-      "endTime": 125.215,
-      "duration": 6.7
+      "startTime": 115.6,
+      "endTime": 122.28,
+      "duration": 6.68,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 21,
@@ -552,7 +572,7 @@
         "F006"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 6.28,
       "template": "list-reveal",
       "props": {
         "title": "Diocletian's Price Edict",
@@ -568,9 +588,10 @@
         "newAssets": []
       },
       "emotionalTone": "Absurd, severe.",
-      "startTime": 125.215,
-      "endTime": 131.497,
-      "duration": 6.282
+      "startTime": 123.08,
+      "endTime": 129.36,
+      "duration": 6.28,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 22,
@@ -579,7 +600,7 @@
         "F006"
       ],
       "wordCount": 14,
-      "estimatedDuration": 5.863,
+      "estimatedDuration": 6.76,
       "template": "silhouette-scene",
       "props": {
         "figures": [
@@ -603,9 +624,10 @@
         "newAssets": []
       },
       "emotionalTone": "Futile, dark.",
-      "startTime": 131.497,
-      "endTime": 137.36,
-      "duration": 5.863
+      "startTime": 129.48,
+      "endTime": 136.24,
+      "duration": 6.76,
+      "confidence": 0.929
     },
     {
       "sceneNumber": 23,
@@ -614,7 +636,7 @@
         "F007"
       ],
       "wordCount": 8,
-      "estimatedDuration": 3.35,
+      "estimatedDuration": 3.44,
       "template": "transition-break",
       "props": {
         "title": "THEN CAME PLAGUE",
@@ -626,9 +648,10 @@
         "newAssets": []
       },
       "emotionalTone": "Dread.",
-      "startTime": 137.36,
-      "endTime": 140.71,
-      "duration": 3.35
+      "startTime": 136.84,
+      "endTime": 140.28,
+      "duration": 3.44,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 24,
@@ -637,7 +660,7 @@
         "F007"
       ],
       "wordCount": 14,
-      "estimatedDuration": 5.863,
+      "estimatedDuration": 5.36,
       "template": "map-scene",
       "props": {
         "region": "roman-empire-max-extent",
@@ -655,9 +678,10 @@
         "newAssets": []
       },
       "emotionalTone": "Somber.",
-      "startTime": 140.71,
-      "endTime": 146.573,
-      "duration": 5.863
+      "startTime": 141.12,
+      "endTime": 146.48,
+      "duration": 5.36,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 25,
@@ -667,7 +691,7 @@
         "F010"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 6.92,
       "template": "comparison-split",
       "props": {
         "heading": "The Squeeze",
@@ -689,9 +713,10 @@
         "newAssets": []
       },
       "emotionalTone": "Tightening pressure.",
-      "startTime": 146.573,
-      "endTime": 152.855,
-      "duration": 6.282
+      "startTime": 147.28,
+      "endTime": 154.2,
+      "duration": 6.92,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 26,
@@ -700,7 +725,7 @@
         "F011"
       ],
       "wordCount": 14,
-      "estimatedDuration": 5.863,
+      "estimatedDuration": 5.74,
       "template": "silhouette-scene",
       "props": {
         "figures": [
@@ -729,9 +754,10 @@
         "newAssets": []
       },
       "emotionalTone": "Uneasy pragmatism.",
-      "startTime": 152.855,
-      "endTime": 158.718,
-      "duration": 5.863
+      "startTime": 154.54,
+      "endTime": 160.28,
+      "duration": 5.74,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 27,
@@ -740,7 +766,7 @@
         "F011"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 4.82,
       "template": "silhouette-scene",
       "props": {
         "figures": [
@@ -764,16 +790,17 @@
         "newAssets": []
       },
       "emotionalTone": "Warning.",
-      "startTime": 158.718,
-      "endTime": 164.999,
-      "duration": 6.282
+      "startTime": 160.68,
+      "endTime": 165.5,
+      "duration": 4.82,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 28,
       "narration": "Not to Rome. Remember that detail. It comes back at the very end of this story.",
       "usedFacts": [],
       "wordCount": 16,
-      "estimatedDuration": 6.7,
+      "estimatedDuration": 5.7,
       "template": "text-emphasis",
       "props": {
         "text": "REMEMBER THIS DETAIL",
@@ -787,9 +814,10 @@
         "newAssets": []
       },
       "emotionalTone": "Foreshadowing.",
-      "startTime": 164.999,
-      "endTime": 171.7,
-      "duration": 6.7
+      "startTime": 165.5,
+      "endTime": 171.2,
+      "duration": 5.7,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 29,
@@ -798,7 +826,7 @@
         "F012"
       ],
       "wordCount": 17,
-      "estimatedDuration": 7.119,
+      "estimatedDuration": 7.3,
       "template": "map-scene",
       "props": {
         "region": "thrace-adrianople",
@@ -813,9 +841,10 @@
         "newAssets": []
       },
       "emotionalTone": "Catastrophic.",
-      "startTime": 171.7,
-      "endTime": 178.819,
-      "duration": 7.119
+      "startTime": 172.0,
+      "endTime": 179.3,
+      "duration": 7.3,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 30,
@@ -824,7 +853,7 @@
         "F012"
       ],
       "wordCount": 13,
-      "estimatedDuration": 5.444,
+      "estimatedDuration": 5.02,
       "template": "silhouette-scene",
       "props": {
         "figures": [
@@ -849,9 +878,10 @@
         "newAssets": []
       },
       "emotionalTone": "Grave.",
-      "startTime": 178.819,
-      "endTime": 184.263,
-      "duration": 5.444
+      "startTime": 179.98,
+      "endTime": 185.0,
+      "duration": 5.02,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 31,
@@ -860,7 +890,7 @@
         "F013"
       ],
       "wordCount": 16,
-      "estimatedDuration": 6.7,
+      "estimatedDuration": 5.96,
       "template": "map-scene",
       "props": {
         "region": "roman-empire-balkan-frontier",
@@ -878,9 +908,10 @@
         "newAssets": []
       },
       "emotionalTone": "Unprecedented, uneasy.",
-      "startTime": 184.263,
-      "endTime": 190.964,
-      "duration": 6.7
+      "startTime": 185.74,
+      "endTime": 191.7,
+      "duration": 5.96,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 32,
@@ -889,7 +920,7 @@
         "F013"
       ],
       "wordCount": 17,
-      "estimatedDuration": 7.119,
+      "estimatedDuration": 5.28,
       "template": "comparison-split",
       "props": {
         "heading": "The Federate Bargain",
@@ -913,9 +944,10 @@
         "newAssets": []
       },
       "emotionalTone": "Desperate deal.",
-      "startTime": 190.964,
-      "endTime": 198.083,
-      "duration": 7.119
+      "startTime": 192.02,
+      "endTime": 197.3,
+      "duration": 5.28,
+      "confidence": 0.941
     },
     {
       "sceneNumber": 33,
@@ -924,7 +956,7 @@
         "F013"
       ],
       "wordCount": 14,
-      "estimatedDuration": 5.863,
+      "estimatedDuration": 5.46,
       "template": "text-emphasis",
       "props": {
         "text": "COMMAND BECOMES NEGOTIATION",
@@ -938,9 +970,10 @@
         "newAssets": []
       },
       "emotionalTone": "Slipping control.",
-      "startTime": 198.083,
-      "endTime": 203.946,
-      "duration": 5.863
+      "startTime": 197.84,
+      "endTime": 203.3,
+      "duration": 5.46,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 34,
@@ -949,7 +982,7 @@
         "F014"
       ],
       "wordCount": 16,
-      "estimatedDuration": 6.7,
+      "estimatedDuration": 7.46,
       "template": "map-scene",
       "props": {
         "region": "roman-empire-east-west-split",
@@ -967,9 +1000,10 @@
         "newAssets": []
       },
       "emotionalTone": "Fateful.",
-      "startTime": 203.946,
-      "endTime": 210.646,
-      "duration": 6.7
+      "startTime": 204.52,
+      "endTime": 211.98,
+      "duration": 7.46,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 35,
@@ -978,7 +1012,7 @@
         "F014"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 5.5,
       "template": "comparison-split",
       "props": {
         "heading": "Two Empires, Two Fates",
@@ -1001,9 +1035,10 @@
         "newAssets": []
       },
       "emotionalTone": "Unbalanced, ominous.",
-      "startTime": 210.646,
-      "endTime": 216.928,
-      "duration": 6.282
+      "startTime": 212.74,
+      "endTime": 218.24,
+      "duration": 5.5,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 36,
@@ -1012,7 +1047,7 @@
         "F015"
       ],
       "wordCount": 10,
-      "estimatedDuration": 4.188,
+      "estimatedDuration": 3.44,
       "template": "stat-card",
       "props": {
         "value": 10,
@@ -1025,9 +1060,10 @@
         "newAssets": []
       },
       "emotionalTone": "Absurd, worrying.",
-      "startTime": 216.928,
-      "endTime": 221.116,
-      "duration": 4.188
+      "startTime": 218.44,
+      "endTime": 221.88,
+      "duration": 3.44,
+      "confidence": 0.8
     },
     {
       "sceneNumber": 37,
@@ -1037,7 +1073,7 @@
         "F011"
       ],
       "wordCount": 16,
-      "estimatedDuration": 6.7,
+      "estimatedDuration": 5.28,
       "template": "list-reveal",
       "props": {
         "title": "A Perfect Storm",
@@ -1053,9 +1089,10 @@
         "newAssets": []
       },
       "emotionalTone": "Doom assembling.",
-      "startTime": 221.116,
-      "endTime": 227.816,
-      "duration": 6.7
+      "startTime": 222.04,
+      "endTime": 227.32,
+      "duration": 5.28,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 38,
@@ -1064,7 +1101,7 @@
         "F016"
       ],
       "wordCount": 14,
-      "estimatedDuration": 5.863,
+      "estimatedDuration": 7.18,
       "template": "silhouette-scene",
       "props": {
         "figures": [
@@ -1093,9 +1130,10 @@
         "newAssets": []
       },
       "emotionalTone": "Shock.",
-      "startTime": 227.816,
-      "endTime": 233.679,
-      "duration": 5.863
+      "startTime": 227.96,
+      "endTime": 235.14,
+      "duration": 7.18,
+      "confidence": 0.938
     },
     {
       "sceneNumber": 39,
@@ -1104,7 +1142,7 @@
         "F016"
       ],
       "wordCount": 14,
-      "estimatedDuration": 5.863,
+      "estimatedDuration": 4.08,
       "template": "stat-card",
       "props": {
         "value": "800",
@@ -1117,9 +1155,10 @@
         "newAssets": []
       },
       "emotionalTone": "Historic gravity.",
-      "startTime": 233.679,
-      "endTime": 239.542,
-      "duration": 5.863
+      "startTime": 235.84,
+      "endTime": 239.92,
+      "duration": 4.08,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 40,
@@ -1128,7 +1167,7 @@
         "F017"
       ],
       "wordCount": 16,
-      "estimatedDuration": 6.7,
+      "estimatedDuration": 5.92,
       "template": "quote-card",
       "props": {
         "quote": "The city which had taken the whole world was itself taken.",
@@ -1142,9 +1181,10 @@
         "newAssets": []
       },
       "emotionalTone": "Mournful.",
-      "startTime": 239.542,
-      "endTime": 246.243,
-      "duration": 6.7
+      "startTime": 240.4,
+      "endTime": 246.32,
+      "duration": 5.92,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 41,
@@ -1153,7 +1193,7 @@
         "F018"
       ],
       "wordCount": 12,
-      "estimatedDuration": 5.025,
+      "estimatedDuration": 4.96,
       "template": "text-emphasis",
       "props": {
         "text": "NOT EVEN THE CAPITAL",
@@ -1167,9 +1207,10 @@
         "newAssets": []
       },
       "emotionalTone": "Surprising.",
-      "startTime": 246.243,
-      "endTime": 251.268,
-      "duration": 5.025
+      "startTime": 246.74,
+      "endTime": 251.7,
+      "duration": 4.96,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 42,
@@ -1178,7 +1219,7 @@
         "F018"
       ],
       "wordCount": 16,
-      "estimatedDuration": 6.7,
+      "estimatedDuration": 4.68,
       "template": "timeline-scene",
       "props": {
         "title": "The Moving Court",
@@ -1203,9 +1244,10 @@
         "newAssets": []
       },
       "emotionalTone": "Telling detail.",
-      "startTime": 251.268,
-      "endTime": 257.969,
-      "duration": 6.7
+      "startTime": 252.28,
+      "endTime": 256.96,
+      "duration": 4.68,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 43,
@@ -1214,7 +1256,7 @@
         "F016"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 5.98,
       "template": "text-emphasis",
       "props": {
         "text": "SYMBOLS DON'T PAY ARMIES",
@@ -1228,9 +1270,10 @@
         "newAssets": []
       },
       "emotionalTone": "Cold pragmatism.",
-      "startTime": 257.969,
-      "endTime": 264.25,
-      "duration": 6.282
+      "startTime": 257.58,
+      "endTime": 263.56,
+      "duration": 5.98,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 44,
@@ -1239,7 +1282,7 @@
         "F019"
       ],
       "wordCount": 16,
-      "estimatedDuration": 6.7,
+      "estimatedDuration": 5.02,
       "template": "transition-break",
       "props": {
         "title": "THE REAL DEATH BLOW",
@@ -1251,9 +1294,10 @@
         "newAssets": []
       },
       "emotionalTone": "Revelatory.",
-      "startTime": 264.25,
-      "endTime": 270.951,
-      "duration": 6.7
+      "startTime": 264.12,
+      "endTime": 269.14,
+      "duration": 5.02,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 45,
@@ -1262,7 +1306,7 @@
         "F019"
       ],
       "wordCount": 13,
-      "estimatedDuration": 5.444,
+      "estimatedDuration": 5.91,
       "template": "map-scene",
       "props": {
         "region": "north-africa-carthage",
@@ -1277,9 +1321,10 @@
         "newAssets": []
       },
       "emotionalTone": "Decisive.",
-      "startTime": 270.951,
-      "endTime": 276.395,
-      "duration": 5.444
+      "startTime": 269.65,
+      "endTime": 275.56,
+      "duration": 5.91,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 46,
@@ -1288,7 +1333,7 @@
         "F019"
       ],
       "wordCount": 12,
-      "estimatedDuration": 5.025,
+      "estimatedDuration": 4.26,
       "template": "map-scene",
       "props": {
         "region": "mediterranean-africa-to-italy",
@@ -1306,9 +1351,10 @@
         "newAssets": []
       },
       "emotionalTone": "Vital dependency.",
-      "startTime": 276.395,
-      "endTime": 281.42,
-      "duration": 5.025
+      "startTime": 276.04,
+      "endTime": 280.3,
+      "duration": 4.26,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 47,
@@ -1317,7 +1363,7 @@
         "F020"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 6.46,
       "template": "text-emphasis",
       "props": {
         "text": "NO TAXES, NO ARMY",
@@ -1331,9 +1377,10 @@
         "newAssets": []
       },
       "emotionalTone": "Ruthless logic.",
-      "startTime": 281.42,
-      "endTime": 287.702,
-      "duration": 6.282
+      "startTime": 281.36,
+      "endTime": 287.82,
+      "duration": 6.46,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 48,
@@ -1342,7 +1389,7 @@
         "F020"
       ],
       "wordCount": 17,
-      "estimatedDuration": 7.119,
+      "estimatedDuration": 6.16,
       "template": "comparison-split",
       "props": {
         "heading": "The Real Equation",
@@ -1364,9 +1411,10 @@
         "newAssets": []
       },
       "emotionalTone": "Clinical, damning.",
-      "startTime": 287.702,
-      "endTime": 294.821,
-      "duration": 7.119
+      "startTime": 288.58,
+      "endTime": 294.74,
+      "duration": 6.16,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 49,
@@ -1375,7 +1423,7 @@
         "F020"
       ],
       "wordCount": 17,
-      "estimatedDuration": 7.119,
+      "estimatedDuration": 6.06,
       "template": "map-scene",
       "props": {
         "region": "western-provinces",
@@ -1393,9 +1441,10 @@
         "newAssets": []
       },
       "emotionalTone": "Inevitable decline.",
-      "startTime": 294.821,
-      "endTime": 301.94,
-      "duration": 7.119
+      "startTime": 295.22,
+      "endTime": 301.28,
+      "duration": 6.06,
+      "confidence": 0.882
     },
     {
       "sceneNumber": 50,
@@ -1404,7 +1453,7 @@
         "F020"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 5.94,
       "template": "list-reveal",
       "props": {
         "title": "The Death Spiral",
@@ -1421,9 +1470,10 @@
         "newAssets": []
       },
       "emotionalTone": "Accelerating doom.",
-      "startTime": 301.94,
-      "endTime": 308.222,
-      "duration": 6.282
+      "startTime": 301.82,
+      "endTime": 307.76,
+      "duration": 5.94,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 51,
@@ -1433,7 +1483,7 @@
         "F011"
       ],
       "wordCount": 19,
-      "estimatedDuration": 7.957,
+      "estimatedDuration": 5.74,
       "template": "icon-grid",
       "props": {
         "icon": "icon-soldier",
@@ -1449,9 +1499,10 @@
         "newAssets": []
       },
       "emotionalTone": "Powder keg.",
-      "startTime": 308.222,
-      "endTime": 316.179,
-      "duration": 7.957
+      "startTime": 308.68,
+      "endTime": 314.42,
+      "duration": 5.74,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 52,
@@ -1460,7 +1511,7 @@
         "F021"
       ],
       "wordCount": 14,
-      "estimatedDuration": 5.863,
+      "estimatedDuration": 5.36,
       "template": "text-emphasis",
       "props": {
         "text": "BACK TO 476",
@@ -1474,9 +1525,10 @@
         "newAssets": []
       },
       "emotionalTone": "Full circle.",
-      "startTime": 316.179,
-      "endTime": 322.042,
-      "duration": 5.863
+      "startTime": 315.12,
+      "endTime": 320.48,
+      "duration": 5.36,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 53,
@@ -1485,7 +1537,7 @@
         "F024"
       ],
       "wordCount": 13,
-      "estimatedDuration": 5.444,
+      "estimatedDuration": 6.28,
       "template": "silhouette-scene",
       "props": {
         "figures": [
@@ -1504,9 +1556,10 @@
         "newAssets": []
       },
       "emotionalTone": "Poetic irony.",
-      "startTime": 322.042,
-      "endTime": 327.486,
-      "duration": 5.444
+      "startTime": 321.12,
+      "endTime": 327.4,
+      "duration": 6.28,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 54,
@@ -1515,7 +1568,7 @@
         "F024"
       ],
       "wordCount": 12,
-      "estimatedDuration": 5.025,
+      "estimatedDuration": 5.98,
       "template": "text-emphasis",
       "props": {
         "text": "\"THE LITTLE AUGUSTUS\"",
@@ -1529,9 +1582,10 @@
         "newAssets": []
       },
       "emotionalTone": "Pitying.",
-      "startTime": 327.486,
-      "endTime": 332.511,
-      "duration": 5.025
+      "startTime": 327.86,
+      "endTime": 333.84,
+      "duration": 5.98,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 55,
@@ -1540,7 +1594,7 @@
         "F022"
       ],
       "wordCount": 17,
-      "estimatedDuration": 7.119,
+      "estimatedDuration": 5.96,
       "template": "silhouette-scene",
       "props": {
         "figures": [
@@ -1569,9 +1623,10 @@
         "newAssets": []
       },
       "emotionalTone": "Payoff, betrayal.",
-      "startTime": 332.511,
-      "endTime": 339.631,
-      "duration": 7.119
+      "startTime": 334.42,
+      "endTime": 340.38,
+      "duration": 5.96,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 56,
@@ -1580,7 +1635,7 @@
         "F022"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 4.92,
       "template": "comparison-split",
       "props": {
         "heading": "The Last Demand",
@@ -1602,9 +1657,10 @@
         "newAssets": []
       },
       "emotionalTone": "Tense.",
-      "startTime": 339.631,
-      "endTime": 345.912,
-      "duration": 6.282
+      "startTime": 340.82,
+      "endTime": 345.74,
+      "duration": 4.92,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 57,
@@ -1614,7 +1670,7 @@
         "F021"
       ],
       "wordCount": 14,
-      "estimatedDuration": 5.863,
+      "estimatedDuration": 5.16,
       "template": "silhouette-scene",
       "props": {
         "figures": [
@@ -1643,9 +1699,10 @@
         "newAssets": []
       },
       "emotionalTone": "Anticlimactic truth.",
-      "startTime": 345.912,
-      "endTime": 351.775,
-      "duration": 5.863
+      "startTime": 346.34,
+      "endTime": 351.5,
+      "duration": 5.16,
+      "confidence": 0.929
     },
     {
       "sceneNumber": 58,
@@ -1654,7 +1711,7 @@
         "F021"
       ],
       "wordCount": 13,
-      "estimatedDuration": 5.444,
+      "estimatedDuration": 5.88,
       "template": "map-scene",
       "props": {
         "region": "italy-to-constantinople",
@@ -1669,9 +1726,10 @@
         "newAssets": []
       },
       "emotionalTone": "Quiet finality.",
-      "startTime": 351.775,
-      "endTime": 357.219,
-      "duration": 5.444
+      "startTime": 352.02,
+      "endTime": 357.9,
+      "duration": 5.88,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 59,
@@ -1680,7 +1738,7 @@
         "F021"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 4.52,
       "template": "silhouette-scene",
       "props": {
         "figures": [
@@ -1699,9 +1757,10 @@
         "newAssets": []
       },
       "emotionalTone": "Deflating.",
-      "startTime": 357.219,
-      "endTime": 363.501,
-      "duration": 6.282
+      "startTime": 359.24,
+      "endTime": 363.76,
+      "duration": 4.52,
+      "confidence": 0.933
     },
     {
       "sceneNumber": 60,
@@ -1711,7 +1770,7 @@
         "F022"
       ],
       "wordCount": 16,
-      "estimatedDuration": 6.7,
+      "estimatedDuration": 4.46,
       "template": "text-emphasis",
       "props": {
         "text": "DEATH BY PAYROLL DISPUTE",
@@ -1725,9 +1784,10 @@
         "newAssets": []
       },
       "emotionalTone": "Dark irony.",
-      "startTime": 363.501,
-      "endTime": 370.202,
-      "duration": 6.7
+      "startTime": 364.36,
+      "endTime": 368.82,
+      "duration": 4.46,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 61,
@@ -1736,7 +1796,7 @@
         "F023"
       ],
       "wordCount": 11,
-      "estimatedDuration": 4.607,
+      "estimatedDuration": 3.66,
       "template": "silhouette-scene",
       "props": {
         "figures": [
@@ -1760,9 +1820,10 @@
         "newAssets": []
       },
       "emotionalTone": "Eerie calm.",
-      "startTime": 370.202,
-      "endTime": 374.808,
-      "duration": 4.607
+      "startTime": 369.24,
+      "endTime": 372.9,
+      "duration": 3.66,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 62,
@@ -1771,7 +1832,7 @@
         "F023"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 5.86,
       "template": "list-reveal",
       "props": {
         "title": "The Day After 476",
@@ -1787,9 +1848,10 @@
         "newAssets": []
       },
       "emotionalTone": "Astonishing continuity.",
-      "startTime": 374.808,
-      "endTime": 381.09,
-      "duration": 6.282
+      "startTime": 374.04,
+      "endTime": 379.9,
+      "duration": 5.86,
+      "confidence": 0.933
     },
     {
       "sceneNumber": 63,
@@ -1798,7 +1860,7 @@
         "F023"
       ],
       "wordCount": 14,
-      "estimatedDuration": 5.863,
+      "estimatedDuration": 6.08,
       "template": "text-emphasis",
       "props": {
         "text": "NOBODY NOTICED THE FALL",
@@ -1812,9 +1874,10 @@
         "newAssets": []
       },
       "emotionalTone": "Mind-bending.",
-      "startTime": 381.09,
-      "endTime": 386.953,
-      "duration": 5.863
+      "startTime": 380.2,
+      "endTime": 386.28,
+      "duration": 6.08,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 64,
@@ -1823,7 +1886,7 @@
         "F001"
       ],
       "wordCount": 17,
-      "estimatedDuration": 7.119,
+      "estimatedDuration": 7.4,
       "template": "list-reveal",
       "props": {
         "title": "How Empires Die",
@@ -1839,9 +1902,10 @@
         "newAssets": []
       },
       "emotionalTone": "Thesis, sobering.",
-      "startTime": 386.953,
-      "endTime": 394.072,
-      "duration": 7.119
+      "startTime": 386.82,
+      "endTime": 394.22,
+      "duration": 7.4,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 65,
@@ -1850,7 +1914,7 @@
         "F025"
       ],
       "wordCount": 18,
-      "estimatedDuration": 7.538,
+      "estimatedDuration": 6.52,
       "template": "map-scene",
       "props": {
         "region": "eastern-roman-empire",
@@ -1868,9 +1932,10 @@
         "newAssets": []
       },
       "emotionalTone": "Twist.",
-      "startTime": 394.072,
-      "endTime": 401.61,
-      "duration": 7.538
+      "startTime": 394.9,
+      "endTime": 401.42,
+      "duration": 6.52,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 66,
@@ -1879,7 +1944,7 @@
         "F025"
       ],
       "wordCount": 15,
-      "estimatedDuration": 6.282,
+      "estimatedDuration": 7.52,
       "template": "timeline-scene",
       "props": {
         "title": "Rome After Rome",
@@ -1900,9 +1965,10 @@
         "newAssets": []
       },
       "emotionalTone": "Awe.",
-      "startTime": 401.61,
-      "endTime": 407.892,
-      "duration": 6.282
+      "startTime": 401.9,
+      "endTime": 409.42,
+      "duration": 7.52,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 67,
@@ -1912,7 +1978,7 @@
         "F023"
       ],
       "wordCount": 16,
-      "estimatedDuration": 6.7,
+      "estimatedDuration": 5.9,
       "template": "text-emphasis",
       "props": {
         "text": "ROME DIDN'T FALL. IT FADED.",
@@ -1926,16 +1992,17 @@
         "newAssets": []
       },
       "emotionalTone": "Conclusive.",
-      "startTime": 407.892,
-      "endTime": 414.592,
-      "duration": 6.7
+      "startTime": 409.96,
+      "endTime": 415.86,
+      "duration": 5.9,
+      "confidence": 1.0
     },
     {
       "sceneNumber": 68,
       "narration": "If this changed how you see history, there's more where that came from. Subscribe for the next story.",
       "usedFacts": [],
       "wordCount": 18,
-      "estimatedDuration": 7.538,
+      "estimatedDuration": 5.85,
       "template": "transition-break",
       "props": {
         "title": "SUBSCRIBE FOR MORE",
@@ -1947,19 +2014,19 @@
         "newAssets": []
       },
       "emotionalTone": "Warm, inviting.",
-      "startTime": 414.592,
+      "startTime": 416.28,
       "endTime": 422.13,
-      "duration": 7.538
+      "duration": 5.85,
+      "confidence": 1.0
     }
   ],
-  "timingMode": "proportional-estimate",
+  "timingMode": "transcript-guided-alignment",
   "audio": {
     "file": "/outputs/why-the-roman-empire-really-collapsed/audio/voiceover.mp3",
     "duration": 422.13,
     "sampleRate": 44100,
-    "timingSource": "proportional-estimate",
-    "alignmentTool": null,
-    "transcriptFile": "/outputs/why-the-roman-empire-really-collapsed/02-script-voiceover.txt",
-    "warning": "estimated timing (word-proportional, normalized to audio) — NOT valid for voiced final render"
+    "timingSource": "transcript-guided-alignment",
+    "alignmentTool": "faster-whisper",
+    "transcriptFile": "/outputs/why-the-roman-empire-really-collapsed/02-script-voiceover.txt"
   }
 }

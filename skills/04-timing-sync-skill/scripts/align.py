@@ -66,8 +66,58 @@ class AlignmentQualityError(Exception):
     """Coverage below thresholds — Mode A result must not be trusted."""
 
 
+_ONES = ["zero", "one", "two", "three", "four", "five", "six", "seven",
+         "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen",
+         "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
+_TENS = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy",
+         "eighty", "ninety"]
+
+
+def _int_to_words(n):
+    """Deterministic English word tokens for 0 <= n < 10**9."""
+    if n < 20:
+        return [_ONES[n]]
+    if n < 100:
+        tens, rest = divmod(n, 10)
+        return [_TENS[tens]] + (_int_to_words(rest) if rest else [])
+    for scale, name in ((10 ** 6, "million"), (10 ** 3, "thousand"),
+                        (100, "hundred")):
+        if n >= scale:
+            head, rest = divmod(n, scale)
+            return (_int_to_words(head) + [name]
+                    + (_int_to_words(rest) if rest else []))
+    return [str(n)]  # unreachable for n < 10**9
+
+
 def normalize_words(text):
-    return re.findall(r"[a-z0-9']+", text.lower())
+    """Lowercase tokens with digits expanded to English words.
+
+    ASR output writes numbers as digits ("400,000", "90") while scripts spell
+    them out ("four hundred thousand", "ninety"); expanding digit tokens on
+    BOTH sides makes matching representation-invariant without touching the
+    coverage thresholds. Digit groups of exactly three ("400" "000" from
+    "400,000") are re-joined before conversion; mixed tokens ("270s") are
+    left untouched.
+    """
+    tokens = re.findall(r"[a-z0-9']+", text.lower())
+    out, i = [], 0
+    while i < len(tokens):
+        tok = tokens[i]
+        if not tok.isdigit():
+            out.append(tok)
+            i += 1
+            continue
+        j = i + 1
+        while (j < len(tokens) and tokens[j].isdigit()
+               and len(tokens[j]) == 3 and len(tok) <= 3):
+            j += 1
+        value = int("".join(tokens[i:j]))
+        if value < 10 ** 9:
+            out.extend(_int_to_words(value))
+        else:
+            out.extend(tokens[i:j])
+        i = j
+    return out
 
 
 def matching_pairs(ref, hyp):
@@ -462,6 +512,26 @@ def self_test():
           all(ends[i] <= starts[i + 1] for i in range(len(ends) - 1)))
     t2, c2 = compute_alignment_timings(PARAGRAPHS, hyp, total, DEFAULT_BUFFER)
     check("deterministic", (t2, c2) == (timings, coverage))
+
+    # digit-vs-spelled-number robustness (ASR writes "400,000"/"90", script
+    # spells them out) — expansion is symmetric, thresholds untouched
+    check("digit tokens expand to spelled words",
+          normalize_words("between 400,000 and 600,000 men")
+          == ["between", "four", "hundred", "thousand", "and",
+              "six", "hundred", "thousand", "men"])
+    check("plain digits expand (90 -> ninety, 1453 -> words)",
+          normalize_words("90") == ["ninety"]
+          and normalize_words("1453") == ["one", "thousand",
+                                          "four", "hundred", "fifty", "three"])
+    check("mixed tokens like '270s' stay untouched",
+          normalize_words("the 270s") == ["the", "270s"])
+    num_ref = ["The army had four hundred thousand men.",
+               "The coin was ninety percent silver."]
+    hyp_n, tot_n = _synthetic_hyp(["The army had 400,000 men.",
+                                   "The coin was 90 percent silver."])
+    _, cov_n = compute_alignment_timings(num_ref, hyp_n, tot_n, DEFAULT_BUFFER)
+    check("digit transcript matches spelled-out reference -> coverage 1.0",
+          cov_n == 1.0)
 
     # degraded transcript -> quality error (scene 3 fully corrupted)
     bad = [dict(w) for w in hyp]

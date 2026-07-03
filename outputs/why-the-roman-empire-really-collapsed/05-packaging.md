@@ -92,3 +92,57 @@ Avoid:
 - Misleading angle (no "secret history" bait the video can't pay off)
 - Slow generic intro ("In this video we will...")
 - Unrelated background before the 476 cold open
+
+# 05B — Publishing Finalization
+
+## Final Video Description
+
+Everyone "knows" barbarians destroyed Rome. The real story is stranger: the empire had been quietly dying for three hundred years — and when the famous "fall" finally came in 476 AD, almost nobody noticed.
+
+In this animated documentary we follow the real killers of the Western Roman Empire:
+
+- 26 emperors in 50 years — the throne that became a death sentence
+- The denarius, from over 90% silver to about 5% — how Rome's money died first
+- A price edict enforced by execution, and why it failed
+- The federate bargain: an army whose loyalty was for sale
+- 439 AD, Carthage: the real death blow nobody talks about
+- 476 AD: the mutiny over unpaid land that ended an empire — and changed almost nothing
+
+And the twist: half of Rome never fell at all. The Eastern Empire carried on until 1453.
+
+Subscribe for more animated documentaries about history, money, and how civilizations break.
+
+Chapters:
+0:00 The Fall Nobody Noticed
+0:30 The Machine That Ran Rome
+1:00 26 Emperors in 50 Years
+1:25 Follow the Silver
+2:17 Plague
+2:34 Hiring the Barbarians
+2:52 Adrianople and the Bargain
+3:24 One Empire Becomes Two
+3:48 The Sack of 410
+4:24 The Real Death Blow: Carthage
+5:15 Back to 476
+6:09 Life Goes On
+6:34 Rome After Rome
+
+## Final Tags
+
+roman empire, fall of rome, why rome fell, fall of the western roman empire, 476 ad, romulus augustulus, odoacer, crisis of the third century, roman inflation, denarius, sack of rome 410, vandals carthage, byzantine empire, ancient history, animated documentary, history explained
+
+## Final Pinned Comment
+
+Everyone blames the barbarians. After watching — what do you think actually killed Rome: the money, the plagues, or the politics? And which empire should we break down next? 👇
+
+## Attribution Block
+
+None required. All assets used in this video are Public domain (map: Wikimedia Commons "RomanEmpire 117.svg") or project-original CC0 vectors — no attribution obligations.
+
+## Upload Checklist
+
+- [ ] Title + thumbnail pair chosen (A/B plan from 05A noted)
+- [ ] Final description pasted (chapters timestamps verified against the render)
+- [ ] Tags, pinned comment set
+- [ ] End screen / cards configured (subscribe end card = Scene 68)
+- [ ] Shorts clips scheduled (4 ideas in 05A, all 9:16-capable templates)

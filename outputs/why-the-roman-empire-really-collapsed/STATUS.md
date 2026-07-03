@@ -6,7 +6,7 @@ Video Slug: why-the-roman-empire-really-collapsed
 Video Topic: Why the Roman Empire Really Collapsed
 Target Language: English
 Target Length: 7 minutes
-Current Stage: Quality Gate (Phase 1E production run — no real audio yet)
+Current Stage: READY FOR RENDER (Phase 1 complete; awaiting Phase 2 decision)
 Last Updated: 2026-07-03
 
 ## Completed Stages
@@ -14,9 +14,9 @@ Last Updated: 2026-07-03
 - [x] 01 Research
 - [x] 02 Script
 - [x] 03 Visual Scene JSON
-- [x] 04 Timing Sync (word-count-estimate mode — no audio)
+- [x] 04 Timing Sync (Mode A transcript-guided-alignment on real audio)
 - [x] 05 Packaging (05A)
-- [ ] 05 Packaging (05B)
+- [x] 05 Packaging (05B)
 - [x] Quality Gate
 - [ ] 06 Render
 
@@ -27,25 +27,25 @@ Last Updated: 2026-07-03
 - [x] 02-script-annotated.md
 - [x] 02-script-voiceover.txt
 - [x] 03-scenes.json
-- [ ] audio/voiceover.mp3
-- [ ] 04-scenes-final.json
-- [x] 04-scenes-final-estimated.json
+- [x] audio/voiceover.mp3
+- [x] 04-scenes-final.json
+- [x] 04-scenes-final-estimated.json (superseded draft; kept as Mode B artifact)
 - [x] 05-packaging.md
 
 ## Quality Gate
 
 <!-- QG:BEGIN — bu blok quality-gate.py tarafından üretilir, elle düzenleme -->
-Gate Result        : PASS (0 failure(s), 1 warning(s))
-Gate Run           : 2026-07-03 14:39 | bootstrap: no
-Validation Status  : derive_vo diff: OK | 03-scenes.json: OK | 04-scenes-final-estimated.json: OK
+Gate Result        : PASS (0 failure(s), 0 warning(s))
+Gate Run           : 2026-07-03 15:14 | bootstrap: no
+Validation Status  : derive_vo diff: OK | 03-scenes.json: OK | 04-scenes-final.json: OK | 04-scenes-final-estimated.json: OK
 Fact Status        : 24 fact(s) used | VERIFY-status violations: 0 | scriptCritical all VERIFIED: yes | number-without-fact warnings: 0
 Asset Status       : 5 library asset(s), 0 new | BLOCKED/Unknown violations: 0 | attribution: not needed | usedInVideos sync: fresh
-Timing Status      : timingMode: word-count-estimate | audio file present: no | min scene confidence: n/a | voiced final render allowed: NO
+Timing Status      : timingMode: transcript-guided-alignment | audio file present: yes | min scene confidence: 0.8 | voiced final render allowed: yes
 
 Failures:
 - none
 Warnings:
-- TC2 only estimated timing exists — voiced final render not allowed yet (run align.py Mode A when audio is ready)
+- none
 <!-- QG:END -->
 
 ## Current Blocking Issues
@@ -54,27 +54,25 @@ Warnings:
 
 ## Warnings
 
-- Timing is word-count-estimate only (no voiceover.mp3 yet): 04-scenes-final-estimated.json is a draft/silent preview input, never a voiced-final-render input. Expected at this stage.
-- align.py sanity checks: no LONG (>12s) or SHORT (<2s) scenes; estimated total 403.2s (~6:43) vs 7:00 target — acceptable.
-- Assets RESOLVED (2026-07-03): all 5 assets are now in /assets/library with license metadata; 03-scenes.json uses fromLibrary (newAssets empty); validate.py PASS without --bootstrap. map-roman-empire = Wikimedia Commons "RomanEmpire 117.svg" (Public domain, verified via Commons API); icon-soldier / figure-warrior / figure-emperor / figure-civilian = project-original CC0 SVGs (simple v1 — replaceable later under the same ids).
+- None. Mode A alignment: global coverage 0.985; per-scene confidence min 0.80 (scenes 7/16/18 in the 0.85–0.87 band — Whisper heard digits/"daenerius"; matching made number-robust in align.py, thresholds untouched). No LONG/SHORT scenes. Real total 422.13s (7:02) vs 7:00 target.
 
 ## Required User Action
 
-- Record the voiceover (ElevenLabs) from 02-script-voiceover.txt and drop it at audio/voiceover.mp3, then install faster-whisper (use the full interpreter path: C:\Users\brsct\AppData\Local\Programs\Python\Python314\python.exe -m pip install faster-whisper) and re-run align.py for Mode A.
+- None for the pipeline. Human Layer-2 checklist before publishing: title/thumbnail claim support (see 05A CTR notes — "payroll dispute" framing flagged), and the Upload Checklist in 05B.
 
 ## Next Step
 
-Drop audio/voiceover.mp3, then: python skills/04-timing-sync-skill/scripts/align.py outputs/why-the-roman-empire-really-collapsed --mode auto — afterwards append 05B to 05-packaging.md and re-run scripts/quality-gate.py.
+Phase 2 (/render) — requires the user's explicit go-ahead per CLAUDE.md; Claude must not start it unprompted. Everything render needs is ready: 04-scenes-final.json (transcript-guided), audio/voiceover.mp3, 5 licensed library assets, gate PASS with zero warnings.
 
 ## Session Notes
 
-Current Phase: 1E (example topic production output)
-Completed This Session: 01-facts.json, 02-script-annotated.md, 02-script-voiceover.txt (derive_vo.py), 03-scenes.json (validate.py PASS, 0 warnings), 04-scenes-final-estimated.json (align.py --mode wordcount), 05-packaging.md (05A), Hook Promise Audit updated to PASS after 05A, STATUS.md
-Files Created: all of the above (01-research.md was already present from a prior session)
-Files Modified: 02-script-annotated.md (audit section only)
-Commands Run: derive_vo.py, validate.py (--bootstrap first pass, clean pass after assets landed), align.py --mode wordcount (x2), sync_manifest_usage.py (--check + write), quality-gate.py (x2), Commons API license check + asset download
+Current Phase: 1E complete + post-1E finalization (assets, real audio alignment, 05B)
+Completed This Session: 01-facts.json, 02-script-annotated.md, 02-script-voiceover.txt, 03-scenes.json, asset library seeded (5 licensed assets; scenes switched to fromLibrary), faster-whisper+rapidfuzz installed, align.py number-robust matching fix (+4 self-test checks, 21/21 PASS), 04-scenes-final.json via Mode A (coverage 0.985), 05-packaging.md 05A+05B, quality-gate PASS 0/0
+Files Created: full output set + 5 asset files
+Files Modified: align.py (digit-to-words normalization in matching — symmetric, thresholds unchanged), 03-scenes.json (fromLibrary), manifest.json, LICENSES.md
+Commands Run: derive_vo.py, validate.py, align.py (wordcount → auto/Mode A), sync_manifest_usage.py, quality-gate.py (final: PASS 0 failures 0 warnings), align.py --self-test (21/21)
 Blockers: none
-Next Exact Step: commit asset work, then wait for user-supplied voiceover.mp3 → align.py Mode A → 05B → gate
+Next Exact Step: user decides on Phase 2 (/render); record /usage in TASKS.md Quota Notes
 
 ## Quota Notes
 

@@ -30,7 +30,7 @@ Validation Results
 * derive_vo diff OK; 03 + 04 schema/scene checks OK; VERIFY violations 0; scriptCritical all VERIFIED; number-without-fact warnings 0; BLOCKED/Unknown 0; attribution not needed; sync fresh.
 Blockers
 
-* None for Phase 1. Voiced render path blocked ONLY on user inputs now: audio/voiceover.mp3 (ElevenLabs, from 02-script-voiceover.txt) + faster-whisper install; then align.py Mode A → 05B → gate.
+* NONE. Voiced pipeline fully complete (post-1E session, 2026-07-03): user supplied audio/voiceover.mp3 (10.1MB, 422.13s); faster-whisper 1.2.1 + rapidfuzz 3.14.5 installed into the working interpreter; align.py Mode A initially rejected (min scene 0.54 — Whisper wrote digits "400 000"/"90" vs spelled-out VO words); fixed by making align.py matching number-robust (symmetric digit→words expansion in normalize_words; coverage thresholds UNTOUCHED; +4 self-test checks, 21/21 PASS); re-run → Mode A accepted: coverage 0.985, min scene confidence 0.80, no LONG/SHORT, total 7:02 → 04-scenes-final.json. 05B appended to 05-packaging.md (final description with chapter timestamps from real timings, final tags/pinned comment, Attribution Block "None required" — all assets PD/CC0, Upload Checklist). FINAL GATE: PASS — 0 failures, 0 warnings; "voiced final render allowed: yes".
 ASSETS — RESOLVED (2026-07-03, post-1E session; repo pushed to GitHub as brsctncnbrk-ops/FactForge, branch main)
 
 All 5 assets sourced/created and registered in manifest.json + LICENSES.md; 03-scenes.json switched to fromLibrary (newAssets empty everywhere); sync_manifest_usage.py wrote usedInVideos; validate.py PASS **without --bootstrap**; align.py re-run; quality-gate.py PASS (only the expected TC2 estimated-timing warning).
@@ -45,7 +45,7 @@ All 5 assets sourced/created and registered in manifest.json + LICENSES.md; 03-s
 
 Silhouettes/icon are deliberately minimal placeholder-quality vectors with real licenses; upgrade them later under the SAME manifest ids (no scene churn).
 Next Exact Step
-Commit the asset work (`git add -A && git commit -m "assets: library seeded for roman-empire video"` + push) + record /usage in Quota Notes. User is producing the ElevenLabs voiceover now → when audio/voiceover.mp3 lands: pip install faster-whisper (full interpreter path), align.py --mode auto, append 05B, re-run gate. Then review the PRODUCT (WORKFLOW "Sen neyi kontrol et (1E)") and decide on Phase 2 (/render) — Claude must not start it on its own.
+Phase 1 is FULLY complete (research → script → scenes → real-audio timing → packaging 05A+05B → gate PASS 0/0). Record /usage in Quota Notes. The ONLY remaining decision: Phase 2 (/render — Remotion components + render pipeline). Per CLAUDE.md this needs the user's explicit request; Claude must not start it on its own. All render inputs are ready: 04-scenes-final.json (transcript-guided, min conf 0.80), audio/voiceover.mp3, 5 licensed assets in /assets/library, 05-packaging.md complete.
 Quota Notes
 
 * Phase 0: before __% -> after __% (kullanıcı doldurur)
