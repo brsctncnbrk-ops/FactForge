@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "facts-file.schema.json",
+  "title": "Fact Registry (01-facts.json)",
+  "description": "Machine source of truth for sources and facts (patch Section 5). 01-research.md references facts by ID; on conflict this file wins.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["videoSlug", "searchesUsed", "searchBudget", "sources", "facts"],
+  "properties": {
+    "videoSlug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "searchesUsed": { "type": "integer", "minimum": 0 },
+    "searchBudget": { "type": "integer", "minimum": 0 },
+    "sources": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/source" }
+    },
+    "facts": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/fact" }
+    }
+  },
+  "definitions": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "url", "type", "reliability"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^S[0-9]{3}$" },
+        "title": { "type": "string", "minLength": 1 },
+        "url": { "type": "string" },
+        "type": { "enum": ["academic", "institutional", "encyclopedic", "popular", "weak"] },
+        "reliability": { "enum": ["high", "medium", "low"] },
+        "notes": { "type": "string" }
+      }
+    },
+    "fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "claim", "sources", "status", "scriptCritical", "isNumber"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^F[0-9]{3}$" },
+        "claim": { "type": "string", "minLength": 1 },
+        "sources": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^S[0-9]{3}$" },
+          "uniqueItems": true
+        },
+        "status": { "enum": ["VERIFIED", "SINGLE-SOURCE", "VERIFY"] },
+        "scriptCritical": { "type": "boolean" },
+        "isNumber": { "type": "boolean" },
+        "notes": { "type": "string" }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "scriptCritical": { "const": true } },
+            "required": ["scriptCritical"]
+          },
+          "then": {
+            "properties": { "status": { "const": "VERIFIED" } }
+          }
+        },
+        {
+          "if": {
+            "properties": { "status": { "const": "VERIFIED" } },
+            "required": ["status"]
+          },
+          "then": {
+            "properties": { "sources": { "minItems": 2 } }
+          }
+        },
+        {
+          "if": {
+            "properties": { "status": { "const": "SINGLE-SOURCE" } },
+            "required": ["status"]
+          },
+          "then": {
+            "properties": { "sources": { "minItems": 1, "maxItems": 1 } }
+          }
+        }
+      ]
+    }
+  }
+}

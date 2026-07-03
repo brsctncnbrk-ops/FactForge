@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "icon-grid.schema.json",
+  "title": "icon-grid props",
+  "description": "Icon array (e.g. army size, population representation).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["icon", "count"],
+  "properties": {
+    "icon": { "type": "string", "minLength": 1 },
+    "count": { "type": "integer", "minimum": 1, "maximum": 200 },
+    "highlightCount": { "type": "integer", "minimum": 0 },
+    "label": { "type": "string" },
+    "columns": { "type": "integer", "minimum": 1 },
+    "secondaryIcon": { "type": "string", "minLength": 1 },
+    "secondaryCount": { "type": "integer", "minimum": 0 },
+    "aspectRatio": { "enum": ["16:9", "9:16"], "default": "16:9" }
+  }
+}

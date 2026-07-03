@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "stat-card.schema.json",
+  "title": "stat-card props",
+  "description": "Large number/statistic + short label + counter animation. 9:16 variant planned from the start (Shorts).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["value", "label"],
+  "properties": {
+    "value": { "type": ["string", "number"] },
+    "label": { "type": "string", "minLength": 1 },
+    "secondaryText": { "type": "string" },
+    "icon": { "type": "string", "minLength": 1 },
+    "countUp": { "type": "boolean", "default": true },
+    "aspectRatio": { "enum": ["16:9", "9:16"], "default": "16:9" }
+  }
+}

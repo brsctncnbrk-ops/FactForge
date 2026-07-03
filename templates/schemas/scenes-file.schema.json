@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "scenes-file.schema.json",
+  "title": "Scenes File",
+  "description": "Top-level schema for 03-scenes.json, 04-scenes-final.json and 04-scenes-final-estimated.json. timingMode and audio are absent in 03-scenes.json and required by convention in 04 files (enforced by quality-gate.py, not this schema). Per-template props validation is performed by validate.py against /templates/schemas/{template}.schema.json.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["videoSlug", "fps", "resolution", "scenes"],
+  "properties": {
+    "videoSlug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "fps": { "type": "integer", "minimum": 1, "maximum": 120 },
+    "resolution": { "type": "string", "pattern": "^[0-9]{3,4}x[0-9]{3,4}$" },
+    "timingMode": {
+      "enum": [
+        "forced-alignment",
+        "transcript-guided-alignment",
+        "proportional-estimate",
+        "word-count-estimate"
+      ]
+    },
+    "audio": { "$ref": "#/definitions/audioMetadata" },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/scene" }
+    }
+  },
+  "definitions": {
+    "audioMetadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["file", "duration", "sampleRate", "timingSource", "alignmentTool", "transcriptFile"],
+      "properties": {
+        "file": { "type": "string", "minLength": 1 },
+        "duration": { "type": "number", "exclusiveMinimum": 0 },
+        "sampleRate": { "type": "integer", "minimum": 8000 },
+        "timingSource": {
+          "enum": [
+            "forced-alignment",
+            "transcript-guided-alignment",
+            "proportional-estimate",
+            "word-count-estimate"
+          ]
+        },
+        "alignmentTool": { "type": ["string", "null"] },
+        "transcriptFile": { "type": "string", "minLength": 1 },
+        "warning": { "type": "string" }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sceneNumber", "narration", "wordCount", "template", "props", "assets"],
+      "properties": {
+        "sceneNumber": { "type": "integer", "minimum": 1 },
+        "narration": { "type": "string", "minLength": 1 },
+        "usedFacts": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^F[0-9]{3}$" },
+          "uniqueItems": true
+        },
+        "wordCount": { "type": "integer", "minimum": 1 },
+        "estimatedDuration": { "type": "number", "exclusiveMinimum": 0 },
+        "startTime": { "type": "number", "minimum": 0 },
+        "endTime": { "type": "number", "exclusiveMinimum": 0 },
+        "duration": { "type": "number", "exclusiveMinimum": 0 },
+        "template": {
+          "enum": [
+            "map-scene",
+            "timeline-scene",
+            "stat-card",
+            "comparison-split",
+            "list-reveal",
+            "quote-card",
+            "silhouette-scene",
+            "chart-scene",
+            "icon-grid",
+            "text-emphasis",
+            "image-spotlight",
+            "transition-break"
+          ]
+        },
+        "props": { "type": "object" },
+        "assets": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["fromLibrary", "newAssets"],
+          "properties": {
+            "fromLibrary": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 },
+              "uniqueItems": true
+            },
+            "newAssets": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/newAsset" }
+            }
+          }
+        },
+        "emotionalTone": { "type": "string" },
+        "styleNotes": { "type": "string" }
+      }
+    },
+    "newAsset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "description": { "type": "string" },
+        "suggestedSource": { "type": "string" }
+      }
+    }
+  }
+}

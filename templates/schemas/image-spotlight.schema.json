@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "image-spotlight.schema.json",
+  "title": "image-spotlight props",
+  "description": "Stock image/photo + Ken Burns (slow pan/zoom).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["image", "kenBurns"],
+  "properties": {
+    "image": { "type": "string", "minLength": 1 },
+    "kenBurns": {
+      "enum": ["zoom-in", "zoom-out", "pan-left", "pan-right", "pan-up", "pan-down"]
+    },
+    "caption": { "type": "string" },
+    "onScreenText": { "type": "string" },
+    "aspectRatio": { "enum": ["16:9", "9:16"], "default": "16:9" }
+  }
+}

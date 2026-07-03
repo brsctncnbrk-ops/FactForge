@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "quote-card.schema.json",
+  "title": "quote-card props",
+  "description": "Quote/key sentence with typographic emphasis.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["quote"],
+  "properties": {
+    "quote": { "type": "string", "minLength": 1 },
+    "attribution": { "type": "string" },
+    "emphasisWords": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "background": { "type": "string", "minLength": 1 },
+    "aspectRatio": { "enum": ["16:9", "9:16"], "default": "16:9" }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "chart-scene.schema.json",
+  "title": "chart-scene props",
+  "description": "Line/bar/pie chart drawn with data animation. Chart data must come from VERIFIED facts only (patch Section 6).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["chartType", "data"],
+  "properties": {
+    "chartType": { "enum": ["line", "bar", "pie"] },
+    "data": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["labels", "series"],
+      "properties": {
+        "labels": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "series": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "values"],
+            "properties": {
+              "name": { "type": "string", "minLength": 1 },
+              "values": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "type": "number" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "title": { "type": "string" },
+    "xAxisLabel": { "type": "string" },
+    "yAxisLabel": { "type": "string" },
+    "highlightIndex": { "type": "integer", "minimum": 0 },
+    "animationStyle": { "enum": ["draw", "grow", "fade"], "default": "draw" },
+    "aspectRatio": { "enum": ["16:9", "9:16"], "default": "16:9" }
+  }
+}

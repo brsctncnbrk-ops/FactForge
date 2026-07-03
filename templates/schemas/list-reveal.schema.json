@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "list-reveal.schema.json",
+  "title": "list-reveal props",
+  "description": "3-5 item list; items appear in sequence.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["items"],
+  "properties": {
+    "items": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 5,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "title": { "type": "string" },
+    "numbered": { "type": "boolean", "default": false },
+    "aspectRatio": { "enum": ["16:9", "9:16"], "default": "16:9" }
+  }
+}

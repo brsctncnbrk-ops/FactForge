@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "transition-break.schema.json",
+  "title": "transition-break props",
+  "description": "Chapter transition, title card, tempo change.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["title"],
+  "properties": {
+    "title": { "type": "string", "minLength": 1 },
+    "subtitle": { "type": "string" },
+    "chapterNumber": { "type": "integer", "minimum": 1 },
+    "style": { "enum": ["fade", "wipe", "zoom"], "default": "fade" },
+    "background": { "type": "string", "minLength": 1 },
+    "aspectRatio": { "enum": ["16:9", "9:16"], "default": "16:9" }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "text-emphasis.schema.json",
+  "title": "text-emphasis props",
+  "description": "Full-screen kinetic typography, one strong sentence. 9:16 variant planned from the start (Shorts).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["text"],
+  "properties": {
+    "text": { "type": "string", "minLength": 1 },
+    "emphasisWords": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "animation": { "enum": ["impact", "typewriter", "fade-scale"], "default": "impact" },
+    "backgroundColor": { "type": "string" },
+    "backgroundAsset": { "type": "string", "minLength": 1 },
+    "aspectRatio": { "enum": ["16:9", "9:16"], "default": "16:9" }
+  }
+}
