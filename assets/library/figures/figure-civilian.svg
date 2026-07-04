@@ -1,16 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 220" width="120" height="220">
-  <!-- Flat-vector pictogram person v3 (blocky rounded shapes, single flat
-       fill) — replaces the fine documentary-silhouette v2: this style stays
-       readable under rotation (fall animation) and at small chip sizes.
-       FactForge project-original asset (CC0). Same id/viewBox as v1/v2. -->
-  <g fill="currentColor">
-    <circle cx="60" cy="36" r="24"/>
-    <rect x="30" y="60" width="60" height="86" rx="26"/>
-    <rect x="10" y="64" width="20" height="76" rx="10"/>
-    <rect x="90" y="64" width="20" height="76" rx="10"/>
-    <rect x="34" y="146" width="22" height="66" rx="11"/>
-    <rect x="64" y="146" width="22" height="66" rx="11"/>
-    <rect x="30" y="206" width="30" height="12" rx="6"/>
-    <rect x="60" y="206" width="30" height="12" rx="6"/>
+  <!-- Flat-vector character v4: same v1-v3 geometry (same id/viewBox/paths),
+       now multi-tone (skin + costume + trim) with a dark outline stroke —
+       the Infographics-Show hallmark ("flat colors + black outline") that
+       the v3 single-fill silhouette was missing. `color` (set by the
+       caller/template) still drives the tunic tint via currentColor, same
+       as v3; skin and sandals are fixed tones. FactForge project-original
+       asset (CC0). -->
+  <g stroke="#152A4D" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <circle fill="#F0B285" cx="60" cy="36" r="24"/>
+    <rect fill="currentColor" x="30" y="60" width="60" height="86" rx="26"/>
+    <rect fill="#F0B285" x="10" y="64" width="20" height="76" rx="10"/>
+    <rect fill="#F0B285" x="90" y="64" width="20" height="76" rx="10"/>
+    <rect fill="#F0B285" x="34" y="146" width="22" height="66" rx="11"/>
+    <rect fill="#F0B285" x="64" y="146" width="22" height="66" rx="11"/>
+    <rect fill="#6B4A2F" x="30" y="206" width="30" height="12" rx="6"/>
+    <rect fill="#6B4A2F" x="60" y="206" width="30" height="12" rx="6"/>
   </g>
 </svg>

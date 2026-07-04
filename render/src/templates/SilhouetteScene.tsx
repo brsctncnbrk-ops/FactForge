@@ -18,9 +18,12 @@ const POSITIONS: Record<string, { x: number; bottom: number; scale: number }> = 
   background: { x: 50, bottom: 22, scale: 0.62 },
 };
 
-// Flat "costume" colors per figure type — the Infographics-Show look uses
-// colorful flat character icons, not black cutouts. Falls back to white for
-// any asset id not in this table (new figures still render, just neutral).
+// Costume/trim tint per figure type, applied via currentColor inside each
+// figure SVG (v4: skin tone + outline stroke are baked into the asset; this
+// color only drives the garment/crest/laurel-robe fill) — the
+// Infographics-Show look uses colorful outlined flat characters, not black
+// cutouts. Falls back to white for any asset id not in this table (new
+// figures still render, just neutral).
 const FIGURE_COLORS: Record<string, string> = {
   "figure-warrior": theme.accentAlt,
   "figure-emperor": theme.accent,

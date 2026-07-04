@@ -6,7 +6,7 @@ Video Slug: why-the-roman-empire-really-collapsed
 Video Topic: Why the Roman Empire Really Collapsed
 Target Language: English
 Target Length: 7 minutes
-Current Stage: RENDERED (first full render 2026-07-04 with CRF 22/jpeg intermediates — superseded by CRF 18/png settings; captioned re-render recommended before upload)
+Current Stage: RENDERED + CAPTIONED (flat-vector visual overhaul; full captioned re-render completed 2026-07-04 via GitHub Actions run 28716705909 — 422.19s, 1920x1080/30fps, ~1.75 Mbps video / ~2.07 Mbps total, burn-captions on; caption-safe-area verified against the new flat OverlayText pills at 3 spot-checked frames, no overlap). Ready for the human Layer-2 checklist before publish.
 Last Updated: 2026-07-04
 
 ## Completed Stages
@@ -18,7 +18,7 @@ Last Updated: 2026-07-04
 - [x] 05 Packaging (05A)
 - [x] 05 Packaging (05B)
 - [x] Quality Gate
-- [x] 06 Render (first full mp4 2026-07-04; re-render pending: CRF 18/png encoding + burned-in captions were added after it)
+- [x] 06 Render (first full mp4 2026-07-04 CRF22/jpeg; superseded by CRF18/png + captions; superseded again same day by the flat-vector visual overhaul + full captioned re-render — GH Actions run 28716705909)
 
 ## Generated Files
 
@@ -37,7 +37,7 @@ Last Updated: 2026-07-04
 
 <!-- QG:BEGIN — bu blok quality-gate.py tarafından üretilir, elle düzenleme -->
 Gate Result        : PASS (0 failure(s), 0 warning(s))
-Gate Run           : 2026-07-04 21:52 | bootstrap: no
+Gate Run           : 2026-07-04 22:53 | bootstrap: no
 Validation Status  : derive_vo diff: OK | 03-scenes.json: OK | 04-scenes-final.json: OK | 04-scenes-final-estimated.json: OK
 Fact Status        : 24 fact(s) used | VERIFY-status violations: 0 | scriptCritical all VERIFIED: yes | number-without-fact warnings: 0
 Asset Status       : 5 library asset(s), 0 new | BLOCKED/Unknown violations: 0 | attribution: not needed | usedInVideos sync: fresh
@@ -59,11 +59,11 @@ Warnings:
 
 ## Required User Action
 
-- None for the pipeline. Human Layer-2 checklist before publishing: title/thumbnail claim support (see 05A CTR notes — "payroll dispute" framing flagged), and the Upload Checklist in 05B.
+- Human Layer-2 checklist before publishing: title/thumbnail claim support (see 05A CTR notes — "payroll dispute" framing flagged), and the Upload Checklist in 05B.
 
 ## Next Step
 
-Re-render via GitHub Actions with the improved encoding (CRF 18 / png intermediates) — tick `burn-captions` for embedded subtitles, or upload 05-captions.srt to YouTube alongside the clean `video` render. Then the human Layer-2 checklist (title/thumbnail claim support + 05B Upload Checklist) before publishing.
+Human Layer-2 checklist (title/thumbnail claim support + 05B Upload Checklist), then publish. The captioned mp4 (flat-vector visual style, burn-captions on) is rendered and downloaded from GH Actions run 28716705909 — download link: https://github.com/brsctncnbrk-ops/FactForge/actions/runs/28716705909 (artifact retention 2 days from 2026-07-04).
 
 ## Session Notes
 
