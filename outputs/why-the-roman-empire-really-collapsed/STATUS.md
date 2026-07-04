@@ -36,7 +36,7 @@ Last Updated: 2026-07-03
 
 <!-- QG:BEGIN — bu blok quality-gate.py tarafından üretilir, elle düzenleme -->
 Gate Result        : PASS (0 failure(s), 0 warning(s))
-Gate Run           : 2026-07-03 15:14 | bootstrap: no
+Gate Run           : 2026-07-04 04:40 | bootstrap: no
 Validation Status  : derive_vo diff: OK | 03-scenes.json: OK | 04-scenes-final.json: OK | 04-scenes-final-estimated.json: OK
 Fact Status        : 24 fact(s) used | VERIFY-status violations: 0 | scriptCritical all VERIFIED: yes | number-without-fact warnings: 0
 Asset Status       : 5 library asset(s), 0 new | BLOCKED/Unknown violations: 0 | attribution: not needed | usedInVideos sync: fresh

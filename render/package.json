@@ -1,0 +1,25 @@
+{
+  "name": "factforge-render",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FactForge Phase 2 render layer — Remotion project. 12 scene templates coded once; every video is JSON-only after that.",
+  "scripts": {
+    "gen": "node scripts/generate-types.mjs",
+    "stage": "node scripts/stage-public.mjs",
+    "studio": "remotion studio",
+    "render": "remotion render",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "json-schema-to-typescript": "^15.0.0",
+    "typescript": "^5.5.0"
+  }
+}

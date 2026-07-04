@@ -1,0 +1,79 @@
+# FactForge Phase 2 — cloud render (brief §06 GitHub Actions kurgusu).
+# Manual trigger only. quality-gate.py must PASS before the render starts;
+# the in-code voiced-render guard additionally refuses non-alignment timing.
+# Artifact retention is 2 days (free-plan artifact storage is 500 MB) —
+# download the mp4 promptly.
+name: render
+
+on:
+  workflow_dispatch:
+    inputs:
+      video-slug:
+        description: "Video slug under outputs/ (kebab-case)"
+        required: true
+        type: string
+      crf:
+        description: "x264 CRF (20-23; YouTube re-encodes anyway)"
+        required: false
+        default: "22"
+        type: string
+      frames:
+        description: "Optional frame range for a test render, e.g. 0-300 (empty = full video)"
+        required: false
+        default: ""
+        type: string
+
+concurrency:
+  group: render-${{ inputs.video-slug }}
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install gate dependencies
+        run: pip install jsonschema
+
+      - name: Quality gate (render precondition — FAIL stops the job)
+        run: python scripts/quality-gate.py "${{ inputs.video-slug }}"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: render/package-lock.json
+
+      - name: Install render dependencies
+        working-directory: render
+        run: npm ci
+
+      - name: Generate types from schemas
+        working-directory: render
+        run: npm run gen
+
+      - name: Stage render inputs
+        working-directory: render
+        run: npm run stage -- "${{ inputs.video-slug }}"
+
+      - name: Render
+        working-directory: render
+        run: >
+          npx remotion render video
+          "out/${{ inputs.video-slug }}.mp4"
+          --props='{"slug":"${{ inputs.video-slug }}"}'
+          --crf=${{ inputs.crf }}
+          ${{ inputs.frames != '' && format('--frames={0}', inputs.frames) || '' }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.video-slug }}
+          path: render/out/${{ inputs.video-slug }}.mp4
+          retention-days: 2
+          if-no-files-found: error
