@@ -1,7 +1,9 @@
+import { useContext } from "react";
 import { Img, interpolate } from "remotion";
 import type { ImageSpotlightProps } from "../types/generated";
 import { useScene } from "../lib/anim";
 import { OverlayText, SceneFrame } from "../lib/bits";
+import { CaptionsActiveContext } from "../lib/captionLayout";
 import { theme } from "../lib/theme";
 import { resolveAsset } from "../lib/assets";
 
@@ -26,6 +28,7 @@ const kenBurnsTransform = (kind: string, p: number): string => {
 
 export const ImageSpotlight: React.FC<{ p: ImageSpotlightProps }> = ({ p }) => {
   const { progress } = useScene();
+  const captionsActive = useContext(CaptionsActiveContext);
 
   return (
     <SceneFrame>
@@ -54,7 +57,9 @@ export const ImageSpotlight: React.FC<{ p: ImageSpotlightProps }> = ({ p }) => {
           style={{
             position: "absolute",
             left: "3%",
-            bottom: "3%",
+            // Burned-in subtitles own the bottom strip; move the source credit
+            // to the top-left corner so it never sits under a caption.
+            ...(captionsActive ? { top: "3%" } : { bottom: "3%" }),
             fontSize: 28,
             color: theme.textDim,
             background: "rgba(16,20,32,0.7)",

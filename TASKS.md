@@ -1,8 +1,17 @@
 TASKS — Session Handoff
 Current Phase
-Post-render QA (2026-07-04, second session): user reviewed the first full mp4 → two complaints (no subtitles; picture quality must improve). All FOUR tracks now DONE: A encoding, B captions, C visual upgrade, D repo hygiene. Phase 1 gate still PASS 0/0; render typecheck PASS.
+Post-render QA (2026-07-04, THIRD session): user reviewed a 30 s captioned smoke-test mp4 → one complaint: overlapping subtitles ("üst üste binen alt yazı"). DIAGNOSED + FIXED: the burned-in caption band collided with scene-owned lower-third labels. Caption TIMING data was clean (148 cues, 0 temporal overlaps) — the collision was purely spatial. Fix approved ("onay") and applied; render typecheck PASS, gate PASS 0/0, caption self-test 20/20. Prior second-session four tracks (A encoding, B captions, C visuals, D hygiene) remain DONE.
 Design approved
-yes for all four tracks (user "onay" to the four-track summary, then a second "onay" to the Track C visual-upgrade design summary).
+yes — user "onay" to the caption-overlap fix design summary (this session). Earlier: yes for all four second-session tracks.
+Caption-overlap fix (this session)
+* ROOT CAUSE: CaptionOverlay draws at bottom 6.5%; OverlayText (scene label used by MapScene / SilhouetteScene / ImageSpotlight) drew at bottom 8% — same band. Any scene with an onScreenText label stacked the label and the subtitle. Confirmed visually at t=25 s (map scene: "THE ETERNAL EMPIRE" under "Picture the empire everyone / imagines: endless legions,"). SceneTitle-based templates (chart/comparison/list/timeline) are top-anchored → never collided (verified t=13 s timeline).
+* FIX (composition-aware, no scene JSON / no caption-data churn):
+  * NEW render/src/lib/captionLayout.ts — single source: CAPTION_BOTTOM_PCT=6.5, CAPTION_BAND_PCT=20 (reserved zone), OVERLAY_SAFE_BOTTOM_PCT=21, and CaptionsActiveContext (React context, default false).
+  * VideoComposition.tsx wraps the scene list in CaptionsActiveContext.Provider value={captions !== null} → true ONLY in the video-captioned comp; plain "video"/"draft" comps stay false (unchanged).
+  * bits.tsx OverlayText: bottom 21% when captions active, else original 8%.
+  * CaptionOverlay.tsx: bottom now references CAPTION_BOTTOM_PCT (single source).
+  * ImageSpotlight.tsx source-credit label: moves to top-left (top 3%) when captions active, else original bottom 3%.
+* VERIFIED: video-captioned still @frame 750 → label sits ABOVE, subtitle BELOW, ~33 px gap, no overlap. Non-captioned "video" still @frame 750 → label back at bottom 8%, no subtitle (no regression). tsc PASS; build_captions --self-test 20/20; quality-gate PASS 0/0.
 Completed This Session
 
 * DIAGNOSIS: first render was 1080p30 but only ~2.13 Mbps with JPEG intermediate frames (ringing on serif text, banding on gradients) and had NO subtitle track.
@@ -38,9 +47,9 @@ Blockers
 * NONE. Note: git rm --cached of voiceover.mp3 was attempted per the approved summary but REVERTED — render.yml stages audio from the checkout, so untracking it would break cloud renders (deviation reported to user; revisit with Git LFS when the library grows).
 Next Exact Step
 
-1. Commit + push this session's work (encoding + captions + Track C visuals + hygiene). All four tracks approved and done.
-2. GitHub → Actions → render → slug why-the-roman-empire-really-collapsed, tick burn-captions per preference (SRT sidecar exists either way at outputs/<slug>/05-captions.srt). Optional cheap cloud smoke test first: frames 0-900 (samples text/map/silhouette upgrades + a few captions).
-3. Download artifact (retention 2 days), re-ffprobe (expect higher bitrate), eyeball the upgraded visuals + captions → human Layer-2 checklist → upload (attach 05-captions.srt if not burned in).
+1. Commit + push this session's caption-overlap fix (5 render-layer files: NEW lib/captionLayout.ts; VideoComposition.tsx; lib/bits.tsx; CaptionOverlay.tsx; templates/ImageSpotlight.tsx). Plus prior second-session work if still unpushed.
+2. Re-render the FULL captioned video: GitHub → Actions → render → slug why-the-roman-empire-really-collapsed, burn-captions ON. The 30 s smoke-test that showed the overlap is now superseded — re-render full length (~422 s) and re-check the map/silhouette/image scenes (the templates that carry onScreenText labels) for clean separation.
+3. Download artifact, re-ffprobe (expect ~3 Mbps), eyeball captions vs. scene labels across the map/silhouette scenes → human Layer-2 checklist → upload (attach 05-captions.srt if not burned in).
 4. Track C figures are v2; icon-soldier is still v1 and the map is the stock PD chart — both fine, upgrade later under stable ids if desired.
 Quota Notes
 

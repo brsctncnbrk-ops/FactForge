@@ -5,6 +5,7 @@
 import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import type { CaptionsFile } from "./types/generated";
 import { theme } from "./lib/theme";
+import { CAPTION_BOTTOM_PCT } from "./lib/captionLayout";
 
 const FADE_SEC = 0.12;
 
@@ -39,7 +40,7 @@ export const CaptionOverlay: React.FC<{ captions: CaptionsFile }> = ({
           position: "absolute",
           left: 0,
           right: 0,
-          bottom: "6.5%",
+          bottom: `${CAPTION_BOTTOM_PCT}%`,
           display: "flex",
           justifyContent: "center",
           opacity,

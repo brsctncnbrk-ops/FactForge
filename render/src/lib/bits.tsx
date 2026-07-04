@@ -1,7 +1,9 @@
 // Small shared UI pieces used by several templates.
+import { useContext } from "react";
 import { AbsoluteFill } from "remotion";
 import { bgGradient, theme } from "./theme";
 import { entrance, useScene } from "./anim";
+import { CaptionsActiveContext, OVERLAY_SAFE_BOTTOM_PCT } from "./captionLayout";
 
 // Procedural film grain: an feTurbulence tile as a data URI — deterministic
 // (fixed seed), no external asset, tiles seamlessly (stitchTiles).
@@ -95,15 +97,18 @@ export const Emphasized: React.FC<{
   );
 };
 
-// Bottom-centered short overlay text (map/silhouette/image templates).
+// Bottom-centered short overlay text (map/silhouette/image templates). When
+// subtitles are burned in it rises above the reserved caption band so the
+// scene label and the subtitle never stack on top of each other.
 export const OverlayText: React.FC<{ text: string }> = ({ text }) => {
   const { frame, durationInFrames, fps } = useScene();
+  const captionsActive = useContext(CaptionsActiveContext);
   const t = entrance(frame, durationInFrames, fps, 0.2, 0.7);
   return (
     <div
       style={{
         position: "absolute",
-        bottom: "8%",
+        bottom: captionsActive ? `${OVERLAY_SAFE_BOTTOM_PCT}%` : "8%",
         left: 0,
         right: 0,
         display: "flex",

@@ -8,6 +8,7 @@ import { sceneFrameRanges } from "./lib/data";
 import { renderScene } from "./templates";
 import { theme } from "./lib/theme";
 import { CaptionOverlay } from "./CaptionOverlay";
+import { CaptionsActiveContext } from "./lib/captionLayout";
 
 export const VideoComposition: React.FC<{
   slug: string; // used by calculateMetadata to pick the scenes file
@@ -24,16 +25,20 @@ export const VideoComposition: React.FC<{
 
   return (
     <AbsoluteFill style={{ background: theme.bg }}>
-      {data.scenes.map((scene, i) => (
-        <Sequence
-          key={scene.sceneNumber}
-          name={`${String(scene.sceneNumber).padStart(2, "0")}-${scene.template}`}
-          from={ranges[i].from}
-          durationInFrames={ranges[i].durationInFrames}
-        >
-          {renderScene(scene)}
-        </Sequence>
-      ))}
+      {/* Scenes learn whether subtitles are burned in so their own lower-third
+          text can lift clear of the caption band (video-captioned only). */}
+      <CaptionsActiveContext.Provider value={captions !== null}>
+        {data.scenes.map((scene, i) => (
+          <Sequence
+            key={scene.sceneNumber}
+            name={`${String(scene.sceneNumber).padStart(2, "0")}-${scene.template}`}
+            from={ranges[i].from}
+            durationInFrames={ranges[i].durationInFrames}
+          >
+            {renderScene(scene)}
+          </Sequence>
+        ))}
+      </CaptionsActiveContext.Provider>
       {voiced && data.audio ? (
         <Audio src={staticFile(data.audio.file.replace(/^\//, ""))} />
       ) : null}
