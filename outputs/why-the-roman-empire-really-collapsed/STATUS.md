@@ -6,7 +6,7 @@ Video Slug: why-the-roman-empire-really-collapsed
 Video Topic: Why the Roman Empire Really Collapsed
 Target Language: English
 Target Length: 7 minutes
-Current Stage: RENDERED + CAPTIONED (flat-vector visual overhaul; full captioned re-render completed 2026-07-04 via GitHub Actions run 28716705909 — 422.19s, 1920x1080/30fps, ~1.75 Mbps video / ~2.07 Mbps total, burn-captions on; caption-safe-area verified against the new flat OverlayText pills at 3 spot-checked frames, no overlap). Ready for the human Layer-2 checklist before publish.
+Current Stage: RENDERED + CAPTIONED (flat-vector visual overhaul + character outline recolor v4; latest full captioned re-render completed 2026-07-04 via GitHub Actions run 28717980285 — 422.19s, 1920x1080/30fps, ~2.07 Mbps total, burn-captions on; verified via frames extracted from the actual encoded mp4 at 3 silhouette-scene timestamps — outlined multi-tone characters render correctly, no caption overlap. This supersedes run 28716705909, which still had the v3 monochrome-silhouette figures). Ready for the human Layer-2 checklist before publish.
 Last Updated: 2026-07-04
 
 ## Completed Stages
@@ -18,7 +18,7 @@ Last Updated: 2026-07-04
 - [x] 05 Packaging (05A)
 - [x] 05 Packaging (05B)
 - [x] Quality Gate
-- [x] 06 Render (first full mp4 2026-07-04 CRF22/jpeg; superseded by CRF18/png + captions; superseded again same day by the flat-vector visual overhaul + full captioned re-render — GH Actions run 28716705909)
+- [x] 06 Render (first full mp4 2026-07-04 CRF22/jpeg; superseded by CRF18/png + captions; superseded by the flat-vector visual overhaul + full captioned re-render — GH Actions run 28716705909; superseded again same day by the character outline recolor v4 re-render — GH Actions run 28717980285, current deliverable)
 
 ## Generated Files
 
@@ -63,7 +63,7 @@ Warnings:
 
 ## Next Step
 
-Human Layer-2 checklist (title/thumbnail claim support + 05B Upload Checklist), then publish. The captioned mp4 (flat-vector visual style, burn-captions on) is rendered and downloaded from GH Actions run 28716705909 — download link: https://github.com/brsctncnbrk-ops/FactForge/actions/runs/28716705909 (artifact retention 2 days from 2026-07-04).
+Human Layer-2 checklist (title/thumbnail claim support + 05B Upload Checklist), then publish. The current captioned mp4 (flat-vector visual style + outlined character recolor, burn-captions on) is rendered at GH Actions run 28717980285 — download link: https://github.com/brsctncnbrk-ops/FactForge/actions/runs/28717980285 (artifact retention 2 days from 2026-07-04). The earlier run 28716705909 is superseded (still had monochrome-silhouette figures) — download the newer run for publishing.
 
 ## Session Notes
 
