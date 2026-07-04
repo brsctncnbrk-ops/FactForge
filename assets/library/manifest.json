@@ -1,7 +1,31 @@
 {
   "version": "2.1.1",
-  "updatedAt": "2026-07-03",
+  "updatedAt": "2026-07-04",
   "assets": [
+    {
+      "id": "decor-laurel",
+      "type": "icon",
+      "source": "Project original (drawn in-house for FactForge)",
+      "sourceUrl": "",
+      "license": "CC0",
+      "attributionRequired": false,
+      "attributionText": "",
+      "filePath": "/assets/library/icons/decor-laurel.svg",
+      "tags": [
+        "laurel",
+        "ornament",
+        "divider",
+        "decor",
+        "flat",
+        "vector"
+      ],
+      "createdAt": "2026-07-04",
+      "updatedAt": "2026-07-04",
+      "status": "ACTIVE",
+      "reusable": true,
+      "usedInVideos": [],
+      "notes": "Horizontal laurel-branch ornament (currentColor). Referenced by render template code (text-emphasis divider), not by scene JSONs — usedInVideos stays empty by design."
+    },
     {
       "id": "map-roman-empire",
       "type": "map",

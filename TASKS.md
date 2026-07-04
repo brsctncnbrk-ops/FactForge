@@ -1,44 +1,47 @@
 TASKS — Session Handoff
 Current Phase
-Phase 2 — /render (Remotion + GitHub Actions): IMPLEMENTED this session (2026-07-04) on explicit user request + ONAY of the design summary. Phase 1 remains fully complete (gate PASS 0/0).
+Post-render QA (2026-07-04, second session): user reviewed the first full mp4 → two complaints (no subtitles; picture quality must improve). All FOUR tracks now DONE: A encoding, B captions, C visual upgrade, D repo hygiene. Phase 1 gate still PASS 0/0; render typecheck PASS.
 Design approved
-yes — Phase 2 DESIGN SUMMARY presented (preconditions table, external-docs verification, structure, guards, CI plan); user replied "onay".
+yes for all four tracks (user "onay" to the four-track summary, then a second "onay" to the Track C visual-upgrade design summary).
 Completed This Session
 
-* Patch §16 precondition check passed; verified current external terms via web: Remotion still free for individuals/≤3-person orgs; GitHub Actions private repo = 2,000 free min/month + **500 MB artifact storage** (new constraint vs. brief — handled with retention-days: 2 + prompt download).
-* /render Remotion project (Node 24 local, Remotion 4.0.484):
-  * scripts/generate-types.mjs — /templates/schemas/*.schema.json → src/types/generated/ via json-schema-to-typescript (P8; facts-file skipped; generated files carry DO-NOT-EDIT banner and are committed).
-  * scripts/stage-public.mjs <slug> — deterministic copy of assets/library + outputs/<slug>/04-*.json + audio into render/public (gitignored, rebuilt each run). DESIGN DEVIATION (justified): publicDir=repo-root from the summary was replaced by this staging script because Remotion copies the whole public dir into every render bundle (would copy node_modules/.git).
-  * 12 template components (src/templates/), all coded once, typed from generated types; duration-proportional animations (interpolate + capped entrance ramps); InlineSvg helper inlines currentColor SVGs (fetch + delayRender) and normalizes root width/height to 100%.
-  * src/Root.tsx: two compositions — "video" (voiced; guard in src/lib/data.ts REFUSES unless file=04-scenes-final.json AND timingMode ∈ {forced-alignment, transcript-guided-alignment} AND audio metadata present) and "draft" (silent; falls back to estimated file; never mounts Audio). Slug/fps/resolution/duration all read from the JSON via calculateMetadata — no hardcoding.
-  * Scene frame boundaries: from=round(startTime×fps), each scene holds until the next scene's start frame (narration gaps hold the visual; no black frames/overlap); last scene runs to ceil(audio.duration×fps).
-* .github/workflows/render.yml — workflow_dispatch (video-slug, crf default 22, optional frames for test segments); steps: checkout → Python+jsonschema → quality-gate.py <slug> (FAIL stops job) → Node 20 + npm ci → npm run gen → npm run stage → npx remotion render video → upload-artifact retention-days: 2.
-* render/README.md — commands, compositions, cloud-render usage.
+* DIAGNOSIS: first render was 1080p30 but only ~2.13 Mbps with JPEG intermediate frames (ringing on serif text, banding on gradients) and had NO subtitle track.
+* Track A — encoding: remotion.config.ts jpeg→png intermediates, CRF 22→18; render.yml crf default 18. Verified visually via stills (text edges clean).
+* Track B — captions (P7/P8):
+  * templates/schemas/captions-file.schema.json (new schema; npm run gen now emits CaptionsFile type — 14 schemas).
+  * scripts/build_captions.py <slug>: 04-scenes-final.json → 05-captions.json/.srt/.vtt. Alignment-timing guard (refuses estimated), sentence-split + greedy merge (≤84 chars, ≤4 s), word-proportional timing, ≤0.4 s lead-out into gaps, ≤2 lines × ≤42 chars. --self-test 20/20 PASS. Real run: 148 cues / 68 scenes, last cue 422.13 s.
+  * render: lib/captions.ts loader (slug-mismatch + missing-file guards), CaptionOverlay.tsx (bottom safe area, fade 0.12 s), VideoComposition captions prop, NEW composition "video-captioned" (voiced guard + requires 05-captions.json). render.yml new boolean input burn-captions → picks video-captioned.
+* Track D — hygiene: README.md rewritten (setup/layout/command order/render), requirements.txt (jsonschema + faster-whisper/rapidfuzz), .gitignore hardened (media ignored, EXCEPTION !outputs/*/audio/voiceover.mp3 — see Notes), examples/README.md (topic prompt + cheat-sheet), .github/workflows/selftest.yml (all 6 script self-tests, jsonschema only), stale .gitkeep files removed, STATUS.md aligned (RENDERED + re-render pending, captions listed, next step updated).
+* Track C — visual upgrade (no scene JSON churn; all under stable manifest ids):
+  * bits.tsx SceneFrame now layers a drifting warm glow + procedural film grain (inline feTurbulence data-URI, fixed seed) + edge vignette under EVERY template — kills the "bare gradient" look on text-only scenes.
+  * Figures v1→v2 under the SAME ids/paths (figure-warrior/emperor/civilian): crested helmet+cloak+pteruges / fuller toga+orating arm / belted tunic+satchel+walking stride. icon-soldier left as v1.
+  * New CC0 asset decor-laurel (icons/decor-laurel.svg) + manifest + LICENSES.md entry; referenced by TEMPLATE CODE only (text-emphasis divider), so usedInVideos stays [] by design (sync --check: FRESH).
+  * TextEmphasis: kinetic accent underline sweep + mirrored laurel divider (Emphasized gained an optional `underline` 0..1 prop).
+  * MapScene: parchment glow, richer sepia+contrast+drop-shadow, baseline Ken Burns for the default camera, expanding pulse rings behind markers.
+  * SilhouetteScene: low-sun horizon glow, two parallax hill layers, lit ground band, per-figure contact shadow; background-figure baseline moved 34%→19% so distant figures stand on the horizon (they floated mid-sky against the new hills).
+  * Verified via draft stills (text/map/2 silhouettes); typecheck PASS.
 Files Created
 
-* render/: package.json, package-lock.json, tsconfig.json, remotion.config.ts, .gitignore, README.md, scripts/generate-types.mjs, scripts/stage-public.mjs, src/index.ts, src/Root.tsx, src/VideoComposition.tsx, src/lib/{theme.ts, assets.ts, data.ts, anim.ts, bits.tsx, InlineSvg.tsx}, src/templates/{12 components + index.tsx}, src/types/generated/{13 files, committed}
-* .github/workflows/render.yml
+* scripts/build_captions.py; templates/schemas/captions-file.schema.json; outputs/<slug>/05-captions.{json,srt,vtt}; render/src/lib/captions.ts; render/src/CaptionOverlay.tsx; requirements.txt; examples/README.md; .github/workflows/selftest.yml; render/src/types/generated/captions-file.ts (via npm run gen)
 Files Modified
 
-* TASKS.md (this file); STATUS.md QG block rewritten by quality-gate.py (unchanged result)
+* render/remotion.config.ts; .github/workflows/render.yml (crf 18 + burn-captions input); render/scripts/stage-public.mjs (stages 05-captions.json); render/src/{Root.tsx, VideoComposition.tsx}; render/README.md; README.md; .gitignore; outputs/<slug>/STATUS.md; TASKS.md
+* Track C: render/src/lib/bits.tsx; render/src/templates/{TextEmphasis,MapScene,SilhouetteScene}.tsx; assets/library/figures/{figure-warrior,figure-emperor,figure-civilian}.svg (v2); assets/library/icons/decor-laurel.svg (new); assets/library/{manifest.json,LICENSES.md}
 Commands Run
 
-* npm install / npm run gen / npm run typecheck (PASS, 0 errors)
-* Test renders (local, roman-empire): stills across 8 templates (map, icon-grid, silhouette, stat, chart, timeline, list, transition) — 3 visual fixes applied (SVG intrinsic-size normalization, stat-card long-value scaling/centering, silhouette dusk-horizon background so figures read).
-* npx remotion render video --frames=0-150 → mp4 with h264 1080p30 + AAC stereo (ffprobe-verified).
-* GUARD NEGATIVE TEST: tampered timingMode=word-count-estimate copy under a throwaway staging slug → render failed with "VOICED RENDER BLOCKED" (exit 1). Staging re-cleaned afterwards.
-* quality-gate.py why-the-roman-empire-really-collapsed → PASS 0 failures / 0 warnings, voiced final render allowed: yes.
+* ffprobe on the delivered mp4 (2.13 Mbps diagnosis); build_captions.py --self-test (20/20) + real run (148 cues, schema OK); npm run gen / stage / typecheck (PASS 0 errors); remotion still video-captioned ×2 + Track-C draft stills ×4 (overlay + upgraded templates verified visually); ALL self-tests PASS: derive_vo, validate, align, sync_manifest_usage, quality-gate, build_captions; sync_manifest_usage.py --check → FRESH; quality-gate.py <slug> → PASS 0/0.
 Validation Results
 
-* tsc --noEmit: PASS. quality-gate.py: PASS 0/0. Voiced test segment has audio stream. Guard blocks non-alignment timing in code (cannot be bypassed by CLI flags).
+* tsc --noEmit: PASS (after Track C). quality-gate.py: PASS 0 failures / 0 warnings. manifest usedInVideos sync: FRESH. build_captions self-test 20/20. Six script self-tests ALL PASS. video-captioned + upgraded-template stills verified.
 Blockers
 
-* NONE for local work. Full 7-min render is CI-only by design (local ≈ 60–90 min; 5s segment took ~1 min).
+* NONE. Note: git rm --cached of voiceover.mp3 was attempted per the approved summary but REVERTED — render.yml stages audio from the checkout, so untracking it would break cloud renders (deviation reported to user; revisit with Git LFS when the library grows).
 Next Exact Step
 
-1. USER DECISION: repo visibility (private = 2,000 min/month ≈ 20–60 renders + 500 MB artifact cap; public = unlimited minutes but pre-publication content is exposed).
-2. Commit Phase 2 work (render/ + .github/ + TASKS.md) and push — then GitHub → Actions → "render" → Run workflow → video-slug: why-the-roman-empire-really-collapsed (optionally frames: 0-900 first as a cheap cloud smoke test).
-3. Download artifact within 2 days; human checklist (Katman 2) before upload.
+1. Commit + push this session's work (encoding + captions + Track C visuals + hygiene). All four tracks approved and done.
+2. GitHub → Actions → render → slug why-the-roman-empire-really-collapsed, tick burn-captions per preference (SRT sidecar exists either way at outputs/<slug>/05-captions.srt). Optional cheap cloud smoke test first: frames 0-900 (samples text/map/silhouette upgrades + a few captions).
+3. Download artifact (retention 2 days), re-ffprobe (expect higher bitrate), eyeball the upgraded visuals + captions → human Layer-2 checklist → upload (attach 05-captions.srt if not burned in).
+4. Track C figures are v2; icon-soldier is still v1 and the map is the stock PD chart — both fine, upgrade later under stable ids if desired.
 Quota Notes
 
 * Phase 0: before __% -> after __% (kullanıcı doldurur)
@@ -46,8 +49,11 @@ Quota Notes
 * Phase 1B: before __% -> after 97% (5h) / 17% (weekly)
 * Phase 1C/1D/1E: __ (kullanıcı doldurur)
 * Phase 2: before __% -> after __% (kullanıcı doldurur)
+* Post-render QA: before __% -> after __% (kullanıcı doldurur)
 Notes
 
-* PYTHON: `python` on PATH is BROKEN; use C:\Users\brsct\AppData\Local\Programs\Python\Python314\python.exe (jsonschema OK; faster-whisper + rapidfuzz installed since the voiced session).
+* PYTHON: `python` on PATH is BROKEN; use C:\Users\brsct\AppData\Local\Programs\Python\Python314\python.exe (jsonschema, faster-whisper, rapidfuzz installed).
+* voiceover.mp3 MUST stay git-tracked (cloud render checkout needs it); .gitignore has an explicit exception. Git LFS is the escape hatch when repo weight becomes a problem (~10 MB/video).
 * render/public and render/out are gitignored throwaways; regenerate with `npm run stage -- <slug>`. src/types/generated is committed but machine-written (`npm run gen`).
-* Placeholder-quality silhouettes/icons can be upgraded later under the SAME manifest ids; renderer picks them up with zero scene/code churn.
+* Captions: 05-captions.json/.srt/.vtt are ALL derived by scripts/build_captions.py — never hand-edit; re-run after any align.py re-run.
+* Placeholder-quality silhouettes/icons can be upgraded later under the SAME manifest ids; renderer picks them up with zero scene/code churn (→ Track C).

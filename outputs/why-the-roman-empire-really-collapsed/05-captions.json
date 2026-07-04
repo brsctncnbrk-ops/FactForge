@@ -1,0 +1,1395 @@
+{
+  "videoSlug": "why-the-roman-empire-really-collapsed",
+  "sourceFile": "04-scenes-final.json",
+  "timingMode": "transcript-guided-alignment",
+  "cues": [
+    {
+      "index": 1,
+      "sceneNumber": 1,
+      "startTime": 0.0,
+      "endTime": 1.751,
+      "lines": [
+        "September, 476 AD."
+      ]
+    },
+    {
+      "index": 2,
+      "sceneNumber": 1,
+      "startTime": 1.751,
+      "endTime": 4.085,
+      "lines": [
+        "The Roman Empire falls."
+      ]
+    },
+    {
+      "index": 3,
+      "sceneNumber": 1,
+      "startTime": 4.085,
+      "endTime": 6.82,
+      "lines": [
+        "And almost nobody notices."
+      ]
+    },
+    {
+      "index": 4,
+      "sceneNumber": 2,
+      "startTime": 6.82,
+      "endTime": 9.02,
+      "lines": [
+        "No burning city. No final battle."
+      ]
+    },
+    {
+      "index": 5,
+      "sceneNumber": 2,
+      "startTime": 9.02,
+      "endTime": 12.52,
+      "lines": [
+        "Just a boy emperor,",
+        "quietly told to go home."
+      ]
+    },
+    {
+      "index": 6,
+      "sceneNumber": 3,
+      "startTime": 12.52,
+      "endTime": 14.788,
+      "lines": [
+        "Because the empire didn't die that day."
+      ]
+    },
+    {
+      "index": 7,
+      "sceneNumber": 3,
+      "startTime": 14.788,
+      "endTime": 17.54,
+      "lines": [
+        "It had been dying for three hundred years."
+      ]
+    },
+    {
+      "index": 8,
+      "sceneNumber": 4,
+      "startTime": 17.54,
+      "endTime": 19.873,
+      "lines": [
+        "This is the real story of how"
+      ]
+    },
+    {
+      "index": 9,
+      "sceneNumber": 4,
+      "startTime": 19.873,
+      "endTime": 22.94,
+      "lines": [
+        "Rome collapsed, and why",
+        "everyone remembers it wrong."
+      ]
+    },
+    {
+      "index": 10,
+      "sceneNumber": 5,
+      "startTime": 23.38,
+      "endTime": 26.54,
+      "lines": [
+        "Picture the empire everyone",
+        "imagines: endless legions,"
+      ]
+    },
+    {
+      "index": 11,
+      "sceneNumber": 5,
+      "startTime": 26.54,
+      "endTime": 30.0,
+      "lines": [
+        "marble cities, roads that ruled the world."
+      ]
+    },
+    {
+      "index": 12,
+      "sceneNumber": 6,
+      "startTime": 30.0,
+      "endTime": 32.019,
+      "lines": [
+        "But an empire isn't marble."
+      ]
+    },
+    {
+      "index": 13,
+      "sceneNumber": 6,
+      "startTime": 32.019,
+      "endTime": 34.038,
+      "lines": [
+        "It's a machine: an army,"
+      ]
+    },
+    {
+      "index": 14,
+      "sceneNumber": 6,
+      "startTime": 34.038,
+      "endTime": 36.86,
+      "lines": [
+        "paid by taxes, paid in silver."
+      ]
+    },
+    {
+      "index": 15,
+      "sceneNumber": 7,
+      "startTime": 36.94,
+      "endTime": 39.211,
+      "lines": [
+        "That army numbered somewhere between four"
+      ]
+    },
+    {
+      "index": 16,
+      "sceneNumber": 7,
+      "startTime": 39.211,
+      "endTime": 42.26,
+      "lines": [
+        "hundred thousand and six",
+        "hundred thousand men."
+      ]
+    },
+    {
+      "index": 17,
+      "sceneNumber": 8,
+      "startTime": 42.58,
+      "endTime": 46.1,
+      "lines": [
+        "Soldiers expected pay and",
+        "supplies, every single year."
+      ]
+    },
+    {
+      "index": 18,
+      "sceneNumber": 8,
+      "startTime": 46.1,
+      "endTime": 49.58,
+      "lines": [
+        "Multiply that by half a million men."
+      ]
+    },
+    {
+      "index": 19,
+      "sceneNumber": 9,
+      "startTime": 49.9,
+      "endTime": 52.9,
+      "lines": [
+        "It was the single biggest",
+        "expense the Roman state had."
+      ]
+    },
+    {
+      "index": 20,
+      "sceneNumber": 9,
+      "startTime": 52.9,
+      "endTime": 54.8,
+      "lines": [
+        "And the bill kept growing."
+      ]
+    },
+    {
+      "index": 21,
+      "sceneNumber": 10,
+      "startTime": 55.24,
+      "endTime": 58.54,
+      "lines": [
+        "Break the machine that pays",
+        "that army, and you break Rome."
+      ]
+    },
+    {
+      "index": 22,
+      "sceneNumber": 10,
+      "startTime": 58.54,
+      "endTime": 59.86,
+      "lines": [
+        "So let's break it."
+      ]
+    },
+    {
+      "index": 23,
+      "sceneNumber": 11,
+      "startTime": 59.86,
+      "endTime": 61.66,
+      "lines": [
+        "Start in the year 235."
+      ]
+    },
+    {
+      "index": 24,
+      "sceneNumber": 11,
+      "startTime": 61.66,
+      "endTime": 63.82,
+      "lines": [
+        "Over the next fifty years, Rome"
+      ]
+    },
+    {
+      "index": 25,
+      "sceneNumber": 11,
+      "startTime": 63.82,
+      "endTime": 66.18,
+      "lines": [
+        "burned through at least",
+        "twenty-six emperors."
+      ]
+    },
+    {
+      "index": 26,
+      "sceneNumber": 12,
+      "startTime": 66.18,
+      "endTime": 67.998,
+      "lines": [
+        "Twenty-six men in fifty years."
+      ]
+    },
+    {
+      "index": 27,
+      "sceneNumber": 12,
+      "startTime": 67.998,
+      "endTime": 70.542,
+      "lines": [
+        "The throne had stopped being a prize."
+      ]
+    },
+    {
+      "index": 28,
+      "sceneNumber": 12,
+      "startTime": 70.542,
+      "endTime": 72.66,
+      "lines": [
+        "It was a death sentence."
+      ]
+    },
+    {
+      "index": 29,
+      "sceneNumber": 13,
+      "startTime": 72.66,
+      "endTime": 75.73,
+      "lines": [
+        "Every general with an",
+        "army could crown himself."
+      ]
+    },
+    {
+      "index": 30,
+      "sceneNumber": 13,
+      "startTime": 75.73,
+      "endTime": 78.8,
+      "lines": [
+        "So every general did.",
+        "Civil war became routine."
+      ]
+    },
+    {
+      "index": 31,
+      "sceneNumber": 14,
+      "startTime": 78.8,
+      "endTime": 81.78,
+      "lines": [
+        "And while Romans fought",
+        "Romans, the borders"
+      ]
+    },
+    {
+      "index": 32,
+      "sceneNumber": 14,
+      "startTime": 81.78,
+      "endTime": 85.08,
+      "lines": [
+        "went unguarded, and the treasury bled dry."
+      ]
+    },
+    {
+      "index": 33,
+      "sceneNumber": 15,
+      "startTime": 85.08,
+      "endTime": 87.278,
+      "lines": [
+        "Which brings us to the silver."
+      ]
+    },
+    {
+      "index": 34,
+      "sceneNumber": 15,
+      "startTime": 87.278,
+      "endTime": 91.34,
+      "lines": [
+        "Watch the silver, because this",
+        "is where empires really die."
+      ]
+    },
+    {
+      "index": 35,
+      "sceneNumber": 16,
+      "startTime": 91.76,
+      "endTime": 94.252,
+      "lines": [
+        "Rome's standard coin, the denarius, was"
+      ]
+    },
+    {
+      "index": 36,
+      "sceneNumber": 16,
+      "startTime": 94.252,
+      "endTime": 97.56,
+      "lines": [
+        "once more than ninety percent pure silver."
+      ]
+    },
+    {
+      "index": 37,
+      "sceneNumber": 17,
+      "startTime": 97.88,
+      "endTime": 100.29,
+      "lines": [
+        "Each time an emperor ran short of cash,"
+      ]
+    },
+    {
+      "index": 38,
+      "sceneNumber": 17,
+      "startTime": 100.29,
+      "endTime": 103.1,
+      "lines": [
+        "he melted the coins and added cheap metal."
+      ]
+    },
+    {
+      "index": 39,
+      "sceneNumber": 18,
+      "startTime": 103.34,
+      "endTime": 105.473,
+      "lines": [
+        "By the 270s, the denarius"
+      ]
+    },
+    {
+      "index": 40,
+      "sceneNumber": 18,
+      "startTime": 105.473,
+      "endTime": 107.607,
+      "lines": [
+        "was around five percent silver."
+      ]
+    },
+    {
+      "index": 41,
+      "sceneNumber": 18,
+      "startTime": 107.607,
+      "endTime": 110.14,
+      "lines": [
+        "A shiny coating over junk."
+      ]
+    },
+    {
+      "index": 42,
+      "sceneNumber": 19,
+      "startTime": 110.22,
+      "endTime": 112.553,
+      "lines": [
+        "Imagine getting paid in coins that lose"
+      ]
+    },
+    {
+      "index": 43,
+      "sceneNumber": 19,
+      "startTime": 112.553,
+      "endTime": 115.6,
+      "lines": [
+        "their value faster than",
+        "you can spend them."
+      ]
+    },
+    {
+      "index": 44,
+      "sceneNumber": 20,
+      "startTime": 115.6,
+      "endTime": 117.688,
+      "lines": [
+        "Prices exploded across the empire."
+      ]
+    },
+    {
+      "index": 45,
+      "sceneNumber": 20,
+      "startTime": 117.688,
+      "endTime": 119.775,
+      "lines": [
+        "When money itself stops being"
+      ]
+    },
+    {
+      "index": 46,
+      "sceneNumber": 20,
+      "startTime": 119.775,
+      "endTime": 122.68,
+      "lines": [
+        "trusted, everything built on it wobbles."
+      ]
+    },
+    {
+      "index": 47,
+      "sceneNumber": 21,
+      "startTime": 123.08,
+      "endTime": 126.848,
+      "lines": [
+        "Emperor Diocletian tried to",
+        "fix inflation by outlawing it."
+      ]
+    },
+    {
+      "index": 48,
+      "sceneNumber": 21,
+      "startTime": 126.848,
+      "endTime": 129.48,
+      "lines": [
+        "High prices became a capital crime."
+      ]
+    },
+    {
+      "index": 49,
+      "sceneNumber": 22,
+      "startTime": 129.48,
+      "endTime": 130.929,
+      "lines": [
+        "It failed spectacularly."
+      ]
+    },
+    {
+      "index": 50,
+      "sceneNumber": 22,
+      "startTime": 130.929,
+      "endTime": 133.343,
+      "lines": [
+        "Merchants stopped selling, and goods"
+      ]
+    },
+    {
+      "index": 51,
+      "sceneNumber": 22,
+      "startTime": 133.343,
+      "endTime": 136.64,
+      "lines": [
+        "simply vanished into the black market."
+      ]
+    },
+    {
+      "index": 52,
+      "sceneNumber": 23,
+      "startTime": 136.84,
+      "endTime": 140.68,
+      "lines": [
+        "Then came the part nobody",
+        "could control: disease."
+      ]
+    },
+    {
+      "index": 53,
+      "sceneNumber": 24,
+      "startTime": 141.12,
+      "endTime": 143.8,
+      "lines": [
+        "Two great plagues swept",
+        "the empire, emptying"
+      ]
+    },
+    {
+      "index": 54,
+      "sceneNumber": 24,
+      "startTime": 143.8,
+      "endTime": 146.88,
+      "lines": [
+        "farms and thinning the",
+        "army's recruiting pool."
+      ]
+    },
+    {
+      "index": 55,
+      "sceneNumber": 25,
+      "startTime": 147.28,
+      "endTime": 149.587,
+      "lines": [
+        "Fewer farmers meant less tax."
+      ]
+    },
+    {
+      "index": 56,
+      "sceneNumber": 25,
+      "startTime": 149.587,
+      "endTime": 152.816,
+      "lines": [
+        "Fewer recruits meant",
+        "a more expensive army."
+      ]
+    },
+    {
+      "index": 57,
+      "sceneNumber": 25,
+      "startTime": 152.816,
+      "endTime": 154.54,
+      "lines": [
+        "The squeeze tightened."
+      ]
+    },
+    {
+      "index": 58,
+      "sceneNumber": 26,
+      "startTime": 154.54,
+      "endTime": 156.59,
+      "lines": [
+        "So Rome found a shortcut."
+      ]
+    },
+    {
+      "index": 59,
+      "sceneNumber": 26,
+      "startTime": 156.59,
+      "endTime": 160.68,
+      "lines": [
+        "If you can't recruit enough",
+        "Romans, hire the barbarians."
+      ]
+    },
+    {
+      "index": 60,
+      "sceneNumber": 27,
+      "startTime": 160.68,
+      "endTime": 162.929,
+      "lines": [
+        "Whole units now fought under their own"
+      ]
+    },
+    {
+      "index": 61,
+      "sceneNumber": 27,
+      "startTime": 162.929,
+      "endTime": 165.5,
+      "lines": [
+        "chiefs, loyal to their",
+        "leaders and their paychecks."
+      ]
+    },
+    {
+      "index": 62,
+      "sceneNumber": 28,
+      "startTime": 165.5,
+      "endTime": 167.637,
+      "lines": [
+        "Not to Rome. Remember that detail."
+      ]
+    },
+    {
+      "index": 63,
+      "sceneNumber": 28,
+      "startTime": 167.637,
+      "endTime": 171.6,
+      "lines": [
+        "It comes back at the",
+        "very end of this story."
+      ]
+    },
+    {
+      "index": 64,
+      "sceneNumber": 29,
+      "startTime": 172.0,
+      "endTime": 175.435,
+      "lines": [
+        "In 378, at Adrianople,",
+        "the arrangement blew up."
+      ]
+    },
+    {
+      "index": 65,
+      "sceneNumber": 29,
+      "startTime": 175.435,
+      "endTime": 179.7,
+      "lines": [
+        "Gothic forces destroyed much",
+        "of the eastern field army."
+      ]
+    },
+    {
+      "index": 66,
+      "sceneNumber": 30,
+      "startTime": 179.98,
+      "endTime": 182.297,
+      "lines": [
+        "The emperor Valens died on that"
+      ]
+    },
+    {
+      "index": 67,
+      "sceneNumber": 30,
+      "startTime": 182.297,
+      "endTime": 185.4,
+      "lines": [
+        "battlefield, along with",
+        "Rome's aura of invincibility."
+      ]
+    },
+    {
+      "index": 68,
+      "sceneNumber": 31,
+      "startTime": 185.74,
+      "endTime": 188.72,
+      "lines": [
+        "Afterward, for the first",
+        "time, entire barbarian nations"
+      ]
+    },
+    {
+      "index": 69,
+      "sceneNumber": 31,
+      "startTime": 188.72,
+      "endTime": 192.02,
+      "lines": [
+        "settled inside the empire",
+        "under their own kings."
+      ]
+    },
+    {
+      "index": 70,
+      "sceneNumber": 32,
+      "startTime": 192.02,
+      "endTime": 194.505,
+      "lines": [
+        "The bargain was simple",
+        "and desperate: fight for"
+      ]
+    },
+    {
+      "index": 71,
+      "sceneNumber": 32,
+      "startTime": 194.505,
+      "endTime": 197.7,
+      "lines": [
+        "us, and we'll pay you and give you land."
+      ]
+    },
+    {
+      "index": 72,
+      "sceneNumber": 33,
+      "startTime": 197.84,
+      "endTime": 200.18,
+      "lines": [
+        "Rome no longer commanded these people."
+      ]
+    },
+    {
+      "index": 73,
+      "sceneNumber": 33,
+      "startTime": 200.18,
+      "endTime": 203.7,
+      "lines": [
+        "It negotiated with them,",
+        "inside its own borders."
+      ]
+    },
+    {
+      "index": 74,
+      "sceneNumber": 34,
+      "startTime": 204.52,
+      "endTime": 207.784,
+      "lines": [
+        "In 395, the emperor Theodosius died, and"
+      ]
+    },
+    {
+      "index": 75,
+      "sceneNumber": 34,
+      "startTime": 207.784,
+      "endTime": 211.514,
+      "lines": [
+        "the empire was split between his two sons."
+      ]
+    },
+    {
+      "index": 76,
+      "sceneNumber": 34,
+      "startTime": 211.514,
+      "endTime": 212.38,
+      "lines": [
+        "Permanently."
+      ]
+    },
+    {
+      "index": 77,
+      "sceneNumber": 35,
+      "startTime": 212.74,
+      "endTime": 216.04,
+      "lines": [
+        "The East got the wealth",
+        "and the defensible capital."
+      ]
+    },
+    {
+      "index": 78,
+      "sceneNumber": 35,
+      "startTime": 216.04,
+      "endTime": 218.44,
+      "lines": [
+        "The West got the exposed frontiers."
+      ]
+    },
+    {
+      "index": 79,
+      "sceneNumber": 36,
+      "startTime": 218.44,
+      "endTime": 222.04,
+      "lines": [
+        "And the West's new emperor,",
+        "Honorius, was ten years old."
+      ]
+    },
+    {
+      "index": 80,
+      "sceneNumber": 37,
+      "startTime": 222.04,
+      "endTime": 224.68,
+      "lines": [
+        "A child on the throne, a broke treasury,"
+      ]
+    },
+    {
+      "index": 81,
+      "sceneNumber": 37,
+      "startTime": 224.68,
+      "endTime": 227.72,
+      "lines": [
+        "and an army that worked for whoever paid."
+      ]
+    },
+    {
+      "index": 82,
+      "sceneNumber": 38,
+      "startTime": 227.96,
+      "endTime": 230.524,
+      "lines": [
+        "Then, in 410, the unthinkable."
+      ]
+    },
+    {
+      "index": 83,
+      "sceneNumber": 38,
+      "startTime": 230.524,
+      "endTime": 232.576,
+      "lines": [
+        "Alaric's Visigoths marched into"
+      ]
+    },
+    {
+      "index": 84,
+      "sceneNumber": 38,
+      "startTime": 232.576,
+      "endTime": 235.54,
+      "lines": [
+        "Rome itself and sacked it."
+      ]
+    },
+    {
+      "index": 85,
+      "sceneNumber": 39,
+      "startTime": 235.84,
+      "endTime": 237.88,
+      "lines": [
+        "The city had not fallen to a"
+      ]
+    },
+    {
+      "index": 86,
+      "sceneNumber": 39,
+      "startTime": 237.88,
+      "endTime": 240.32,
+      "lines": [
+        "foreign enemy in nearly",
+        "eight hundred years."
+      ]
+    },
+    {
+      "index": 87,
+      "sceneNumber": 40,
+      "startTime": 240.4,
+      "endTime": 243.36,
+      "lines": [
+        "One church father, Jerome,",
+        "wrote: the city which"
+      ]
+    },
+    {
+      "index": 88,
+      "sceneNumber": 40,
+      "startTime": 243.36,
+      "endTime": 246.72,
+      "lines": [
+        "had taken the whole",
+        "world was itself taken."
+      ]
+    },
+    {
+      "index": 89,
+      "sceneNumber": 41,
+      "startTime": 246.74,
+      "endTime": 249.22,
+      "lines": [
+        "But here's the detail everyone misses:"
+      ]
+    },
+    {
+      "index": 90,
+      "sceneNumber": 41,
+      "startTime": 249.22,
+      "endTime": 252.1,
+      "lines": [
+        "Rome wasn't even the capital anymore."
+      ]
+    },
+    {
+      "index": 91,
+      "sceneNumber": 42,
+      "startTime": 252.28,
+      "endTime": 254.62,
+      "lines": [
+        "The court had already",
+        "moved, first to Milan,"
+      ]
+    },
+    {
+      "index": 92,
+      "sceneNumber": 42,
+      "startTime": 254.62,
+      "endTime": 257.36,
+      "lines": [
+        "and then to the safer city of Ravenna."
+      ]
+    },
+    {
+      "index": 93,
+      "sceneNumber": 43,
+      "startTime": 257.58,
+      "endTime": 261.567,
+      "lines": [
+        "The sack of 410 was a",
+        "symbol, and symbols matter."
+      ]
+    },
+    {
+      "index": 94,
+      "sceneNumber": 43,
+      "startTime": 261.567,
+      "endTime": 263.96,
+      "lines": [
+        "But symbols don't pay armies."
+      ]
+    },
+    {
+      "index": 95,
+      "sceneNumber": 44,
+      "startTime": 264.12,
+      "endTime": 266.63,
+      "lines": [
+        "Because the real death",
+        "blow came a generation"
+      ]
+    },
+    {
+      "index": 96,
+      "sceneNumber": 44,
+      "startTime": 266.63,
+      "endTime": 269.54,
+      "lines": [
+        "later, and almost no one talks about it."
+      ]
+    },
+    {
+      "index": 97,
+      "sceneNumber": 45,
+      "startTime": 269.65,
+      "endTime": 272.378,
+      "lines": [
+        "In 439, the Vandals captured Carthage,"
+      ]
+    },
+    {
+      "index": 98,
+      "sceneNumber": 45,
+      "startTime": 272.378,
+      "endTime": 275.96,
+      "lines": [
+        "the crown jewel of Roman North Africa."
+      ]
+    },
+    {
+      "index": 99,
+      "sceneNumber": 46,
+      "startTime": 276.04,
+      "endTime": 278.17,
+      "lines": [
+        "Africa fed the West with grain"
+      ]
+    },
+    {
+      "index": 100,
+      "sceneNumber": 46,
+      "startTime": 278.17,
+      "endTime": 280.7,
+      "lines": [
+        "and filled its treasury with taxes."
+      ]
+    },
+    {
+      "index": 101,
+      "sceneNumber": 47,
+      "startTime": 281.36,
+      "endTime": 284.375,
+      "lines": [
+        "Lose Africa, and the math stops working."
+      ]
+    },
+    {
+      "index": 102,
+      "sceneNumber": 47,
+      "startTime": 284.375,
+      "endTime": 288.22,
+      "lines": [
+        "No taxes, no army. No army, no empire."
+      ]
+    },
+    {
+      "index": 103,
+      "sceneNumber": 48,
+      "startTime": 288.58,
+      "endTime": 290.754,
+      "lines": [
+        "This is the equation historians point"
+      ]
+    },
+    {
+      "index": 104,
+      "sceneNumber": 48,
+      "startTime": 290.754,
+      "endTime": 293.291,
+      "lines": [
+        "to: the West didn't lose its will."
+      ]
+    },
+    {
+      "index": 105,
+      "sceneNumber": 48,
+      "startTime": 293.291,
+      "endTime": 295.14,
+      "lines": [
+        "It lost its income."
+      ]
+    },
+    {
+      "index": 106,
+      "sceneNumber": 49,
+      "startTime": 295.22,
+      "endTime": 298.072,
+      "lines": [
+        "As the fifth century",
+        "wore on, province after"
+      ]
+    },
+    {
+      "index": 107,
+      "sceneNumber": 49,
+      "startTime": 298.072,
+      "endTime": 301.68,
+      "lines": [
+        "province slipped away, taking",
+        "the tax base with them."
+      ]
+    },
+    {
+      "index": 108,
+      "sceneNumber": 50,
+      "startTime": 301.82,
+      "endTime": 304.592,
+      "lines": [
+        "Every lost province",
+        "meant fewer taxes, which"
+      ]
+    },
+    {
+      "index": 109,
+      "sceneNumber": 50,
+      "startTime": 304.592,
+      "endTime": 308.16,
+      "lines": [
+        "meant fewer soldiers, which",
+        "meant more lost provinces."
+      ]
+    },
+    {
+      "index": 110,
+      "sceneNumber": 51,
+      "startTime": 308.68,
+      "endTime": 311.399,
+      "lines": [
+        "The Western Empire now",
+        "had an army it could"
+      ]
+    },
+    {
+      "index": 111,
+      "sceneNumber": 51,
+      "startTime": 311.399,
+      "endTime": 314.82,
+      "lines": [
+        "not pay, made of men whose",
+        "loyalty was for sale."
+      ]
+    },
+    {
+      "index": 112,
+      "sceneNumber": 52,
+      "startTime": 315.12,
+      "endTime": 317.8,
+      "lines": [
+        "Which brings us back to 476, and"
+      ]
+    },
+    {
+      "index": 113,
+      "sceneNumber": 52,
+      "startTime": 317.8,
+      "endTime": 320.88,
+      "lines": [
+        "the fall that wasn't really a fall."
+      ]
+    },
+    {
+      "index": 114,
+      "sceneNumber": 53,
+      "startTime": 321.12,
+      "endTime": 324.018,
+      "lines": [
+        "The emperor was Romulus Augustulus, a"
+      ]
+    },
+    {
+      "index": 115,
+      "sceneNumber": 53,
+      "startTime": 324.018,
+      "endTime": 327.8,
+      "lines": [
+        "boy named, incredibly,",
+        "after Rome's own founder."
+      ]
+    },
+    {
+      "index": 116,
+      "sceneNumber": 54,
+      "startTime": 327.86,
+      "endTime": 330.85,
+      "lines": [
+        "History even remembers him by a"
+      ]
+    },
+    {
+      "index": 117,
+      "sceneNumber": 54,
+      "startTime": 330.85,
+      "endTime": 334.24,
+      "lines": [
+        "mocking nickname: Augustulus,",
+        "the little Augustus."
+      ]
+    },
+    {
+      "index": 118,
+      "sceneNumber": 55,
+      "startTime": 334.42,
+      "endTime": 338.276,
+      "lines": [
+        "The men who ended his reign weren't",
+        "invaders storming the gates."
+      ]
+    },
+    {
+      "index": 119,
+      "sceneNumber": 55,
+      "startTime": 338.276,
+      "endTime": 340.78,
+      "lines": [
+        "They were Rome's own federate soldiers."
+      ]
+    },
+    {
+      "index": 120,
+      "sceneNumber": 56,
+      "startTime": 340.82,
+      "endTime": 344.1,
+      "lines": [
+        "They had asked for land",
+        "in Italy to settle on."
+      ]
+    },
+    {
+      "index": 121,
+      "sceneNumber": 56,
+      "startTime": 344.1,
+      "endTime": 346.14,
+      "lines": [
+        "Their general, Orestes, said no."
+      ]
+    },
+    {
+      "index": 122,
+      "sceneNumber": 57,
+      "startTime": 346.34,
+      "endTime": 348.92,
+      "lines": [
+        "So they mutinied, chose",
+        "their commander Odoacer"
+      ]
+    },
+    {
+      "index": 123,
+      "sceneNumber": 57,
+      "startTime": 348.92,
+      "endTime": 351.9,
+      "lines": [
+        "as king, and deposed the boy emperor."
+      ]
+    },
+    {
+      "index": 124,
+      "sceneNumber": 58,
+      "startTime": 352.02,
+      "endTime": 353.829,
+      "lines": [
+        "No successor was named."
+      ]
+    },
+    {
+      "index": 125,
+      "sceneNumber": 58,
+      "startTime": 353.829,
+      "endTime": 355.638,
+      "lines": [
+        "The imperial insignia were"
+      ]
+    },
+    {
+      "index": 126,
+      "sceneNumber": 58,
+      "startTime": 355.638,
+      "endTime": 358.3,
+      "lines": [
+        "simply sent east, to Constantinople."
+      ]
+    },
+    {
+      "index": 127,
+      "sceneNumber": 59,
+      "startTime": 359.24,
+      "endTime": 362.555,
+      "lines": [
+        "Odoacer didn't even bother to claim",
+        "the imperial title for himself."
+      ]
+    },
+    {
+      "index": 128,
+      "sceneNumber": 59,
+      "startTime": 362.555,
+      "endTime": 364.16,
+      "lines": [
+        "He didn't need it."
+      ]
+    },
+    {
+      "index": 129,
+      "sceneNumber": 60,
+      "startTime": 364.36,
+      "endTime": 366.59,
+      "lines": [
+        "The Roman Empire in the West ended not"
+      ]
+    },
+    {
+      "index": 130,
+      "sceneNumber": 60,
+      "startTime": 366.59,
+      "endTime": 369.22,
+      "lines": [
+        "with a battle, but with a payroll dispute."
+      ]
+    },
+    {
+      "index": 131,
+      "sceneNumber": 61,
+      "startTime": 369.24,
+      "endTime": 373.3,
+      "lines": [
+        "And here's the strangest part:",
+        "in Italy, life simply went on."
+      ]
+    },
+    {
+      "index": 132,
+      "sceneNumber": 62,
+      "startTime": 374.04,
+      "endTime": 377.556,
+      "lines": [
+        "Odoacer kept the Roman administration.",
+        "The Senate kept meeting."
+      ]
+    },
+    {
+      "index": 133,
+      "sceneNumber": 62,
+      "startTime": 377.556,
+      "endTime": 380.2,
+      "lines": [
+        "Latin remained the language of government."
+      ]
+    },
+    {
+      "index": 134,
+      "sceneNumber": 63,
+      "startTime": 380.2,
+      "endTime": 383.24,
+      "lines": [
+        "The fall of Rome, the moment every"
+      ]
+    },
+    {
+      "index": 135,
+      "sceneNumber": 63,
+      "startTime": 383.24,
+      "endTime": 386.68,
+      "lines": [
+        "textbook circles, happened",
+        "without most Romans noticing."
+      ]
+    },
+    {
+      "index": 136,
+      "sceneNumber": 64,
+      "startTime": 386.82,
+      "endTime": 390.302,
+      "lines": [
+        "Because empires don't",
+        "die the way movies show."
+      ]
+    },
+    {
+      "index": 137,
+      "sceneNumber": 64,
+      "startTime": 390.302,
+      "endTime": 394.62,
+      "lines": [
+        "They rot quietly: money first,",
+        "then loyalty, then everything."
+      ]
+    },
+    {
+      "index": 138,
+      "sceneNumber": 65,
+      "startTime": 394.9,
+      "endTime": 397.798,
+      "lines": [
+        "And half of Rome never fell at all."
+      ]
+    },
+    {
+      "index": 139,
+      "sceneNumber": 65,
+      "startTime": 397.798,
+      "endTime": 401.82,
+      "lines": [
+        "The Eastern Empire carried on",
+        "for nearly a thousand years."
+      ]
+    },
+    {
+      "index": 140,
+      "sceneNumber": 66,
+      "startTime": 401.9,
+      "endTime": 405.409,
+      "lines": [
+        "Roman emperors ruled from",
+        "Constantinople until 1453,"
+      ]
+    },
+    {
+      "index": 141,
+      "sceneNumber": 66,
+      "startTime": 405.409,
+      "endTime": 407.415,
+      "lines": [
+        "almost a millennium after"
+      ]
+    },
+    {
+      "index": 142,
+      "sceneNumber": 66,
+      "startTime": 407.415,
+      "endTime": 409.82,
+      "lines": [
+        "the West quietly faded."
+      ]
+    },
+    {
+      "index": 143,
+      "sceneNumber": 67,
+      "startTime": 409.96,
+      "endTime": 411.435,
+      "lines": [
+        "So Rome didn't fall."
+      ]
+    },
+    {
+      "index": 144,
+      "sceneNumber": 67,
+      "startTime": 411.435,
+      "endTime": 413.647,
+      "lines": [
+        "It faded, so slowly that the"
+      ]
+    },
+    {
+      "index": 145,
+      "sceneNumber": 67,
+      "startTime": 413.647,
+      "endTime": 416.26,
+      "lines": [
+        "fall itself was just a formality."
+      ]
+    },
+    {
+      "index": 146,
+      "sceneNumber": 68,
+      "startTime": 416.28,
+      "endTime": 418.23,
+      "lines": [
+        "If this changed how you see"
+      ]
+    },
+    {
+      "index": 147,
+      "sceneNumber": 68,
+      "startTime": 418.23,
+      "endTime": 420.505,
+      "lines": [
+        "history, there's more",
+        "where that came from."
+      ]
+    },
+    {
+      "index": 148,
+      "sceneNumber": 68,
+      "startTime": 420.505,
+      "endTime": 422.13,
+      "lines": [
+        "Subscribe for the next story."
+      ]
+    }
+  ]
+}

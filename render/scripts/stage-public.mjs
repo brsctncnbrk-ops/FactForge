@@ -5,9 +5,10 @@
 //
 // Usage: npm run stage -- <video-slug>
 // Copies:
-//   /assets/library/**            -> public/assets/library/**
-//   /outputs/<slug>/04-*.json     -> public/outputs/<slug>/
-//   /outputs/<slug>/audio/*.mp3   -> public/outputs/<slug>/audio/   (if present)
+//   /assets/library/**              -> public/assets/library/**
+//   /outputs/<slug>/04-*.json       -> public/outputs/<slug>/
+//   /outputs/<slug>/05-captions.json-> public/outputs/<slug>/       (if present)
+//   /outputs/<slug>/audio/*.mp3     -> public/outputs/<slug>/audio/ (if present)
 import { cpSync, rmSync, mkdirSync, existsSync, readdirSync, copyFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -46,6 +47,15 @@ for (const f of readdirSync(outDir)) {
 if (staged === 0) {
   console.error("No 04-scenes-final*.json found — nothing to render.");
   process.exit(1);
+}
+
+// captions are optional (only the video-captioned composition requires them)
+const captions = join(outDir, "05-captions.json");
+if (existsSync(captions)) {
+  copyFileSync(captions, join(pub, "outputs", slug, "05-captions.json"));
+  console.log(`staged outputs/${slug}/05-captions.json`);
+} else {
+  console.log("no 05-captions.json — video-captioned comp will refuse (run scripts/build_captions.py)");
 }
 
 const audioDir = join(outDir, "audio");

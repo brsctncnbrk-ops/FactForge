@@ -13,15 +13,20 @@ on:
         required: true
         type: string
       crf:
-        description: "x264 CRF (20-23; YouTube re-encodes anyway)"
+        description: "x264 CRF (18 = visually lossless master; YouTube re-encodes anyway)"
         required: false
-        default: "22"
+        default: "18"
         type: string
       frames:
         description: "Optional frame range for a test render, e.g. 0-300 (empty = full video)"
         required: false
         default: ""
         type: string
+      burn-captions:
+        description: "Burn subtitles into the video (needs outputs/<slug>/05-captions.json)"
+        required: false
+        default: false
+        type: boolean
 
 concurrency:
   group: render-${{ inputs.video-slug }}
@@ -65,7 +70,8 @@ jobs:
       - name: Render
         working-directory: render
         run: >
-          npx remotion render video
+          npx remotion render
+          ${{ inputs.burn-captions && 'video-captioned' || 'video' }}
           "out/${{ inputs.video-slug }}.mp4"
           --props='{"slug":"${{ inputs.video-slug }}"}'
           --crf=${{ inputs.crf }}

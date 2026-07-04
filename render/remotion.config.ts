@@ -4,7 +4,10 @@
 import { Config } from "@remotion/cli/config";
 
 Config.setEntryPoint("./src/index.ts");
-Config.setVideoImageFormat("jpeg");
-// CRF default for final renders; YouTube re-encodes anyway (brief §06: 20–23).
-Config.setCrf(22);
+// PNG intermediate frames: lossless before x264, so serif text stays crisp and
+// dark gradients don't band (JPEG intermediates caused ringing on text edges).
+Config.setVideoImageFormat("png");
+// CRF 18 ≈ visually lossless for this flat-color/text content; YouTube
+// re-encodes anyway, so feeding it a cleaner master is what matters.
+Config.setCrf(18);
 Config.setOverwriteOutput(true);

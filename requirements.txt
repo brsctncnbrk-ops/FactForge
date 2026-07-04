@@ -1,0 +1,10 @@
+# Python dependencies for the FactForge pipeline scripts.
+# Install: python -m pip install -r requirements.txt
+#
+# Core (validation + quality gate) — required everywhere, including CI:
+jsonschema>=4.21
+
+# Timing sync Mode A (real-audio alignment in skills/04-timing-sync-skill/scripts/align.py).
+# Only needed when aligning against recorded voiceover; CI self-tests run without them.
+faster-whisper>=1.0
+rapidfuzz>=3.6

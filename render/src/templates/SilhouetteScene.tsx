@@ -15,7 +15,9 @@ const POSITIONS: Record<string, { x: number; bottom: number; scale: number }> = 
   center: { x: 50, bottom: 12, scale: 1 },
   right: { x: 75, bottom: 12, scale: 1 },
   foreground: { x: 50, bottom: 4, scale: 1.45 },
-  background: { x: 50, bottom: 34, scale: 0.62 },
+  // distant figures stand near the horizon line (hills top out ~27%), not
+  // floating mid-sky — 34% read fine on the old bare gradient, not anymore
+  background: { x: 50, bottom: 19, scale: 0.62 },
 };
 
 const figureMotion = (
@@ -85,15 +87,57 @@ export const SilhouetteScene: React.FC<{ p: SilhouetteSceneProps }> = ({ p }) =>
           }}
         />
       ) : null}
-      {/* ground line */}
+      {/* low sun glow on the horizon */}
+      <div
+        style={{
+          position: "absolute",
+          left: "30%",
+          right: "30%",
+          bottom: "6%",
+          height: "30%",
+          background:
+            "radial-gradient(50% 60% at 50% 88%, rgba(226,150,80,0.5) 0%, rgba(226,150,80,0.15) 55%, rgba(0,0,0,0) 80%)",
+        }}
+      />
+      {/* distant hill layers, drifting apart very slowly (parallax) */}
+      <div
+        style={{
+          position: "absolute",
+          left: "-4%",
+          right: "-4%",
+          bottom: "11%",
+          height: "16%",
+          background: "#141724",
+          opacity: 0.85,
+          clipPath:
+            "polygon(0% 100%, 0% 62%, 9% 44%, 18% 58%, 27% 30%, 38% 55%, 47% 38%, 57% 60%, 66% 34%, 76% 56%, 85% 42%, 94% 60%, 100% 48%, 100% 100%)",
+          transform: `translateX(${-6 * progress}px)`,
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          left: "-4%",
+          right: "-4%",
+          bottom: "10%",
+          height: "10%",
+          background: "#0e1019",
+          clipPath:
+            "polygon(0% 100%, 0% 55%, 12% 70%, 22% 40%, 34% 66%, 45% 48%, 58% 72%, 70% 44%, 82% 64%, 92% 50%, 100% 66%, 100% 100%)",
+          transform: `translateX(${6 * progress}px)`,
+        }}
+      />
+      {/* ground: dark band with a lit edge instead of a bare 2px line */}
       <div
         style={{
           position: "absolute",
           left: 0,
           right: 0,
-          bottom: "10%",
-          height: 2,
-          background: theme.stroke,
+          bottom: 0,
+          height: "10.2%",
+          background:
+            "linear-gradient(180deg, rgba(26,20,16,0.95) 0%, #0a0c12 60%)",
+          boxShadow: "0 -1px 0 rgba(226,150,80,0.35)",
         }}
       />
       {p.figures.map((fig, i) => {
@@ -116,7 +160,7 @@ export const SilhouetteScene: React.FC<{ p: SilhouetteSceneProps }> = ({ p }) =>
               opacity: t * (fig.position === "background" ? 0.55 : 0.92),
             }}
           >
-            <div style={motion}>
+            <div style={{ position: "relative", ...motion }}>
               <InlineSvg
                 src={resolveAsset(fig.asset)}
                 color="#0b0d14"
@@ -124,6 +168,20 @@ export const SilhouetteScene: React.FC<{ p: SilhouetteSceneProps }> = ({ p }) =>
                   height,
                   width: height * 0.5,
                   filter: "drop-shadow(0 6px 18px rgba(0,0,0,0.7))",
+                }}
+              />
+              {/* contact shadow grounds the figure */}
+              <div
+                style={{
+                  position: "absolute",
+                  left: "50%",
+                  bottom: -8,
+                  width: height * 0.46,
+                  height: 16,
+                  transform: "translateX(-50%)",
+                  borderRadius: "50%",
+                  background:
+                    "radial-gradient(50% 50% at 50% 50%, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 75%)",
                 }}
               />
             </div>

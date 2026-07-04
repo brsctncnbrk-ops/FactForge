@@ -19,7 +19,12 @@ npm run typecheck
 
 - `video` — voiced final render. Loads `outputs/<slug>/04-scenes-final.json`
   and REFUSES (hard error in `src/lib/data.ts`) unless `timingMode` is
-  `forced-alignment` or `transcript-guided-alignment`. Audio is mounted only here.
+  `forced-alignment` or `transcript-guided-alignment`. Audio is mounted here
+  and in `video-captioned` only.
+- `video-captioned` — same as `video` plus burned-in subtitles. Additionally
+  REFUSES unless `outputs/<slug>/05-captions.json` exists — generate it with
+  `python scripts/build_captions.py <slug>` (also emits the SRT/VTT sidecars
+  for YouTube), then re-run `npm run stage -- <slug>`.
 - `draft` — silent preview; falls back to `04-scenes-final-estimated.json`
   when no final file exists. Never mounts audio.
 
@@ -30,6 +35,10 @@ Slug is an input prop:
 
 Local machine only does stills / short `--frames` test segments (4 GB RAM;
 a full 7-min 1080p30 render takes ~60-90 min anywhere). Full render:
-GitHub Actions → workflow "render" → Run workflow → enter the video slug.
+GitHub Actions → workflow "render" → Run workflow → enter the video slug
+(tick "burn-captions" to render the `video-captioned` composition).
 `quality-gate.py` runs first and a FAIL stops the render. The mp4 artifact
 has retention-days: 2 — download it promptly.
+
+Encoding: PNG intermediate frames + CRF 18 (set in `remotion.config.ts`) — a
+visually lossless master so YouTube's re-encode starts from clean input.

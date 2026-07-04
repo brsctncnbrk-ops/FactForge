@@ -3,16 +3,18 @@
 // the next scene starts (no black frames). Audio is mounted ONLY when `voiced`
 // — the draft composition never passes voiced=true.
 import { AbsoluteFill, Audio, Sequence, staticFile, useVideoConfig } from "remotion";
-import type { ScenesFile } from "./types/generated";
+import type { CaptionsFile, ScenesFile } from "./types/generated";
 import { sceneFrameRanges } from "./lib/data";
 import { renderScene } from "./templates";
 import { theme } from "./lib/theme";
+import { CaptionOverlay } from "./CaptionOverlay";
 
 export const VideoComposition: React.FC<{
   slug: string; // used by calculateMetadata to pick the scenes file
   data: ScenesFile | null;
   voiced: boolean;
-}> = ({ data, voiced }) => {
+  captions: CaptionsFile | null; // only set by the video-captioned composition
+}> = ({ data, voiced, captions }) => {
   const { durationInFrames } = useVideoConfig();
   if (!data) {
     // defaultProps state before calculateMetadata resolves
@@ -35,6 +37,7 @@ export const VideoComposition: React.FC<{
       {voiced && data.audio ? (
         <Audio src={staticFile(data.audio.file.replace(/^\//, ""))} />
       ) : null}
+      {captions ? <CaptionOverlay captions={captions} /> : null}
     </AbsoluteFill>
   );
 };

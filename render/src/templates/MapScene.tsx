@@ -67,9 +67,36 @@ const cameraTransform = (camera: string, progress: number): string => {
     case "drift":
       return `scale(${1.08 + 0.05 * p}) translate(${-1.5 * p}%, ${1.2 * p}%)`;
     default:
-      return "none";
+      // no scene is ever a frozen frame: gentle Ken Burns as the baseline
+      return `scale(${1.03 + 0.04 * p})`;
   }
 };
+
+// Expanding pulse rings behind a map marker (two rings, phase-offset). Ring
+// phase derives from scene progress, so re-timed scenes stay in sync.
+const PulseRings: React.FC<{ progress: number }> = ({ progress }) => (
+  <>
+    {[0, 0.5].map((offset) => {
+      const ph = (progress * 3 + offset) % 1;
+      return (
+        <div
+          key={offset}
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "50%",
+            width: 84,
+            height: 84,
+            borderRadius: "50%",
+            border: `3px solid ${theme.accentAlt}`,
+            transform: `translate(-50%, -50%) scale(${0.6 + ph * 1.5})`,
+            opacity: (1 - ph) * 0.55,
+          }}
+        />
+      );
+    })}
+  </>
+);
 
 export const MapScene: React.FC<{ p: MapSceneProps; fromLibrary: string[] }> = ({
   p,
@@ -86,6 +113,16 @@ export const MapScene: React.FC<{ p: MapSceneProps; fromLibrary: string[] }> = (
   const icons = p.icons ?? [];
   return (
     <SceneFrame>
+      {/* parchment glow behind the map so it reads as an aged chart, not a
+          flat cut-out */}
+      <div
+        style={{
+          position: "absolute",
+          inset: "4% 6%",
+          background:
+            "radial-gradient(80% 70% at 50% 46%, rgba(212,162,78,0.13) 0%, rgba(212,162,78,0.04) 55%, rgba(0,0,0,0) 78%)",
+        }}
+      />
       <div
         style={{
           position: "absolute",
@@ -102,7 +139,8 @@ export const MapScene: React.FC<{ p: MapSceneProps; fromLibrary: string[] }> = (
             height: "100%",
             objectFit: "contain",
             padding: "2%",
-            filter: "sepia(0.35) brightness(0.9)",
+            filter:
+              "sepia(0.5) saturate(1.15) brightness(0.92) contrast(1.06) drop-shadow(0 10px 30px rgba(0,0,0,0.5))",
           }}
         />
         {icons.map((icon, i) => {
@@ -123,15 +161,18 @@ export const MapScene: React.FC<{ p: MapSceneProps; fromLibrary: string[] }> = (
                 gap: 6,
               }}
             >
-              <InlineSvg
-                src={resolveAsset(icon.asset)}
-                color={theme.accentAlt}
-                style={{
-                  width: 84,
-                  height: 84,
-                  filter: "drop-shadow(0 2px 10px rgba(0,0,0,0.6))",
-                }}
-              />
+              <div style={{ position: "relative", width: 84, height: 84 }}>
+                <PulseRings progress={progress} />
+                <InlineSvg
+                  src={resolveAsset(icon.asset)}
+                  color={theme.accentAlt}
+                  style={{
+                    width: 84,
+                    height: 84,
+                    filter: "drop-shadow(0 2px 10px rgba(0,0,0,0.6))",
+                  }}
+                />
+              </div>
               {icon.label && j === 0 ? (
                 <div
                   style={{

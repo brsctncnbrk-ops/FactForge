@@ -6,8 +6,8 @@ Video Slug: why-the-roman-empire-really-collapsed
 Video Topic: Why the Roman Empire Really Collapsed
 Target Language: English
 Target Length: 7 minutes
-Current Stage: READY FOR RENDER (Phase 1 complete; awaiting Phase 2 decision)
-Last Updated: 2026-07-03
+Current Stage: RENDERED (first full render 2026-07-04 with CRF 22/jpeg intermediates — superseded by CRF 18/png settings; captioned re-render recommended before upload)
+Last Updated: 2026-07-04
 
 ## Completed Stages
 
@@ -18,7 +18,7 @@ Last Updated: 2026-07-03
 - [x] 05 Packaging (05A)
 - [x] 05 Packaging (05B)
 - [x] Quality Gate
-- [ ] 06 Render
+- [x] 06 Render (first full mp4 2026-07-04; re-render pending: CRF 18/png encoding + burned-in captions were added after it)
 
 ## Generated Files
 
@@ -31,12 +31,13 @@ Last Updated: 2026-07-03
 - [x] 04-scenes-final.json
 - [x] 04-scenes-final-estimated.json (superseded draft; kept as Mode B artifact)
 - [x] 05-packaging.md
+- [x] 05-captions.json / 05-captions.srt / 05-captions.vtt (148 cues; build_captions.py)
 
 ## Quality Gate
 
 <!-- QG:BEGIN — bu blok quality-gate.py tarafından üretilir, elle düzenleme -->
 Gate Result        : PASS (0 failure(s), 0 warning(s))
-Gate Run           : 2026-07-04 04:40 | bootstrap: no
+Gate Run           : 2026-07-04 14:29 | bootstrap: no
 Validation Status  : derive_vo diff: OK | 03-scenes.json: OK | 04-scenes-final.json: OK | 04-scenes-final-estimated.json: OK
 Fact Status        : 24 fact(s) used | VERIFY-status violations: 0 | scriptCritical all VERIFIED: yes | number-without-fact warnings: 0
 Asset Status       : 5 library asset(s), 0 new | BLOCKED/Unknown violations: 0 | attribution: not needed | usedInVideos sync: fresh
@@ -62,11 +63,12 @@ Warnings:
 
 ## Next Step
 
-Phase 2 (/render) — requires the user's explicit go-ahead per CLAUDE.md; Claude must not start it unprompted. Everything render needs is ready: 04-scenes-final.json (transcript-guided), audio/voiceover.mp3, 5 licensed library assets, gate PASS with zero warnings.
+Re-render via GitHub Actions with the improved encoding (CRF 18 / png intermediates) — tick `burn-captions` for embedded subtitles, or upload 05-captions.srt to YouTube alongside the clean `video` render. Then the human Layer-2 checklist (title/thumbnail claim support + 05B Upload Checklist) before publishing.
 
 ## Session Notes
 
-Current Phase: 1E complete + post-1E finalization (assets, real audio alignment, 05B)
+Current Phase: post-render QA (2026-07-04): encoding fix (png/CRF 18), captions layer (SRT/VTT/JSON + video-captioned comp), repo hygiene — details in TASKS.md
+Previous Phase: 1E complete + post-1E finalization (assets, real audio alignment, 05B)
 Completed This Session: 01-facts.json, 02-script-annotated.md, 02-script-voiceover.txt, 03-scenes.json, asset library seeded (5 licensed assets; scenes switched to fromLibrary), faster-whisper+rapidfuzz installed, align.py number-robust matching fix (+4 self-test checks, 21/21 PASS), 04-scenes-final.json via Mode A (coverage 0.985), 05-packaging.md 05A+05B, quality-gate PASS 0/0
 Files Created: full output set + 5 asset files
 Files Modified: align.py (digit-to-words normalization in matching — symmetric, thresholds unchanged), 03-scenes.json (fromLibrary), manifest.json, LICENSES.md

@@ -1,0 +1,43 @@
+# FactForge — deterministic-script self-tests (P7 safety net).
+# Cheap (< 1 min): stdlib + jsonschema only; Mode A deps (faster-whisper,
+# rapidfuzz) are NOT installed — align.py's self-test runs without them.
+name: selftest
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "skills/**/scripts/**"
+      - "templates/schemas/**"
+      - ".github/workflows/selftest.yml"
+  pull_request:
+    paths:
+      - "scripts/**"
+      - "skills/**/scripts/**"
+      - "templates/schemas/**"
+      - ".github/workflows/selftest.yml"
+  workflow_dispatch:
+
+jobs:
+  selftest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install gate dependencies
+        run: pip install jsonschema
+
+      - name: Script self-tests
+        run: |
+          python skills/02-script-skill/scripts/derive_vo.py --self-test
+          python skills/03-visual-scene-skill/scripts/validate.py --self-test
+          python skills/04-timing-sync-skill/scripts/align.py --self-test
+          python scripts/sync_manifest_usage.py --self-test
+          python scripts/quality-gate.py --self-test
+          python scripts/build_captions.py --self-test

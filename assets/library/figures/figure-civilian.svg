@@ -1,16 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 220" width="120" height="220">
-  <!-- Roman civilian silhouette in a knee-length tunic, neutral standing pose.
-       FactForge project-original asset (CC0). -->
+  <!-- Roman civilian silhouette v2: belted knee-length tunic, natural walking
+       pose, satchel at the hip. FactForge project-original asset (CC0).
+       Same id/viewBox as v1. -->
   <g fill="currentColor">
-    <!-- head -->
-    <circle cx="60" cy="28" r="13"/>
-    <!-- tunic torso to knees -->
-    <path d="M46 44 L74 44 L82 132 L38 132 Z"/>
-    <!-- arms at sides -->
-    <path d="M46 50 L34 104 L42 107 L52 62 Z"/>
-    <path d="M74 50 L86 104 L78 107 L68 62 Z"/>
-    <!-- legs below tunic hem -->
-    <path d="M48 132 L46 206 L58 206 L59 140 Z"/>
-    <path d="M72 132 L74 206 L62 206 L61 140 Z"/>
+    <!-- head with short hair line -->
+    <path d="M48 26 a12.5 12.5 0 0 1 25 0 a12.5 12.5 0 0 1 -25 0 Z"/>
+    <path d="M47 22 Q60 12 73 22 L71 16 Q60 8 49 16 Z"/>
+    <!-- neck -->
+    <path d="M55 38 h10 l1 7 h-12 Z"/>
+    <!-- tunic: shoulders to knee, slight flare, belt cinch -->
+    <path d="M45 45 L75 45 L80 84 L77 86 L82 128 L38 128 L43 86 L40 84 Z"/>
+    <!-- belt knot -->
+    <path d="M40 84 L80 84 L79 90 L41 90 Z" fill-opacity="0.35"/>
+    <!-- right arm swinging forward -->
+    <path d="M72 50 L88 78 Q90 82 86 85 L82 86 L66 62 Z"/>
+    <!-- left arm bent, hand at satchel -->
+    <path d="M48 50 L38 74 L34 96 L42 98 L46 78 L56 62 Z"/>
+    <!-- satchel on hip strap -->
+    <path d="M46 47 L36 98 L42 100 L52 49 Z" fill-opacity="0.35"/>
+    <path d="M30 96 h20 v16 q-10 4 -20 0 Z"/>
+    <!-- legs: walking stride, calves -->
+    <path d="M46 128 L56 128 Q54 150 50 166 L46 205 L35 204 L43 164 Q44 146 46 128 Z"/>
+    <path d="M64 128 L74 128 Q77 148 74 166 L79 205 L68 205 L66 164 Q63 146 64 128 Z"/>
+    <!-- feet -->
+    <path d="M35 204 L46 205 L47 211 L32 210 Z"/>
+    <path d="M68 205 L79 205 L83 211 L66 211 Z"/>
   </g>
 </svg>

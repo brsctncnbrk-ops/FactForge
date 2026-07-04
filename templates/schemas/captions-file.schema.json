@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "captions-file.schema.json",
+  "title": "captions file",
+  "description": "05-captions.json — subtitle cues derived deterministically from 04-scenes-final.json by scripts/build_captions.py (P7). The SRT/VTT sidecars are rendered from this same cue list; never hand-edit any of the three.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["videoSlug", "sourceFile", "timingMode", "cues"],
+  "properties": {
+    "videoSlug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "sourceFile": { "const": "04-scenes-final.json" },
+    "timingMode": {
+      "enum": ["forced-alignment", "transcript-guided-alignment"]
+    },
+    "cues": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["index", "sceneNumber", "startTime", "endTime", "lines"],
+        "properties": {
+          "index": { "type": "integer", "minimum": 1 },
+          "sceneNumber": { "type": "integer", "minimum": 1 },
+          "startTime": { "type": "number", "minimum": 0 },
+          "endTime": { "type": "number", "exclusiveMinimum": 0 },
+          "lines": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 2,
+            "items": { "type": "string", "minLength": 1, "maxLength": 46 }
+          }
+        }
+      }
+    }
+  }
+}
