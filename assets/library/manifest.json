@@ -91,19 +91,19 @@
         "warrior",
         "soldier",
         "federate",
-        "silhouette",
-        "spear",
+        "flat",
+        "pictogram",
         "shield",
         "vector"
       ],
       "createdAt": "2026-07-03",
-      "updatedAt": "2026-07-03",
+      "updatedAt": "2026-07-04",
       "status": "ACTIVE",
       "reusable": true,
       "usedInVideos": [
         "why-the-roman-empire-really-collapsed"
       ],
-      "notes": "Generic armed silhouette (spear + round shield), deliberately usable as Roman or barbarian/federate. Simple v1."
+      "notes": "v3 (2026-07-04): redrawn as a blocky flat-vector pictogram (rounded head/torso/limb blocks + helmet-crest spikes + round shield) for the flat-infographic render style — the earlier fine-detail silhouette lost readability under rotation (fall animation) and at small sizes. Same id/viewBox/path as v1/v2, no scene JSON changes needed."
     },
     {
       "id": "figure-emperor",
@@ -118,17 +118,18 @@
         "emperor",
         "toga",
         "laurel",
-        "silhouette",
+        "flat",
+        "pictogram",
         "vector"
       ],
       "createdAt": "2026-07-03",
-      "updatedAt": "2026-07-03",
+      "updatedAt": "2026-07-04",
       "status": "ACTIVE",
       "reusable": true,
       "usedInVideos": [
         "why-the-roman-empire-really-collapsed"
       ],
-      "notes": "Robed, laurel-crowned silhouette; scale down for the boy-emperor scenes. Simple v1."
+      "notes": "v3 (2026-07-04): redrawn as a blocky flat-vector pictogram (rounded head + laurel-band arc + flared robe silhouette) for the flat-infographic render style — the earlier fine-detail silhouette lost readability under rotation (fall animation) and at small sizes. Same id/viewBox/path as v1/v2, no scene JSON changes needed."
     },
     {
       "id": "figure-civilian",
@@ -143,17 +144,18 @@
         "civilian",
         "tunic",
         "crowd",
-        "silhouette",
+        "flat",
+        "pictogram",
         "vector"
       ],
       "createdAt": "2026-07-03",
-      "updatedAt": "2026-07-03",
+      "updatedAt": "2026-07-04",
       "status": "ACTIVE",
       "reusable": true,
       "usedInVideos": [
         "why-the-roman-empire-really-collapsed"
       ],
-      "notes": "Neutral standing tunic figure for crowds and daily-life scenes. Simple v1."
+      "notes": "v3 (2026-07-04): redrawn as a blocky flat-vector rounded-block pictogram person for the flat-infographic render style — the earlier fine-detail silhouette lost readability under rotation (fall animation) and at small sizes. Same id/viewBox/path as v1/v2, no scene JSON changes needed."
     }
   ]
 }

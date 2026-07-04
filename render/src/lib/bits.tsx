@@ -1,22 +1,22 @@
 // Small shared UI pieces used by several templates.
 import { useContext } from "react";
 import { AbsoluteFill } from "remotion";
-import { bgGradient, theme } from "./theme";
+import { theme } from "./theme";
 import { entrance, useScene } from "./anim";
 import { CaptionsActiveContext, OVERLAY_SAFE_BOTTOM_PCT } from "./captionLayout";
 
-// Procedural film grain: an feTurbulence tile as a data URI — deterministic
-// (fixed seed), no external asset, tiles seamlessly (stitchTiles).
-const GRAIN_URI = `data:image/svg+xml;utf8,${encodeURIComponent(
-  '<svg xmlns="http://www.w3.org/2000/svg" width="280" height="280">' +
-    '<filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" seed="7"/>' +
-    '<feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0.5 0 0 0 0"/></filter>' +
-    '<rect width="100%" height="100%" filter="url(#n)"/></svg>'
-)}`;
+// Fixed (non-random) flat decorative shapes — a hallmark of the flat
+// infographic look. Positions/sizes are hard-coded, not derived from
+// Math.random(), so every render worker draws the identical frame.
+const BLOBS: { x: number; y: number; size: number; color: string; opacity: number }[] = [
+  { x: -8, y: -10, size: 46, color: theme.accent, opacity: 0.12 },
+  { x: 104, y: 88, size: 58, color: theme.good, opacity: 0.1 },
+  { x: 96, y: 6, size: 30, color: theme.accentAlt, opacity: 0.1 },
+];
 
-// Every template renders inside this frame: base gradient, a slowly drifting
-// warm glow (depth), film grain, and an edge vignette — so even text-only
-// scenes have atmosphere. Children render above all backdrop layers.
+// Every template renders inside this frame: a flat solid field with a couple
+// of soft flat-color blobs drifting very slowly (visual interest without any
+// gradient/grain/vignette texture). Children render above the backdrop.
 export const SceneFrame: React.FC<{
   children: React.ReactNode;
   background?: string;
@@ -25,31 +25,27 @@ export const SceneFrame: React.FC<{
   return (
     <AbsoluteFill
       style={{
-        background: background ?? bgGradient,
+        background: background ?? theme.bg,
         color: theme.text,
         fontFamily: theme.fontBody,
         overflow: "hidden",
       }}
     >
-      <AbsoluteFill
-        style={{
-          background: `radial-gradient(60% 50% at ${44 + 12 * progress}% ${30 + 8 * progress}%, rgba(212,162,78,0.10) 0%, rgba(212,162,78,0.0) 70%)`,
-        }}
-      />
-      <AbsoluteFill
-        style={{
-          backgroundImage: `url("${GRAIN_URI}")`,
-          backgroundRepeat: "repeat",
-          opacity: 0.05,
-          mixBlendMode: "overlay",
-        }}
-      />
-      <AbsoluteFill
-        style={{
-          background:
-            "radial-gradient(115% 100% at 50% 45%, rgba(0,0,0,0) 55%, rgba(3,5,9,0.45) 100%)",
-        }}
-      />
+      {BLOBS.map((b, i) => (
+        <div
+          key={i}
+          style={{
+            position: "absolute",
+            left: `${b.x + (i % 2 === 0 ? 1 : -1) * 3 * progress}%`,
+            top: `${b.y}%`,
+            width: `${b.size}%`,
+            height: `${b.size}%`,
+            borderRadius: "50%",
+            background: b.color,
+            opacity: b.opacity,
+          }}
+        />
+      ))}
       <AbsoluteFill>{children}</AbsoluteFill>
     </AbsoluteFill>
   );
@@ -78,8 +74,8 @@ export const Emphasized: React.FC<{
       ? {}
       : {
           backgroundImage: `linear-gradient(${color}, ${color})`,
-          backgroundSize: `${Math.max(0, Math.min(1, underline)) * 100}% 0.06em`,
-          backgroundPosition: "0 96%",
+          backgroundSize: `${Math.max(0, Math.min(1, underline)) * 100}% 0.1em`,
+          backgroundPosition: "0 100%",
           backgroundRepeat: "no-repeat",
         };
   return (
@@ -97,9 +93,34 @@ export const Emphasized: React.FC<{
   );
 };
 
-// Bottom-centered short overlay text (map/silhouette/image templates). When
-// subtitles are burned in it rises above the reserved caption band so the
-// scene label and the subtitle never stack on top of each other.
+// Flat colored circle behind an icon — the signature Infographics-Show
+// "icon chip" look. size is the outer circle diameter in px.
+export const IconBadge: React.FC<{
+  children: React.ReactNode;
+  size?: number;
+  color?: string;
+  style?: React.CSSProperties;
+}> = ({ children, size = 150, color = theme.accent, style }) => (
+  <div
+    style={{
+      width: size,
+      height: size,
+      borderRadius: "50%",
+      background: color,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      flexShrink: 0,
+      ...style,
+    }}
+  >
+    {children}
+  </div>
+);
+
+// Bottom-centered short overlay text (map/silhouette/image templates), styled
+// as a flat solid pill. When subtitles are burned in it rises above the
+// reserved caption band so the scene label and the subtitle never stack.
 export const OverlayText: React.FC<{ text: string }> = ({ text }) => {
   const { frame, durationInFrames, fps } = useScene();
   const captionsActive = useContext(CaptionsActiveContext);
@@ -114,20 +135,19 @@ export const OverlayText: React.FC<{ text: string }> = ({ text }) => {
         display: "flex",
         justifyContent: "center",
         opacity: t,
-        transform: `translateY(${(1 - t) * 20}px)`,
+        transform: `translateY(${(1 - t) * 20}px) scale(${0.9 + 0.1 * t})`,
       }}
     >
       <div
         style={{
           fontFamily: theme.fontTitle,
-          fontSize: 44,
-          letterSpacing: "0.12em",
-          textTransform: "uppercase",
-          color: theme.text,
-          background: "rgba(16,20,32,0.75)",
-          border: `1px solid ${theme.stroke}`,
-          borderTop: `3px solid ${theme.accent}`,
-          padding: "14px 36px",
+          fontWeight: theme.fontWeightTitle,
+          fontSize: 40,
+          letterSpacing: "0.02em",
+          color: theme.bg,
+          background: theme.accent,
+          borderRadius: 999,
+          padding: "14px 40px",
           textAlign: "center",
           maxWidth: "80%",
         }}
@@ -144,16 +164,36 @@ export const SceneTitle: React.FC<{ text: string }> = ({ text }) => {
   return (
     <div
       style={{
-        fontFamily: theme.fontTitle,
-        fontSize: 54,
-        color: theme.textDim,
-        letterSpacing: "0.08em",
-        textTransform: "uppercase",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
         marginBottom: 48,
         opacity: t,
+        transform: `translateY(${(1 - t) * -14}px)`,
       }}
     >
-      {text}
+      <div
+        style={{
+          fontFamily: theme.fontTitle,
+          fontWeight: theme.fontWeightTitle,
+          fontSize: 50,
+          color: theme.text,
+          letterSpacing: "0.01em",
+          textAlign: "center",
+        }}
+      >
+        {text}
+      </div>
+      <div
+        style={{
+          width: 90,
+          height: 8,
+          borderRadius: 4,
+          background: theme.accent,
+          marginTop: 14,
+          transform: `scaleX(${t})`,
+        }}
+      />
     </div>
   );
 };

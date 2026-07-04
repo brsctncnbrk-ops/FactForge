@@ -2,7 +2,7 @@
 // timings are fractions of the enclosing Sequence, so when timing-sync changes
 // real scene durations, animations re-align automatically. Micro-entrances are
 // capped in absolute frames so a 7s scene doesn't get a 2s fade.
-import { interpolate, useCurrentFrame, useVideoConfig } from "remotion";
+import { interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 
 export const useScene = () => {
   const frame = useCurrentFrame();
@@ -48,3 +48,16 @@ export const staggered = (
 };
 
 export const easeOut = (t: number): number => 1 - Math.pow(1 - t, 3);
+
+// Bouncy "pop" entrance (flat-infographic style): overshoots past 1 then
+// settles, unlike the plain easeOut ramps above. Delay is in frames.
+export const popIn = (
+  frame: number,
+  fps: number,
+  delayFrames = 0
+): number =>
+  spring({
+    frame: Math.max(0, frame - delayFrames),
+    fps,
+    config: { damping: 11, stiffness: 140, mass: 0.6 },
+  });

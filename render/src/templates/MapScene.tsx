@@ -113,16 +113,6 @@ export const MapScene: React.FC<{ p: MapSceneProps; fromLibrary: string[] }> = (
   const icons = p.icons ?? [];
   return (
     <SceneFrame>
-      {/* parchment glow behind the map so it reads as an aged chart, not a
-          flat cut-out */}
-      <div
-        style={{
-          position: "absolute",
-          inset: "4% 6%",
-          background:
-            "radial-gradient(80% 70% at 50% 46%, rgba(212,162,78,0.13) 0%, rgba(212,162,78,0.04) 55%, rgba(0,0,0,0) 78%)",
-        }}
-      />
       <div
         style={{
           position: "absolute",
@@ -130,17 +120,30 @@ export const MapScene: React.FC<{ p: MapSceneProps; fromLibrary: string[] }> = (
           transform: cameraTransform(p.camera, progress),
         }}
       >
+        {/* flat "card" treatment: the source map is a fine multi-color/labeled
+            historical atlas — recoloring its detail (duotone tint) read as a
+            vintage parchment wash, not flat. Neutralizing it to grayscale and
+            mounting it on a bordered flat card instead lets the ACCENT-colored
+            pins/pulses/labels be the infographic layer on top. */}
+        <div
+          style={{
+            position: "absolute",
+            inset: "3%",
+            background: theme.text,
+            borderRadius: 28,
+            border: `10px solid ${theme.accent}`,
+          }}
+        />
         <Img
           src={resolveAsset(mapId)}
           style={{
             position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
+            inset: "3%",
+            width: "94%",
+            height: "94%",
             objectFit: "contain",
-            padding: "2%",
-            filter:
-              "sepia(0.5) saturate(1.15) brightness(0.92) contrast(1.06) drop-shadow(0 10px 30px rgba(0,0,0,0.5))",
+            padding: "3%",
+            filter: "grayscale(1) brightness(1.05) contrast(1.05)",
           }}
         />
         {icons.map((icon, i) => {
@@ -176,10 +179,13 @@ export const MapScene: React.FC<{ p: MapSceneProps; fromLibrary: string[] }> = (
               {icon.label && j === 0 ? (
                 <div
                   style={{
+                    fontFamily: theme.fontTitle,
+                    fontWeight: theme.fontWeightBody,
                     fontSize: 26,
-                    color: theme.text,
-                    background: "rgba(16,20,32,0.8)",
-                    padding: "4px 12px",
+                    color: theme.bg,
+                    background: theme.text,
+                    borderRadius: 999,
+                    padding: "4px 16px",
                   }}
                 >
                   {icon.label}
@@ -194,7 +200,7 @@ export const MapScene: React.FC<{ p: MapSceneProps; fromLibrary: string[] }> = (
           style={{
             position: "absolute",
             inset: 0,
-            boxShadow: `inset 0 0 ${140 + 40 * Math.sin(progress * Math.PI * 3)}px rgba(179,69,47,0.35)`,
+            boxShadow: `inset 0 0 ${140 + 40 * Math.sin(progress * Math.PI * 3)}px ${theme.accentAlt}59`,
           }}
         />
       ) : null}

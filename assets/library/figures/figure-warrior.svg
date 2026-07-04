@@ -1,32 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 220" width="120" height="220">
-  <!-- Generic armed warrior silhouette v2 (crested helmet, cloak, spear, oval
-       shield, stride stance), usable as Roman soldier or federate.
-       FactForge project-original asset (CC0). Same id/viewBox as v1. -->
+  <!-- Flat-vector pictogram warrior v3 (blocky rounded body + helmet-crest
+       spikes + round shield) — replaces the fine documentary-silhouette v2:
+       this style stays readable under rotation (fall animation) and at small
+       chip sizes. FactForge project-original asset (CC0). Same id/viewBox as
+       v1/v2. -->
   <g fill="currentColor">
-    <!-- spear -->
-    <path d="M98 2 L92 21 L104 21 Z"/>
-    <rect x="96.4" y="19" width="3.2" height="191"/>
-    <!-- helmet crest -->
-    <path d="M45 10 Q59 -3 73 9 Q74 13 71 15 Q59 6 48 15 Q45 13 45 10 Z"/>
-    <!-- head: helmet with cheek and neck guard -->
-    <path d="M47 24 a12.5 12.5 0 0 1 25 0 l0 5 4 4 -5 4 -5 -1 -1 5 -11 0 -1 -5 -6 1 -4 -4 4 -4 Z"/>
-    <!-- cloak flowing behind (left) -->
-    <path d="M44 44 Q30 60 26 96 Q24 122 30 148 L40 144 Q34 118 38 92 Q41 66 50 50 Z" fill-opacity="0.85"/>
-    <!-- torso: cuirass, narrow waist -->
-    <path d="M45 42 L75 42 Q79 58 77 74 L73 96 L47 96 L43 74 Q41 58 45 42 Z"/>
-    <!-- pteruges skirt: strips with gaps -->
-    <path d="M45 96 L51 96 L50 120 L44 119 Z M54 96 L60 96 L60 121 L53 120 Z M63 96 L69 96 L70 120 L63 121 Z M72 96 L76 96 L79 118 L73 119 Z"/>
-    <!-- spear arm: raised grip -->
-    <path d="M72 50 L94 62 Q97 65 95 69 L92 73 L68 64 Z"/>
-    <!-- shield arm behind shield -->
-    <path d="M47 54 L34 78 L42 84 L53 66 Z"/>
-    <!-- legs: stride stance with calves -->
-    <path d="M50 120 L58 122 L56 156 Q56 160 54 164 L50 204 L38 204 L46 160 Q47 140 50 120 Z"/>
-    <path d="M62 122 L70 120 Q72 142 71 158 L76 204 L64 204 L62 162 Q60 140 62 122 Z"/>
-    <!-- feet -->
-    <path d="M38 204 L50 204 L52 210 L36 210 Z"/>
-    <path d="M64 204 L76 204 L80 210 L62 210 Z"/>
-    <!-- oval shield -->
-    <path d="M26 78 a20 30 0 0 1 20 30 a20 30 0 0 1 -40 0 a20 30 0 0 1 20 -30 Z"/>
+    <path d="M46 16 L52 2 L58 16 Z"/>
+    <path d="M54 12 L60 0 L66 12 Z"/>
+    <path d="M62 16 L68 2 L74 16 Z"/>
+    <circle cx="60" cy="36" r="24"/>
+    <rect x="30" y="60" width="60" height="86" rx="26"/>
+    <rect x="10" y="64" width="20" height="76" rx="10"/>
+    <rect x="90" y="64" width="20" height="76" rx="10"/>
+    <rect x="34" y="146" width="22" height="66" rx="11"/>
+    <rect x="64" y="146" width="22" height="66" rx="11"/>
+    <rect x="30" y="206" width="30" height="12" rx="6"/>
+    <rect x="60" y="206" width="30" height="12" rx="6"/>
+    <circle cx="12" cy="112" r="17" fill-opacity="0.9"/>
   </g>
 </svg>

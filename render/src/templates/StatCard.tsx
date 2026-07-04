@@ -1,6 +1,6 @@
 import type { StatCardProps } from "../types/generated";
-import { easeOut, entrance, useScene } from "../lib/anim";
-import { SceneFrame } from "../lib/bits";
+import { popIn, useScene } from "../lib/anim";
+import { IconBadge, SceneFrame } from "../lib/bits";
 import { centerColumn, theme } from "../lib/theme";
 import { InlineSvg } from "../lib/InlineSvg";
 import { resolveAsset } from "../lib/assets";
@@ -29,34 +29,46 @@ const parseValue = (value: string | number) => {
 };
 
 export const StatCard: React.FC<{ p: StatCardProps }> = ({ p }) => {
-  const { frame, durationInFrames, fps } = useScene();
-  const t = easeOut(entrance(frame, durationInFrames, fps, 0.45, 1.6));
-  const appear = easeOut(entrance(frame, durationInFrames, fps, 0.15, 0.6));
+  const { frame, fps } = useScene();
+  const pop = popIn(frame, fps, 0);
+  const appear = Math.min(1, popIn(frame, fps, 6) * 1.2);
   const parsed = parseValue(p.value);
   const countUp = p.countUp ?? true;
   const display =
-    parsed && countUp ? parsed.render(parsed.num * t) : String(p.value);
+    parsed && countUp
+      ? parsed.render(parsed.num * Math.min(1, pop))
+      : String(p.value);
 
   return (
     <SceneFrame>
       <div style={centerColumn}>
         {p.icon ? (
-          <InlineSvg
-            src={resolveAsset(p.icon)}
-            color={theme.accent}
-            style={{ width: 130, height: 130, opacity: appear, marginBottom: 24 }}
-          />
+          <IconBadge
+            size={150}
+            color={theme.accentAlt}
+            style={{
+              marginBottom: 28,
+              opacity: appear,
+              transform: `scale(${pop})`,
+            }}
+          >
+            <InlineSvg
+              src={resolveAsset(p.icon)}
+              color={theme.text}
+              style={{ width: 84, height: 84 }}
+            />
+          </IconBadge>
         ) : null}
         <div
           style={{
             fontFamily: theme.fontTitle,
+            fontWeight: theme.fontWeightTitle,
             // long ranges like "400,000–600,000" shrink to stay on one line
             fontSize: display.length > 12 ? 130 : display.length > 8 ? 160 : 200,
-            fontWeight: 700,
             color: theme.accent,
             lineHeight: 1.05,
             opacity: appear,
-            transform: `translateY(${(1 - appear) * 30}px)`,
+            transform: `scale(${pop})`,
             textAlign: "center",
             maxWidth: "90%",
           }}
@@ -65,8 +77,10 @@ export const StatCard: React.FC<{ p: StatCardProps }> = ({ p }) => {
         </div>
         <div
           style={{
+            fontFamily: theme.fontTitle,
+            fontWeight: theme.fontWeightBody,
             fontSize: 58,
-            marginTop: 28,
+            marginTop: 20,
             opacity: appear,
             textAlign: "center",
             maxWidth: "75%",
@@ -79,7 +93,7 @@ export const StatCard: React.FC<{ p: StatCardProps }> = ({ p }) => {
             style={{
               fontSize: 38,
               color: theme.textDim,
-              marginTop: 18,
+              marginTop: 16,
               opacity: appear,
               textAlign: "center",
               maxWidth: "70%",

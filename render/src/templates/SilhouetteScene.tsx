@@ -1,4 +1,4 @@
-import { Img, interpolate } from "remotion";
+import { interpolate } from "remotion";
 import type { SilhouetteSceneProps } from "../types/generated";
 import { easeOut, staggered, useScene } from "../lib/anim";
 import { OverlayText, SceneFrame } from "../lib/bits";
@@ -11,13 +11,20 @@ type Fig = SilhouetteSceneProps["figures"][number];
 // position -> base x (%), bottom (%), scale. Same-position figures fan out by
 // index so they never stack exactly.
 const POSITIONS: Record<string, { x: number; bottom: number; scale: number }> = {
-  left: { x: 25, bottom: 12, scale: 1 },
-  center: { x: 50, bottom: 12, scale: 1 },
-  right: { x: 75, bottom: 12, scale: 1 },
-  foreground: { x: 50, bottom: 4, scale: 1.45 },
-  // distant figures stand near the horizon line (hills top out ~27%), not
-  // floating mid-sky — 34% read fine on the old bare gradient, not anymore
-  background: { x: 50, bottom: 19, scale: 0.62 },
+  left: { x: 25, bottom: 14, scale: 1 },
+  center: { x: 50, bottom: 14, scale: 1 },
+  right: { x: 75, bottom: 14, scale: 1 },
+  foreground: { x: 50, bottom: 6, scale: 1.45 },
+  background: { x: 50, bottom: 22, scale: 0.62 },
+};
+
+// Flat "costume" colors per figure type — the Infographics-Show look uses
+// colorful flat character icons, not black cutouts. Falls back to white for
+// any asset id not in this table (new figures still render, just neutral).
+const FIGURE_COLORS: Record<string, string> = {
+  "figure-warrior": theme.accentAlt,
+  "figure-emperor": theme.accent,
+  "figure-civilian": theme.good,
 };
 
 const figureMotion = (
@@ -63,81 +70,34 @@ const figureMotion = (
   }
 };
 
+// The schema still allows an optional `background` image, but the flat
+// template intentionally never draws it: a photographic/painted backdrop
+// behind flat vector figures reads as a mismatch, not depth (confirmed in the
+// Stage-1 visual POC). Flat figures stay on the flat ground only.
 export const SilhouetteScene: React.FC<{ p: SilhouetteSceneProps }> = ({ p }) => {
   const { frame, durationInFrames, progress } = useScene();
 
   return (
-    <SceneFrame
-      // dusk sky: bright warm band at the horizon so dark figures read as
-      // silhouettes against it
-      background={
-        "linear-gradient(180deg, #0d1120 0%, #232b45 45%, #6b4a3a 72%, #c2703f 88%, #1a1410 89%, #0a0c12 100%)"
-      }
-    >
-      {p.background ? (
-        <Img
-          src={resolveAsset(p.background)}
-          style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            opacity: 0.35,
-          }}
-        />
-      ) : null}
-      {/* low sun glow on the horizon */}
-      <div
-        style={{
-          position: "absolute",
-          left: "30%",
-          right: "30%",
-          bottom: "6%",
-          height: "30%",
-          background:
-            "radial-gradient(50% 60% at 50% 88%, rgba(226,150,80,0.5) 0%, rgba(226,150,80,0.15) 55%, rgba(0,0,0,0) 80%)",
-        }}
-      />
-      {/* distant hill layers, drifting apart very slowly (parallax) */}
-      <div
-        style={{
-          position: "absolute",
-          left: "-4%",
-          right: "-4%",
-          bottom: "11%",
-          height: "16%",
-          background: "#141724",
-          opacity: 0.85,
-          clipPath:
-            "polygon(0% 100%, 0% 62%, 9% 44%, 18% 58%, 27% 30%, 38% 55%, 47% 38%, 57% 60%, 66% 34%, 76% 56%, 85% 42%, 94% 60%, 100% 48%, 100% 100%)",
-          transform: `translateX(${-6 * progress}px)`,
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          left: "-4%",
-          right: "-4%",
-          bottom: "10%",
-          height: "10%",
-          background: "#0e1019",
-          clipPath:
-            "polygon(0% 100%, 0% 55%, 12% 70%, 22% 40%, 34% 66%, 45% 48%, 58% 72%, 70% 44%, 82% 64%, 92% 50%, 100% 66%, 100% 100%)",
-          transform: `translateX(${6 * progress}px)`,
-        }}
-      />
-      {/* ground: dark band with a lit edge instead of a bare 2px line */}
+    <SceneFrame>
+      {/* flat ground bar — a solid baseline instead of a photographic horizon */}
       <div
         style={{
           position: "absolute",
           left: 0,
           right: 0,
           bottom: 0,
-          height: "10.2%",
-          background:
-            "linear-gradient(180deg, rgba(26,20,16,0.95) 0%, #0a0c12 60%)",
-          boxShadow: "0 -1px 0 rgba(226,150,80,0.35)",
+          height: "9%",
+          background: theme.bgAlt,
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          left: 0,
+          right: 0,
+          bottom: "9%",
+          height: 6,
+          background: theme.accent,
         }}
       />
       {p.figures.map((fig, i) => {
@@ -148,7 +108,10 @@ export const SilhouetteScene: React.FC<{ p: SilhouetteSceneProps }> = ({ p }) =>
         const x = base.x + same * 9 * (same % 2 === 0 ? 1 : -1);
         const t = easeOut(staggered(frame, durationInFrames, i, p.figures.length, 0.4));
         const motion = figureMotion(fig, frame, durationInFrames, progress);
-        const height = 420 * base.scale;
+        // bigger than the old silhouettes — flat pictograms read as sparse in
+        // a large empty flat frame if kept at the old (documentary-scale) size
+        const height = 560 * base.scale;
+        const color = FIGURE_COLORS[fig.asset] ?? theme.text;
         return (
           <div
             key={i}
@@ -157,32 +120,27 @@ export const SilhouetteScene: React.FC<{ p: SilhouetteSceneProps }> = ({ p }) =>
               left: `${x}%`,
               bottom: `${base.bottom}%`,
               transform: "translateX(-50%)",
-              opacity: t * (fig.position === "background" ? 0.55 : 0.92),
+              opacity: t * (fig.position === "background" ? 0.7 : 1),
             }}
           >
             <div style={{ position: "relative", ...motion }}>
-              <InlineSvg
-                src={resolveAsset(fig.asset)}
-                color="#0b0d14"
-                style={{
-                  height,
-                  width: height * 0.5,
-                  filter: "drop-shadow(0 6px 18px rgba(0,0,0,0.7))",
-                }}
-              />
-              {/* contact shadow grounds the figure */}
+              {/* flat contact ellipse grounds the figure — solid, no blur */}
               <div
                 style={{
                   position: "absolute",
                   left: "50%",
-                  bottom: -8,
-                  width: height * 0.46,
-                  height: 16,
+                  bottom: -6,
+                  width: height * 0.4,
+                  height: 14,
                   transform: "translateX(-50%)",
                   borderRadius: "50%",
-                  background:
-                    "radial-gradient(50% 50% at 50% 50%, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 75%)",
+                  background: "rgba(0,0,0,0.18)",
                 }}
+              />
+              <InlineSvg
+                src={resolveAsset(fig.asset)}
+                color={color}
+                style={{ height, width: height * 0.5 }}
               />
             </div>
           </div>

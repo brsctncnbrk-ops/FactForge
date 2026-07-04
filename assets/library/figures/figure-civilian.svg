@@ -1,29 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 220" width="120" height="220">
-  <!-- Roman civilian silhouette v2: belted knee-length tunic, natural walking
-       pose, satchel at the hip. FactForge project-original asset (CC0).
-       Same id/viewBox as v1. -->
+  <!-- Flat-vector pictogram person v3 (blocky rounded shapes, single flat
+       fill) — replaces the fine documentary-silhouette v2: this style stays
+       readable under rotation (fall animation) and at small chip sizes.
+       FactForge project-original asset (CC0). Same id/viewBox as v1/v2. -->
   <g fill="currentColor">
-    <!-- head with short hair line -->
-    <path d="M48 26 a12.5 12.5 0 0 1 25 0 a12.5 12.5 0 0 1 -25 0 Z"/>
-    <path d="M47 22 Q60 12 73 22 L71 16 Q60 8 49 16 Z"/>
-    <!-- neck -->
-    <path d="M55 38 h10 l1 7 h-12 Z"/>
-    <!-- tunic: shoulders to knee, slight flare, belt cinch -->
-    <path d="M45 45 L75 45 L80 84 L77 86 L82 128 L38 128 L43 86 L40 84 Z"/>
-    <!-- belt knot -->
-    <path d="M40 84 L80 84 L79 90 L41 90 Z" fill-opacity="0.35"/>
-    <!-- right arm swinging forward -->
-    <path d="M72 50 L88 78 Q90 82 86 85 L82 86 L66 62 Z"/>
-    <!-- left arm bent, hand at satchel -->
-    <path d="M48 50 L38 74 L34 96 L42 98 L46 78 L56 62 Z"/>
-    <!-- satchel on hip strap -->
-    <path d="M46 47 L36 98 L42 100 L52 49 Z" fill-opacity="0.35"/>
-    <path d="M30 96 h20 v16 q-10 4 -20 0 Z"/>
-    <!-- legs: walking stride, calves -->
-    <path d="M46 128 L56 128 Q54 150 50 166 L46 205 L35 204 L43 164 Q44 146 46 128 Z"/>
-    <path d="M64 128 L74 128 Q77 148 74 166 L79 205 L68 205 L66 164 Q63 146 64 128 Z"/>
-    <!-- feet -->
-    <path d="M35 204 L46 205 L47 211 L32 210 Z"/>
-    <path d="M68 205 L79 205 L83 211 L66 211 Z"/>
+    <circle cx="60" cy="36" r="24"/>
+    <rect x="30" y="60" width="60" height="86" rx="26"/>
+    <rect x="10" y="64" width="20" height="76" rx="10"/>
+    <rect x="90" y="64" width="20" height="76" rx="10"/>
+    <rect x="34" y="146" width="22" height="66" rx="11"/>
+    <rect x="64" y="146" width="22" height="66" rx="11"/>
+    <rect x="30" y="206" width="30" height="12" rx="6"/>
+    <rect x="60" y="206" width="30" height="12" rx="6"/>
   </g>
 </svg>

@@ -20,5 +20,5 @@ Source and license notes for every asset in `/assets/library`. The machine recor
 ## Per-Asset Notes
 
 - **map-roman-empire** — `File:RomanEmpire_117.svg` by ArdadN (English Wikipedia), Public domain. Source page: https://commons.wikimedia.org/wiki/File:RomanEmpire_117.svg — verified 2026-07-03 via Commons API. No attribution required (credit kept here as a courtesy).
-- **icon-soldier, figure-warrior, figure-emperor, figure-civilian** — project-original CC0 SVGs. Figures upgraded to detailed v2 silhouettes on 2026-07-04 under the SAME ids/paths (scene files untouched); icon-soldier remains v1.
+- **icon-soldier, figure-warrior, figure-emperor, figure-civilian** — project-original CC0 SVGs. Figures upgraded to detailed v2 silhouettes on 2026-07-04, then redrawn again the same day as v3 blocky flat-vector pictograms (rounded head/torso/limb blocks) to fit the flat-infographic render style — the fine v2 detail didn't survive rotation transforms or small render sizes. All under the SAME ids/paths (scene files untouched); icon-soldier remains v1 (already simple enough for the flat style).
 - **decor-laurel** — project-original CC0 laurel-branch ornament (2026-07-04). Referenced directly by render template code (text-emphasis divider), not by scene JSONs, so `usedInVideos` legitimately stays empty.

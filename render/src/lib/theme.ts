@@ -1,19 +1,31 @@
 // Shared visual language for all 12 templates. Components read from here so a
 // future restyle is one file, not twelve.
+//
+// Style target: bright flat-vector infographic (The Infographics Show) — solid
+// flat colors, no gradients/grain/vignette, thick rounded shapes, bold
+// geometric sans. loadFont() is called once at module scope (Remotion caches
+// this internally) so every template gets the family without importing fonts
+// itself.
+import { loadFont } from "@remotion/google-fonts/Poppins";
+
+const { fontFamily: poppins } = loadFont("normal", {
+  weights: ["500", "700", "800"],
+});
+
 export const theme = {
-  bg: "#101420",
-  bgAlt: "#181f30",
-  panel: "rgba(255,255,255,0.06)",
-  text: "#f2ede3",
-  textDim: "#a8a294",
-  accent: "#d4a24e",
-  accentAlt: "#b3452f",
-  good: "#7fae6a",
-  stroke: "rgba(242,237,227,0.25)",
-  fontTitle:
-    "'Georgia', 'Times New Roman', serif",
-  fontBody:
-    "'Segoe UI', 'Helvetica Neue', Arial, sans-serif",
+  bg: "#123B6B",
+  bgAlt: "#0D2C52",
+  panel: "rgba(255,255,255,0.10)",
+  text: "#FFFFFF",
+  textDim: "#B9CBE4",
+  accent: "#FF9736",
+  accentAlt: "#FF5C5C",
+  good: "#3DD68C",
+  stroke: "rgba(255,255,255,0.85)",
+  fontTitle: `'${poppins}', 'Segoe UI', Arial, sans-serif`,
+  fontBody: `'${poppins}', 'Segoe UI', Arial, sans-serif`,
+  fontWeightTitle: 800,
+  fontWeightBody: 500,
 } as const;
 
 export const absoluteFill: React.CSSProperties = {
@@ -30,4 +42,5 @@ export const centerColumn: React.CSSProperties = {
   justifyContent: "center",
 };
 
-export const bgGradient = `radial-gradient(120% 120% at 50% 20%, ${theme.bgAlt} 0%, ${theme.bg} 70%)`;
+// Flat solid field (no gradient) — SceneFrame's default background.
+export const bgGradient = theme.bg;
