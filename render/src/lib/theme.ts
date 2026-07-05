@@ -1,5 +1,5 @@
-// Shared visual language for all 12 templates. Components read from here so a
-// future restyle is one file, not twelve.
+// Shared visual language for all 16 templates. Components read from here so a
+// future restyle is one file, not sixteen.
 //
 // Style target: bright flat-vector infographic (The Infographics Show) — solid
 // flat colors, no gradients/grain/vignette, thick rounded shapes, bold

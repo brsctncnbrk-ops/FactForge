@@ -13,6 +13,11 @@
     },
     "caption": { "type": "string" },
     "onScreenText": { "type": "string" },
+    "revealStyle": {
+      "enum": ["none", "blur-in"],
+      "default": "none",
+      "description": "blur-in: the image starts heavily blurred/dimmed and sharpens over the first ~35% of the scene — a mystery/reveal treatment for a concrete object or document, distinct from the plain Ken Burns default."
+    },
     "aspectRatio": { "enum": ["16:9", "9:16"], "default": "16:9" }
   }
 }

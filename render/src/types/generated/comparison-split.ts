@@ -14,4 +14,5 @@ export interface Side {
   items?: string[];
   image?: string;
   value?: string;
+  icon?: string;
 }

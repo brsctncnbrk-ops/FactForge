@@ -1,6 +1,6 @@
 {
   "version": "2.1.1",
-  "updatedAt": "2026-07-04",
+  "updatedAt": "2026-07-05",
   "assets": [
     {
       "id": "decor-laurel",
@@ -146,16 +146,151 @@
         "crowd",
         "flat",
         "pictogram",
-        "vector"
+        "vector",
+        "generic",
+        "person",
+        "neutral"
       ],
       "createdAt": "2026-07-03",
-      "updatedAt": "2026-07-04",
+      "updatedAt": "2026-07-05",
       "status": "ACTIVE",
       "reusable": true,
       "usedInVideos": [
         "why-the-roman-empire-really-collapsed"
       ],
-      "notes": "v4 (2026-07-04): recolored the v3 blocky pictogram with skin/tunic/sandal tones + a dark outline stroke (the Infographics-Show 'flat color + black outline' character look) — v3 was a flat single-fill silhouette, which read as a generic icon rather than a character. Same id/viewBox/paths as v1-v3, no scene JSON changes needed."
+      "notes": "v4 (2026-07-04): recolored the v3 blocky pictogram with skin/tunic/sandal tones + a dark outline stroke (the Infographics-Show 'flat color + black outline' character look) — v3 was a flat single-fill silhouette, which read as a generic icon rather than a character. Same id/viewBox/paths as v1-v3, no scene JSON changes needed. CORRECTION (2026-07-05): re-examined the actual geometry — unlike figure-warrior (crest+shield) and figure-emperor (toga+laurel), this asset has ZERO period-specific styling (plain rounded-rect torso, no accessories). It was mistakenly treated as Roman-only in earlier gap analysis; it is genuinely reusable as a generic person silhouette for ANY topic (a homeowner, a banker, a generic crowd figure) via silhouette-scene's existing `color` tint. figure-warrior/figure-emperor remain genuinely Rome-specific."
+    },
+    {
+      "id": "icon-warning",
+      "type": "icon",
+      "source": "Project original (drawn in-house for FactForge)",
+      "sourceUrl": "",
+      "license": "CC0",
+      "attributionRequired": false,
+      "attributionText": "",
+      "filePath": "/assets/library/icons/icon-warning.svg",
+      "tags": [
+        "warning",
+        "danger",
+        "alert",
+        "icon",
+        "flat",
+        "vector",
+        "generic"
+      ],
+      "createdAt": "2026-07-05",
+      "updatedAt": "2026-07-05",
+      "status": "ACTIVE",
+      "reusable": true,
+      "usedInVideos": [
+        "why-the-2008-financial-crisis-really-happened",
+        "why-the-roman-empire-really-collapsed"
+      ],
+      "notes": "Warning-triangle + exclamation mark, single fill (currentColor, exclamation cut via evenodd). Topic-agnostic — not Rome-specific. For icon-grid/stat-card/map-scene warning emphasis and any future warning/danger-toned scene."
+    },
+    {
+      "id": "icon-coin",
+      "type": "icon",
+      "source": "Project original (drawn in-house for FactForge)",
+      "sourceUrl": "",
+      "license": "CC0",
+      "attributionRequired": false,
+      "attributionText": "",
+      "filePath": "/assets/library/icons/icon-coin.svg",
+      "tags": [
+        "money",
+        "economy",
+        "coin",
+        "icon",
+        "flat",
+        "vector",
+        "generic"
+      ],
+      "createdAt": "2026-07-05",
+      "updatedAt": "2026-07-05",
+      "status": "ACTIVE",
+      "reusable": true,
+      "usedInVideos": [
+        "why-the-2008-financial-crisis-really-happened",
+        "why-the-roman-empire-really-collapsed"
+      ],
+      "notes": "Coin-stack silhouette (three overlapping ellipses), single fill. Topic-agnostic. For money/economy visualization scenes (chart-scene/stat-card/icon-grid)."
+    },
+    {
+      "id": "icon-document",
+      "type": "icon",
+      "source": "Project original (drawn in-house for FactForge)",
+      "sourceUrl": "",
+      "license": "CC0",
+      "attributionRequired": false,
+      "attributionText": "",
+      "filePath": "/assets/library/icons/icon-document.svg",
+      "tags": [
+        "document",
+        "evidence",
+        "record",
+        "icon",
+        "flat",
+        "vector",
+        "generic"
+      ],
+      "createdAt": "2026-07-05",
+      "updatedAt": "2026-07-05",
+      "status": "ACTIVE",
+      "reusable": true,
+      "usedInVideos": [
+        "why-the-2008-financial-crisis-really-happened"
+      ],
+      "notes": "Folded-corner page with 3 text-line holes cut via evenodd, single fill. Topic-agnostic. Primary use: evidence-board-scene item icon."
+    },
+    {
+      "id": "icon-megaphone",
+      "type": "icon",
+      "source": "Project original (drawn in-house for FactForge)",
+      "sourceUrl": "",
+      "license": "CC0",
+      "attributionRequired": false,
+      "attributionText": "",
+      "filePath": "/assets/library/icons/icon-megaphone.svg",
+      "tags": [
+        "news",
+        "briefing",
+        "announcement",
+        "icon",
+        "flat",
+        "vector",
+        "generic"
+      ],
+      "createdAt": "2026-07-05",
+      "updatedAt": "2026-07-05",
+      "status": "ACTIVE",
+      "reusable": true,
+      "usedInVideos": [],
+      "notes": "Bullhorn/megaphone silhouette, single fill. Topic-agnostic. For news-briefing-scene and icon-grid announcement contexts."
+    },
+    {
+      "id": "map-world-generic",
+      "type": "map",
+      "source": "Project original (drawn in-house for FactForge)",
+      "sourceUrl": "",
+      "license": "CC0",
+      "attributionRequired": false,
+      "attributionText": "",
+      "filePath": "/assets/library/maps/map-world-generic.svg",
+      "tags": [
+        "world",
+        "map",
+        "generic",
+        "schematic",
+        "flat",
+        "vector"
+      ],
+      "createdAt": "2026-07-05",
+      "updatedAt": "2026-07-05",
+      "status": "ACTIVE",
+      "reusable": true,
+      "usedInVideos": [],
+      "notes": "Simplified/schematic world continent shapes — deliberately stylized, not traced from a real atlas and not politically accurate, so it never overclaims cartographic precision. Rendered through map-scene's existing grayscale+card treatment like map-roman-empire. Fills the gap map-roman-empire left for any non-Roman-history topic needing a world map (map-scene's PLACEMENTS already support generic north/south/east/west/center pins, not just Rome-specific ones)."
     }
   ]
 }

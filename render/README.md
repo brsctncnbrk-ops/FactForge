@@ -1,6 +1,6 @@
 # /render — Phase 2 Render Layer (Remotion)
 
-Not a skill. The 12 scene templates are coded ONCE as Remotion components;
+Not a skill. The 16 scene templates are coded ONCE as Remotion components;
 after that every video is JSON-only (props from `04-scenes-final.json`).
 TypeScript prop types are GENERATED from `/templates/schemas` (P8) — never
 edit `src/types/generated/*` by hand; run `npm run gen`.

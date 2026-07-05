@@ -37,16 +37,21 @@
       ],
       "wordCount": 15,
       "estimatedDuration": 6.282,
-      "template": "text-emphasis",
+      "template": "silhouette-scene",
       "props": {
-        "text": "NO BATTLE. NO FIRE.",
-        "emphasisWords": [
-          "NO"
+        "figures": [
+          {
+            "asset": "figure-emperor",
+            "action": "static",
+            "position": "foreground"
+          }
         ],
-        "animation": "fade-scale"
+        "onScreenText": "NO BATTLE. NO FIRE."
       },
       "assets": {
-        "fromLibrary": [],
+        "fromLibrary": [
+          "figure-emperor"
+        ],
         "newAssets": []
       },
       "emotionalTone": "Quiet, eerie.",
@@ -202,14 +207,14 @@
       "estimatedDuration": 6.282,
       "template": "icon-grid",
       "props": {
-        "icon": "icon-soldier",
+        "icon": "icon-coin",
         "count": 50,
         "label": "1 icon = 10,000 soldiers",
         "columns": 10
       },
       "assets": {
         "fromLibrary": [
-          "icon-soldier"
+          "icon-coin"
         ],
         "newAssets": []
       },
@@ -355,19 +360,17 @@
       ],
       "wordCount": 14,
       "estimatedDuration": 5.863,
-      "template": "map-scene",
+      "template": "icon-grid",
       "props": {
-        "region": "roman-empire-max-extent",
-        "camera": "slow-zoom-out",
-        "mapAsset": "map-roman-empire",
-        "highlights": [
-          "borders"
-        ],
-        "onScreenText": "ROME VS. ROME"
+        "icon": "icon-coin",
+        "count": 16,
+        "highlightCount": 16,
+        "label": "TREASURY BLED DRY",
+        "columns": 8
       },
       "assets": {
         "fromLibrary": [
-          "map-roman-empire"
+          "icon-coin"
         ],
         "newAssets": []
       },
@@ -741,25 +744,30 @@
       ],
       "wordCount": 15,
       "estimatedDuration": 6.282,
-      "template": "silhouette-scene",
+      "template": "comparison-split",
       "props": {
-        "figures": [
-          {
-            "asset": "figure-warrior",
-            "action": "static",
-            "position": "foreground"
-          },
-          {
-            "asset": "figure-warrior",
-            "action": "march",
-            "position": "background"
-          }
-        ],
-        "onScreenText": "LOYALTY FOR HIRE"
+        "heading": "LOYALTY FOR HIRE",
+        "left": {
+          "title": "ROME",
+          "icon": "icon-warning",
+          "items": [
+            "A distant capital",
+            "No guaranteed pay"
+          ]
+        },
+        "right": {
+          "title": "THEIR COMMANDER",
+          "icon": "icon-coin",
+          "items": [
+            "Present, in charge",
+            "Pays them directly"
+          ]
+        }
       },
       "assets": {
         "fromLibrary": [
-          "figure-warrior"
+          "icon-warning",
+          "icon-coin"
         ],
         "newAssets": []
       },
@@ -1289,19 +1297,16 @@
       ],
       "wordCount": 12,
       "estimatedDuration": 5.025,
-      "template": "map-scene",
+      "template": "icon-grid",
       "props": {
-        "region": "mediterranean-africa-to-italy",
-        "camera": "slow-pan-right",
-        "mapAsset": "map-roman-empire",
-        "highlights": [
-          "grain-and-tax-routes"
-        ],
-        "onScreenText": "ROME'S BREADBASKET"
+        "icon": "icon-coin",
+        "count": 10,
+        "label": "ROME'S BREADBASKET: GRAIN + TAXES",
+        "columns": 5
       },
       "assets": {
         "fromLibrary": [
-          "map-roman-empire"
+          "icon-coin"
         ],
         "newAssets": []
       },
@@ -1434,18 +1439,16 @@
       ],
       "wordCount": 19,
       "estimatedDuration": 7.957,
-      "template": "icon-grid",
+      "template": "text-emphasis",
       "props": {
-        "icon": "icon-soldier",
-        "count": 40,
-        "highlightCount": 40,
-        "label": "an army with no paymaster",
-        "columns": 10
+        "text": "AN ARMY WITH NO PAYMASTER",
+        "emphasisWords": [
+          "NO PAYMASTER"
+        ],
+        "animation": "impact"
       },
       "assets": {
-        "fromLibrary": [
-          "icon-soldier"
-        ],
+        "fromLibrary": [],
         "newAssets": []
       },
       "emotionalTone": "Powder keg.",
@@ -1461,13 +1464,11 @@
       ],
       "wordCount": 14,
       "estimatedDuration": 5.863,
-      "template": "text-emphasis",
+      "template": "transition-break",
       "props": {
-        "text": "BACK TO 476",
-        "emphasisWords": [
-          "476"
-        ],
-        "animation": "fade-scale"
+        "title": "BACK TO 476",
+        "subtitle": "The fall that wasn't really a fall",
+        "style": "fade"
       },
       "assets": {
         "fromLibrary": [],
@@ -1824,18 +1825,29 @@
       ],
       "wordCount": 17,
       "estimatedDuration": 7.119,
-      "template": "list-reveal",
+      "template": "flow-diagram-scene",
       "props": {
-        "title": "How Empires Die",
-        "items": [
-          "Money first",
-          "Then loyalty",
-          "Then everything"
+        "title": "HOW EMPIRES DIE",
+        "steps": [
+          {
+            "label": "Money first",
+            "icon": "icon-coin"
+          },
+          {
+            "label": "Then loyalty",
+            "icon": "icon-warning"
+          },
+          {
+            "label": "Then everything"
+          }
         ],
-        "numbered": true
+        "highlightIndex": 2
       },
       "assets": {
-        "fromLibrary": [],
+        "fromLibrary": [
+          "icon-coin",
+          "icon-warning"
+        ],
         "newAssets": []
       },
       "emotionalTone": "Thesis, sobering.",

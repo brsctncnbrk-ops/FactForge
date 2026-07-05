@@ -1,13 +1,13 @@
-# Template Catalog (v1 — 12 templates)
+# Template Catalog (v2 — 16 templates)
 
 Human-readable catalog for the scene template system. The **machine source of truth** is `/templates/schemas/{template}.schema.json` (P8) — on any conflict between this document and a schema, **the schema wins**. The top-level file contract is `/templates/schemas/scenes-file.schema.json`.
 
-Shared conventions (all 12 templates):
+Shared conventions (all 16 templates):
 
 - All asset-valued props (`icon`, `image`, `background`, `mapAsset`, `figures[].asset`, ...) hold **manifest asset IDs** from `/assets/library/manifest.json`, never file paths or URLs.
-- Every template has an optional `aspectRatio` prop: `"16:9"` (default) or `"9:16"`. 9:16 is a prop, not a separate schema — schema count stays at 12.
+- Every template has an optional `aspectRatio` prop: `"16:9"` (default) or `"9:16"`. 9:16 is a prop, not a separate schema — schema count stays at 16.
 - `additionalProperties: false` everywhere: a prop not listed in the schema is a validation error, not a hint to the renderer.
-- Template gaps are logged in `/templates/TEMPLATE-GAPS.md` (see NEW TEMPLATE PROPOSAL rule in the brief, 03-visual-scene-skill section).
+- Template gaps are logged in `/templates/TEMPLATE-GAPS.md` (see NEW TEMPLATE PROPOSAL rule in the brief, 03-visual-scene-skill section). Templates 13-16 below were added 2026-07-05 as a direct, explicit architectural decision (not through the emergent per-video threshold — see the TEMPLATE-GAPS.md entry for that decision's paper trail).
 
 ---
 
@@ -308,7 +308,7 @@ Shared conventions (all 12 templates):
 
 ## 11. image-spotlight
 
-**Purpose:** Stock image/photo + Ken Burns (slow pan/zoom). Real artifacts, ruins, paintings.
+**Purpose:** Stock image/photo + Ken Burns (slow pan/zoom). Real artifacts, ruins, paintings. With `revealStyle: "blur-in"`, doubles as the **mystery/reveal scene**: the image starts heavily blurred and dimmed and sharpens over the first ~35% of the scene, for "what is this really?" narration beats.
 
 | Prop | Type | Required | Allowed values / constraints |
 |---|---|---|---|
@@ -316,6 +316,7 @@ Shared conventions (all 12 templates):
 | `kenBurns` | string | yes | `zoom-in`, `zoom-out`, `pan-left`, `pan-right`, `pan-up`, `pan-down` |
 | `caption` | string | no | small descriptive caption |
 | `onScreenText` | string | no | short overlay text |
+| `revealStyle` | string | no | `none` (default), `blur-in` (mystery/reveal treatment) |
 | `aspectRatio` | string | no | `16:9` (default), `9:16` |
 
 **Example props:**
@@ -325,6 +326,17 @@ Shared conventions (all 12 templates):
   "image": "img-colosseum-ruins",
   "kenBurns": "zoom-in",
   "caption": "The Colosseum today"
+}
+```
+
+**Mystery/reveal example:**
+
+```json
+{
+  "image": "img-mystery-document",
+  "kenBurns": "zoom-in",
+  "revealStyle": "blur-in",
+  "onScreenText": "WHAT WAS HIDDEN?"
 }
 ```
 
@@ -357,4 +369,119 @@ Shared conventions (all 12 templates):
 ```
 
 **Asset needs:** 0–1 background.
+
+---
+
+## 13. flow-diagram-scene
+
+**Purpose:** Sequential steps connected by arrows. Process flows and cause-and-effect chains — the one thing list-reveal/timeline-scene don't do (a directional arrow between each step).
+
+| Prop | Type | Required | Allowed values / constraints |
+|---|---|---|---|
+| `steps` | object[] | yes | 2–6 items; each: `label` (required), `icon` (manifest ID, optional) |
+| `direction` | string | no | `horizontal` (default), `vertical` |
+| `title` | string | no | scene heading |
+| `highlightIndex` | integer | no | ≥ 0; index of the emphasized step |
+| `aspectRatio` | string | no | `16:9` (default), `9:16` |
+
+**Example props:**
+
+```json
+{
+  "title": "HOW THE FRONTIER BROKE",
+  "steps": [
+    { "label": "Borders overextended", "icon": "icon-warning" },
+    { "label": "Army spread too thin" },
+    { "label": "Frontier provinces fall" }
+  ],
+  "highlightIndex": 2
+}
+```
+
+**Asset needs:** 0–6 icons.
+**9:16 variant:** forces `direction: "vertical"` regardless of the prop value; steps stack top-to-bottom.
+
+---
+
+## 14. scale-comparison-scene
+
+**Purpose:** Two or more items shown as proportionally sized bars so a magnitude difference reads at a glance (army sizes, distances, populations).
+
+| Prop | Type | Required | Allowed values / constraints |
+|---|---|---|---|
+| `items` | object[] | yes | 2–5 items; each: `label` (required), `value` (number > 0, required), `displayValue` (optional override string) |
+| `unit` | string | no | appended to the auto-formatted value (e.g. `"km"`) |
+| `title` | string | no | scene heading |
+| `aspectRatio` | string | no | `16:9` (default), `9:16` |
+
+**Example props:**
+
+```json
+{
+  "title": "ARMY SIZE, THEN VS. NOW",
+  "unit": "legions",
+  "items": [
+    { "label": "Peak (2nd century)", "value": 33 },
+    { "label": "By 476 AD", "value": 9 }
+  ]
+}
+```
+
+**Asset needs:** none.
+**9:16 variant:** bars stack narrower; labels wrap to two lines above the bar instead of beside it.
+
+---
+
+## 15. evidence-board-scene
+
+**Purpose:** Pinned document/photo cards on a board, optionally linked by string lines. Investigative/mystery framing for a cluster of related facts revealed together.
+
+| Prop | Type | Required | Allowed values / constraints |
+|---|---|---|---|
+| `items` | object[] | yes | 2–6 items; each: `label` (required), `icon` (manifest ID, optional), `note` (optional) |
+| `connections` | integer[][] | no | pairs of item indices to connect with a string line |
+| `title` | string | no | scene heading |
+| `aspectRatio` | string | no | `16:9` (default), `9:16` |
+
+**Example props:**
+
+```json
+{
+  "title": "THE PAPER TRAIL",
+  "items": [
+    { "label": "Tax records, 440 AD", "icon": "icon-document" },
+    { "label": "Payroll dispute", "icon": "icon-coin", "note": "unpaid legions" }
+  ],
+  "connections": [[0, 1]]
+}
+```
+
+**Asset needs:** 0–6 icons.
+**9:16 variant:** cards arrange in a single vertical column instead of the fixed 6-slot board layout.
+
+---
+
+## 16. news-briefing-scene
+
+**Purpose:** News-desk framing — a BREAKING-style tag, a headline, and an optional scrolling ticker. Delivers a claim as a dispatched update rather than narration-over-scene.
+
+| Prop | Type | Required | Allowed values / constraints |
+|---|---|---|---|
+| `headline` | string | yes | main headline text |
+| `tag` | string | no | `"BREAKING"` (default) |
+| `ticker` | string | no | scrolling bottom-band text |
+| `aspectRatio` | string | no | `16:9` (default), `9:16` |
+
+**Example props:**
+
+```json
+{
+  "tag": "JUST IN",
+  "headline": "THE LEGIONS STOP GETTING PAID",
+  "ticker": "Frontier provinces report supply shortages — treasury reserves falling"
+}
+```
+
+**Asset needs:** none.
+**9:16 variant:** ticker band height increases proportionally; headline font shrinks one step to keep 2-line wrap.
 **9:16 variant:** title centered, chapter number above.

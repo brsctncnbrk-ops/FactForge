@@ -78,7 +78,11 @@
             "icon-grid",
             "text-emphasis",
             "image-spotlight",
-            "transition-break"
+            "transition-break",
+            "flow-diagram-scene",
+            "scale-comparison-scene",
+            "evidence-board-scene",
+            "news-briefing-scene"
           ]
         },
         "props": { "type": "object" },
@@ -99,7 +103,15 @@
           }
         },
         "emotionalTone": { "type": "string" },
-        "styleNotes": { "type": "string" }
+        "styleNotes": { "type": "string" },
+        "visualPurpose": {
+          "type": "string",
+          "description": "One sentence: why this scene exists visually — what it shows that the narration alone doesn't. Optional planning aid for 03-visual-scene-skill; not re-derived or diffed by any script."
+        },
+        "qualityNotes": {
+          "type": "string",
+          "description": "Optional human note from the Layer-2 visual QC pass (see /templates/VISUAL-QC-CHECKLIST.md) — e.g. a flagged repetition or a template swap considered. Judgmental, never written or read by quality-gate.py."
+        }
       }
     },
     "newAsset": {

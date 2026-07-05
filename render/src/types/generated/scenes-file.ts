@@ -45,7 +45,11 @@ export interface Scene {
     | "icon-grid"
     | "text-emphasis"
     | "image-spotlight"
-    | "transition-break";
+    | "transition-break"
+    | "flow-diagram-scene"
+    | "scale-comparison-scene"
+    | "evidence-board-scene"
+    | "news-briefing-scene";
   props: {};
   assets: {
     fromLibrary: string[];
@@ -53,6 +57,14 @@ export interface Scene {
   };
   emotionalTone?: string;
   styleNotes?: string;
+  /**
+   * One sentence: why this scene exists visually — what it shows that the narration alone doesn't. Optional planning aid for 03-visual-scene-skill; not re-derived or diffed by any script.
+   */
+  visualPurpose?: string;
+  /**
+   * Optional human note from the Layer-2 visual QC pass (see /templates/VISUAL-QC-CHECKLIST.md) — e.g. a flagged repetition or a template swap considered. Judgmental, never written or read by quality-gate.py.
+   */
+  qualityNotes?: string;
 }
 export interface NewAsset {
   id: string;

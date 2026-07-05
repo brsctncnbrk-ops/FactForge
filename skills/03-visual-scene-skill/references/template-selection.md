@@ -18,12 +18,17 @@ Machine truth for props is always `/templates/schemas/{template}.schema.json`; t
 | One thesis sentence, a punchline, the hook | text-emphasis | quote-card |
 | A concrete artifact, painting, photo, ruin | image-spotlight | silhouette-scene |
 | Chapter change, tempo reset, act break | transition-break | text-emphasis |
+| A process, mechanism, or cause chain ("first X, then Y, so Z") | flow-diagram-scene | timeline-scene, list-reveal |
+| Two+ magnitudes compared directly ("33 legions vs. 9") | scale-comparison-scene | comparison-split, chart-scene |
+| A cluster of related clues/documents pointing to a conclusion | evidence-board-scene | icon-grid, list-reveal |
+| A claim framed as breaking/dispatched news | news-briefing-scene | text-emphasis |
+| A mystery/reveal beat ("what was really going on?") | image-spotlight (`revealStyle: "blur-in"`) | evidence-board-scene |
 
 ## Selection rules
 
 1. **Data beats decoration.** If the narration contains a number, prefer the template that shows the number (stat-card / chart-scene / icon-grid) over a mood shot. Remember: numbers on screen require a VERIFIED fact in `usedFacts` — never put a number in props that is not claimed in the narration.
 2. **One idea per scene.** If a scene seems to need two templates, the script scene is too dense — flag it back to 02 for a split rather than overloading props.
-3. **Variety cadence.** Avoid the same template in more than 2 consecutive scenes (exception: transition-break boundaries). If 3+ in a row emerge, swap the middle one for an alternative from the table.
+3. **Variety cadence.** Avoid the same template in more than 2 consecutive scenes (exception: transition-break boundaries). If 3+ in a row emerge, swap the middle one for an alternative from the table. `quality-gate.py`'s DV1 check WARNs mechanically on 3+ consecutive identical templates — treat a DV1 warning as a signal to revisit this rule, not just noise to suppress.
 4. **Motion every 5–10 seconds.** Every template has built-in animation (counter, reveal, Ken Burns, camera drift); pick props that use it — e.g. never `camera: "static"` on a map-scene longer than ~6 seconds.
 5. **transition-break is punctuation**, not content: use it at act boundaries from the script structure (Hook → Problem Setup → Main Story → Turning Point → Final Thought), roughly every 60–90 seconds, never twice in a row.
 

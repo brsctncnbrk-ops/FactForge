@@ -1,11 +1,16 @@
 import { useContext } from "react";
 import { Img, interpolate } from "remotion";
 import type { ImageSpotlightProps } from "../types/generated";
-import { useScene } from "../lib/anim";
+import { entrance, useScene } from "../lib/anim";
 import { OverlayText, SceneFrame } from "../lib/bits";
 import { CaptionsActiveContext } from "../lib/captionLayout";
 import { theme } from "../lib/theme";
 import { resolveAsset } from "../lib/assets";
+
+// Mystery/reveal treatment: starts heavily blurred + dimmed, sharpens over
+// the first ~35% of the scene. `t` is the entrance ramp (0..1).
+const revealFilter = (t: number): string =>
+  `blur(${(1 - t) * 22}px) brightness(${0.55 + 0.45 * t})`;
 
 const kenBurnsTransform = (kind: string, p: number): string => {
   switch (kind) {
@@ -27,8 +32,12 @@ const kenBurnsTransform = (kind: string, p: number): string => {
 };
 
 export const ImageSpotlight: React.FC<{ p: ImageSpotlightProps }> = ({ p }) => {
-  const { progress } = useScene();
+  const { frame, durationInFrames, fps, progress } = useScene();
   const captionsActive = useContext(CaptionsActiveContext);
+  const revealT =
+    p.revealStyle === "blur-in"
+      ? entrance(frame, durationInFrames, fps, 0.35, 1.4)
+      : 1;
 
   return (
     <SceneFrame>
@@ -41,6 +50,7 @@ export const ImageSpotlight: React.FC<{ p: ImageSpotlightProps }> = ({ p }) => {
           height: "100%",
           objectFit: "cover",
           transform: kenBurnsTransform(p.kenBurns, progress),
+          filter: p.revealStyle === "blur-in" ? revealFilter(revealT) : "none",
         }}
       />
       {/* vignette for text legibility */}

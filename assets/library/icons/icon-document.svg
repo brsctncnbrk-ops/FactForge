@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- Minimal flat document icon: folded-corner page outline with 3 text-line
+       holes cut via evenodd (single fill, no second color needed).
+       FactForge project-original asset (CC0). Fill inherits currentColor. -->
+  <path
+    fill-rule="evenodd"
+    fill="currentColor"
+    d="M4 2 H15 L20 7 V22 H4 Z M7 10 H17 V11.4 H7 Z M7 13.4 H17 V14.8 H7 Z M7 16.8 H14 V18.2 H7 Z"
+  />
+</svg>

@@ -2,7 +2,7 @@
   "name": "factforge-render",
   "version": "1.0.0",
   "private": true,
-  "description": "FactForge Phase 2 render layer — Remotion project. 12 scene templates coded once; every video is JSON-only after that.",
+  "description": "FactForge Phase 2 render layer — Remotion project. 16 scene templates coded once; every video is JSON-only after that.",
   "scripts": {
     "gen": "node scripts/generate-types.mjs",
     "stage": "node scripts/stage-public.mjs",
