@@ -8,5 +8,9 @@ export interface ImageSpotlightProps {
   kenBurns: "zoom-in" | "zoom-out" | "pan-left" | "pan-right" | "pan-up" | "pan-down";
   caption?: string;
   onScreenText?: string;
+  /**
+   * blur-in: the image starts heavily blurred/dimmed and sharpens over the first ~35% of the scene — a mystery/reveal treatment for a concrete object or document, distinct from the plain Ken Burns default.
+   */
+  revealStyle?: "none" | "blur-in";
   aspectRatio?: "16:9" | "9:16";
 }

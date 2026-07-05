@@ -1,0 +1,441 @@
+{
+  "videoSlug": "why-the-2008-financial-crisis-really-happened",
+  "fps": 30,
+  "resolution": "1920x1080",
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "narration": "September 15th, 2008. A 158-year-old investment bank opens for business one last time — and doesn't make it to lunch.",
+      "usedFacts": [
+        "F003"
+      ],
+      "wordCount": 20,
+      "estimatedDuration": 8.0,
+      "template": "news-briefing-scene",
+      "props": {
+        "tag": "BREAKING",
+        "headline": "A 158-YEAR-OLD BANK COLLAPSES",
+        "ticker": "Lehman Brothers files for Chapter 11 bankruptcy — largest filing in U.S. history"
+      },
+      "assets": {
+        "fromLibrary": [],
+        "newAssets": []
+      },
+      "emotionalTone": "Urgent, dramatic.",
+      "startTime": 0.0,
+      "endTime": 8.0,
+      "duration": 8.0
+    },
+    {
+      "sceneNumber": 2,
+      "narration": "Lehman Brothers held six hundred thirty-nine billion dollars in assets. It's still the largest bankruptcy in American history.",
+      "usedFacts": [
+        "F003"
+      ],
+      "wordCount": 18,
+      "estimatedDuration": 7.2,
+      "template": "stat-card",
+      "props": {
+        "value": "$639B",
+        "label": "IN ASSETS — LARGEST BANKRUPTCY IN U.S. HISTORY",
+        "icon": "icon-document",
+        "countUp": true
+      },
+      "assets": {
+        "fromLibrary": [
+          "icon-document"
+        ],
+        "newAssets": []
+      },
+      "emotionalTone": "Sobering.",
+      "startTime": 8.0,
+      "endTime": 15.2,
+      "duration": 7.2
+    },
+    {
+      "sceneNumber": 3,
+      "narration": "To understand how one bank's collapse nearly broke the world, you have to go back further — to how the bubble formed.",
+      "usedFacts": [],
+      "wordCount": 22,
+      "estimatedDuration": 8.8,
+      "template": "transition-break",
+      "props": {
+        "chapterNumber": 2,
+        "title": "THE CHAIN REACTION",
+        "subtitle": "Cheap credit, hidden risk, one bet nobody sized correctly",
+        "style": "fade"
+      },
+      "assets": {
+        "fromLibrary": [],
+        "newAssets": []
+      },
+      "emotionalTone": "Curious, pivoting.",
+      "startTime": 15.2,
+      "endTime": 24.0,
+      "duration": 8.8
+    },
+    {
+      "sceneNumber": 4,
+      "narration": "First, cheap mortgages inflated a housing bubble. Then home prices stopped rising, and borrowers began to default.",
+      "usedFacts": [
+        "F002"
+      ],
+      "wordCount": 17,
+      "estimatedDuration": 6.8,
+      "template": "flow-diagram-scene",
+      "props": {
+        "title": "HOW THE CRISIS SPREAD",
+        "steps": [
+          {
+            "label": "Cheap mortgages inflate a bubble",
+            "icon": "icon-coin"
+          },
+          {
+            "label": "Prices stop, borrowers default",
+            "icon": "icon-warning"
+          },
+          {
+            "label": "Mortgage bonds turn toxic",
+            "icon": "icon-document"
+          },
+          {
+            "label": "Losses spread through banks",
+            "icon": "icon-warning"
+          }
+        ],
+        "highlightIndex": 1
+      },
+      "assets": {
+        "fromLibrary": [
+          "icon-coin",
+          "icon-warning",
+          "icon-document"
+        ],
+        "newAssets": []
+      },
+      "emotionalTone": "Explanatory, building tension.",
+      "startTime": 24.0,
+      "endTime": 30.8,
+      "duration": 6.8
+    },
+    {
+      "sceneNumber": 5,
+      "narration": "The mortgage bonds built on those loans turned toxic — and the losses spread through the entire banking system.",
+      "usedFacts": [
+        "F002"
+      ],
+      "wordCount": 19,
+      "estimatedDuration": 7.6,
+      "template": "text-emphasis",
+      "props": {
+        "text": "TOXIC BONDS. SYSTEM-WIDE CONTAGION.",
+        "emphasisWords": [
+          "SYSTEM-WIDE CONTAGION"
+        ],
+        "animation": "impact"
+      },
+      "assets": {
+        "fromLibrary": [],
+        "newAssets": []
+      },
+      "emotionalTone": "Escalating, alarming.",
+      "startTime": 30.8,
+      "endTime": 38.4,
+      "duration": 7.6
+    },
+    {
+      "sceneNumber": 6,
+      "narration": "By September, banks no longer trusted each other. Lending between them nearly stopped overnight.",
+      "usedFacts": [
+        "F002"
+      ],
+      "wordCount": 14,
+      "estimatedDuration": 5.6,
+      "template": "icon-grid",
+      "props": {
+        "count": 9,
+        "icon": "icon-warning",
+        "label": "BANKS STOP TRUSTING EACH OTHER"
+      },
+      "assets": {
+        "fromLibrary": [
+          "icon-warning"
+        ],
+        "newAssets": []
+      },
+      "emotionalTone": "Tense.",
+      "startTime": 38.4,
+      "endTime": 44.0,
+      "duration": 5.6
+    },
+    {
+      "sceneNumber": 7,
+      "narration": "The Dow Jones Industrial Average lost more than half its value in just seventeen months.",
+      "usedFacts": [
+        "F004"
+      ],
+      "wordCount": 15,
+      "estimatedDuration": 6.0,
+      "template": "scale-comparison-scene",
+      "props": {
+        "title": "DOW JONES, PEAK TO TROUGH",
+        "unit": "points",
+        "items": [
+          {
+            "label": "Peak (Oct 9, 2007)",
+            "value": 14164
+          },
+          {
+            "label": "Low (Mar 9, 2009)",
+            "value": 6547
+          }
+        ]
+      },
+      "assets": {
+        "fromLibrary": [],
+        "newAssets": []
+      },
+      "emotionalTone": "Shocking.",
+      "startTime": 44.0,
+      "endTime": 50.0,
+      "duration": 6.0
+    },
+    {
+      "sceneNumber": 8,
+      "narration": "To stop the bleeding, Congress authorized seven hundred billion dollars to rescue the banking system.",
+      "usedFacts": [
+        "F005"
+      ],
+      "wordCount": 15,
+      "estimatedDuration": 6.0,
+      "template": "stat-card",
+      "props": {
+        "value": "$700B",
+        "label": "AUTHORIZED FOR BANK RESCUES (TARP)",
+        "countUp": true
+      },
+      "assets": {
+        "fromLibrary": [],
+        "newAssets": []
+      },
+      "emotionalTone": "Momentous.",
+      "startTime": 50.0,
+      "endTime": 56.0,
+      "duration": 6.0
+    },
+    {
+      "sceneNumber": 9,
+      "narration": "Lehman was allowed to fail. Days later, the government spent one hundred eighty-two billion dollars to save a single insurance company: AIG.",
+      "usedFacts": [
+        "F003",
+        "F007"
+      ],
+      "wordCount": 22,
+      "estimatedDuration": 8.8,
+      "template": "comparison-split",
+      "props": {
+        "heading": "ONE FELL. ONE WAS SAVED.",
+        "left": {
+          "title": "LEHMAN BROTHERS",
+          "icon": "icon-warning",
+          "items": [
+            "Filed for bankruptcy",
+            "No government rescue"
+          ]
+        },
+        "right": {
+          "title": "AIG",
+          "icon": "icon-coin",
+          "value": "$182B",
+          "items": [
+            "Rescued by Treasury + Fed",
+            "Fully repaid, with a profit"
+          ]
+        }
+      },
+      "assets": {
+        "fromLibrary": [
+          "icon-warning",
+          "icon-coin"
+        ],
+        "newAssets": []
+      },
+      "emotionalTone": "Ironic, pointed.",
+      "startTime": 56.0,
+      "endTime": 64.8,
+      "duration": 8.8
+    },
+    {
+      "sceneNumber": 10,
+      "narration": "Here's what almost nobody remembers: TARP's final cost wasn't seven hundred billion. It was about thirty-one billion.",
+      "usedFacts": [
+        "F005",
+        "F006"
+      ],
+      "wordCount": 17,
+      "estimatedDuration": 6.8,
+      "template": "evidence-board-scene",
+      "props": {
+        "title": "THE REAL TARP BILL",
+        "items": [
+          {
+            "label": "TARP authorized: $700B",
+            "icon": "icon-document"
+          },
+          {
+            "label": "Actual final cost: ~$31B",
+            "icon": "icon-coin",
+            "note": "after repayments, sales, dividends"
+          }
+        ],
+        "connections": [
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "assets": {
+        "fromLibrary": [
+          "icon-document",
+          "icon-coin"
+        ],
+        "newAssets": []
+      },
+      "emotionalTone": "Revelatory.",
+      "startTime": 64.8,
+      "endTime": 71.6,
+      "duration": 6.8
+    },
+    {
+      "sceneNumber": 11,
+      "narration": "And the AIG bailout? Fully repaid — with a twenty-two point seven billion dollar profit for taxpayers.",
+      "usedFacts": [
+        "F008"
+      ],
+      "wordCount": 17,
+      "estimatedDuration": 6.8,
+      "template": "scale-comparison-scene",
+      "props": {
+        "title": "AIG: FULLY REPAID, WITH PROFIT",
+        "unit": "$B",
+        "items": [
+          {
+            "label": "Committed",
+            "value": 182,
+            "displayValue": "$182B"
+          },
+          {
+            "label": "Recovered",
+            "value": 204.7,
+            "displayValue": "$204.7B"
+          }
+        ]
+      },
+      "assets": {
+        "fromLibrary": [],
+        "newAssets": []
+      },
+      "emotionalTone": "Surprising, upbeat.",
+      "startTime": 71.6,
+      "endTime": 78.4,
+      "duration": 6.8
+    },
+    {
+      "sceneNumber": 12,
+      "narration": "But the rescue didn't reach everyone. Unemployment doubled to ten percent within two years.",
+      "usedFacts": [
+        "F009"
+      ],
+      "wordCount": 14,
+      "estimatedDuration": 5.6,
+      "template": "chart-scene",
+      "props": {
+        "chartType": "line",
+        "title": "U.S. UNEMPLOYMENT RATE",
+        "xAxisLabel": "Dec 2007 → Oct 2009",
+        "yAxisLabel": "%",
+        "data": {
+          "labels": [
+            "Dec 2007",
+            "Oct 2009"
+          ],
+          "series": [
+            {
+              "name": "Unemployment rate",
+              "values": [
+                5,
+                10
+              ]
+            }
+          ]
+        },
+        "animationStyle": "grow"
+      },
+      "assets": {
+        "fromLibrary": [],
+        "newAssets": []
+      },
+      "emotionalTone": "Somber.",
+      "startTime": 78.4,
+      "endTime": 84.0,
+      "duration": 5.6
+    },
+    {
+      "sceneNumber": 13,
+      "narration": "Regulators shut down four hundred fourteen banks across the country in just four years.",
+      "usedFacts": [
+        "F010"
+      ],
+      "wordCount": 14,
+      "estimatedDuration": 5.6,
+      "template": "stat-card",
+      "props": {
+        "value": "414",
+        "label": "U.S. BANKS CLOSED, 2008–2011",
+        "countUp": true
+      },
+      "assets": {
+        "fromLibrary": [],
+        "newAssets": []
+      },
+      "emotionalTone": "Grim.",
+      "startTime": 84.0,
+      "endTime": 89.6,
+      "duration": 5.6
+    },
+    {
+      "sceneNumber": 14,
+      "narration": "One bank's Monday morning collapse. A decade of consequences. That's how 2008 really happened.",
+      "usedFacts": [],
+      "wordCount": 14,
+      "estimatedDuration": 5.6,
+      "template": "text-emphasis",
+      "props": {
+        "text": "THAT'S HOW 2008 REALLY HAPPENED",
+        "emphasisWords": [
+          "2008"
+        ],
+        "animation": "impact"
+      },
+      "assets": {
+        "fromLibrary": [],
+        "newAssets": []
+      },
+      "emotionalTone": "Conclusive.",
+      "startTime": 89.6,
+      "endTime": 95.2,
+      "duration": 5.6
+    }
+  ],
+  "timingMode": "word-count-estimate",
+  "audio": {
+    "file": "/outputs/why-the-2008-financial-crisis-really-happened/audio/voiceover.mp3",
+    "duration": 95.2,
+    "sampleRate": 44100,
+    "timingSource": "word-count-estimate",
+    "alignmentTool": null,
+    "transcriptFile": "/outputs/why-the-2008-financial-crisis-really-happened/02-script-voiceover.txt",
+    "warning": "no audio file — durations are pure 150wpm estimates; NOT valid for voiced final render"
+  }
+}

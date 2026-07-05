@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "flow-diagram-scene.schema.json",
+  "title": "flow-diagram-scene props",
+  "description": "Sequential steps connected by arrows. Process flows and cause-and-effect chains — the one thing list-reveal/timeline-scene don't do (a directional arrow between each step).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["steps"],
+  "properties": {
+    "steps": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label"],
+        "properties": {
+          "label": { "type": "string", "minLength": 1 },
+          "icon": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "direction": { "enum": ["horizontal", "vertical"], "default": "horizontal" },
+    "title": { "type": "string" },
+    "highlightIndex": { "type": "integer", "minimum": 0 },
+    "aspectRatio": { "enum": ["16:9", "9:16"], "default": "16:9" }
+  }
+}

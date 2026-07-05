@@ -1,14 +1,40 @@
 import { Img } from "remotion";
 import type { ComparisonSplitProps, Side } from "../types/generated";
-import { easeOut, entrance, staggered, useScene } from "../lib/anim";
-import { SceneFrame, SceneTitle } from "../lib/bits";
+import { easeOut, entrance, popIn, staggered, useScene } from "../lib/anim";
+import { IconBadge, SceneFrame, SceneTitle } from "../lib/bits";
 import { theme } from "../lib/theme";
+import { InlineSvg } from "../lib/InlineSvg";
 import { resolveAsset } from "../lib/assets";
+
+// Same numeric-with-grouping parse StatCard uses, so a side's `value` can
+// count up too instead of appearing as static text.
+const parseValue = (value: string) => {
+  const cleaned = value.replace(/,/g, "");
+  if (!/^\d+(\.\d+)?%?$/.test(cleaned)) return null;
+  const pct = cleaned.endsWith("%");
+  const num = parseFloat(cleaned);
+  const grouped = /,/.test(value);
+  return {
+    num,
+    render: (n: number) => {
+      const s = grouped ? Math.round(n).toLocaleString("en-US") : String(Math.round(n * 10) / 10);
+      return pct ? `${s}%` : s;
+    },
+  };
+};
 
 const Panel: React.FC<{ side: Side; index: 0 | 1 }> = ({ side, index }) => {
   const { frame, durationInFrames, fps } = useScene();
   const t = easeOut(entrance(frame, durationInFrames, fps, 0.22, 0.9));
   const dir = index === 0 ? -1 : 1;
+  const iconPop = popIn(frame, fps, fps * 0.15);
+  const color = index === 0 ? theme.accentAlt : theme.accent;
+  const parsed = side.value ? parseValue(side.value) : null;
+  const countT = popIn(frame, fps, fps * 0.1);
+  const displayValue =
+    side.value && parsed
+      ? parsed.render(parsed.num * Math.min(1, countT))
+      : side.value;
 
   return (
     <div
@@ -22,11 +48,24 @@ const Panel: React.FC<{ side: Side; index: 0 | 1 }> = ({ side, index }) => {
         transform: `translateX(${(1 - t) * 60 * dir}px)`,
       }}
     >
+      {side.icon ? (
+        <IconBadge
+          size={110}
+          color={color}
+          style={{ marginBottom: 20, transform: `scale(${iconPop})` }}
+        >
+          <InlineSvg
+            src={resolveAsset(side.icon)}
+            color={theme.bg}
+            style={{ width: 60, height: 60 }}
+          />
+        </IconBadge>
+      ) : null}
       <div
         style={{
           fontFamily: theme.fontTitle,
           fontSize: 56,
-          color: index === 0 ? theme.accentAlt : theme.accent,
+          color,
           marginBottom: 12,
           textAlign: "center",
         }}
@@ -34,8 +73,15 @@ const Panel: React.FC<{ side: Side; index: 0 | 1 }> = ({ side, index }) => {
         {side.title}
       </div>
       {side.value ? (
-        <div style={{ fontFamily: theme.fontTitle, fontSize: 96, marginBottom: 16 }}>
-          {side.value}
+        <div
+          style={{
+            fontFamily: theme.fontTitle,
+            fontSize: 96,
+            marginBottom: 16,
+            transform: `scale(${0.85 + 0.15 * Math.min(1, countT)})`,
+          }}
+        >
+          {displayValue}
         </div>
       ) : null}
       {side.image ? (

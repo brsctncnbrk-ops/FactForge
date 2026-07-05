@@ -24,7 +24,8 @@
           "items": { "type": "string", "minLength": 1 }
         },
         "image": { "type": "string", "minLength": 1 },
-        "value": { "type": "string" }
+        "value": { "type": "string" },
+        "icon": { "type": "string", "minLength": 1 }
       }
     }
   }

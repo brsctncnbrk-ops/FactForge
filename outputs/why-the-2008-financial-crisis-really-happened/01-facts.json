@@ -1,0 +1,33 @@
+{
+  "videoSlug": "why-the-2008-financial-crisis-really-happened",
+  "searchesUsed": 9,
+  "searchBudget": 15,
+  "sources": [
+    { "id": "S001", "title": "The Great Recession | Federal Reserve History", "url": "https://www.federalreservehistory.org/essays/great-recession-of-200709", "type": "institutional", "reliability": "high", "notes": "Federal Reserve's own historical account." },
+    { "id": "S002", "title": "Subprime mortgage crisis — Wikipedia", "url": "https://en.wikipedia.org/wiki/Subprime_mortgage_crisis", "type": "encyclopedic", "reliability": "medium" },
+    { "id": "S003", "title": "Bankruptcy of Lehman Brothers — Wikipedia", "url": "https://en.wikipedia.org/wiki/Bankruptcy_of_Lehman_Brothers", "type": "encyclopedic", "reliability": "medium" },
+    { "id": "S004", "title": "Bankruptcy of Lehman Brothers — Britannica", "url": "https://www.britannica.com/event/bankruptcy-of-Lehman-Brothers", "type": "institutional", "reliability": "high" },
+    { "id": "S005", "title": "United States bear market of 2007-2009 — Wikipedia", "url": "https://en.wikipedia.org/wiki/United_States_bear_market_of_2007%E2%80%932009", "type": "encyclopedic", "reliability": "medium" },
+    { "id": "S006", "title": "Dow Jones Industrial Average Fast Facts — CNN", "url": "https://www.cnn.com/us/dow-jones-industrial-average-fast-facts", "type": "popular", "reliability": "medium", "notes": "Corroborates the decline percentage." },
+    { "id": "S007", "title": "Troubled Asset Relief Program (TARP) | U.S. Department of the Treasury", "url": "https://home.treasury.gov/data/troubled-asset-relief-program", "type": "institutional", "reliability": "high", "notes": "U.S. Treasury's own program data." },
+    { "id": "S008", "title": "Final Report on the Troubled Asset Relief Program | Congressional Budget Office", "url": "https://www.cbo.gov/publication/60220", "type": "institutional", "reliability": "high" },
+    { "id": "S009", "title": "$182 Billion Commitment to AIG During Financial Crisis Now Fully Recovered | U.S. Department of the Treasury", "url": "https://home.treasury.gov/news/press-releases/tg1703", "type": "institutional", "reliability": "high", "notes": "U.S. Treasury press release confirming full AIG recovery." },
+    { "id": "S010", "title": "Government Assistance for AIG: Summary and Cost | Congress.gov", "url": "https://www.congress.gov/crs-product/R42953", "type": "institutional", "reliability": "high", "notes": "Congressional Research Service report." },
+    { "id": "S011", "title": "Unemployment in October 2009 | U.S. Bureau of Labor Statistics", "url": "https://www.bls.gov/opub/ted/2009/ted_20091110.htm", "type": "institutional", "reliability": "high" },
+    { "id": "S012", "title": "Unemployment in the United States — Wikipedia", "url": "https://en.wikipedia.org/wiki/Unemployment_in_the_United_States", "type": "encyclopedic", "reliability": "medium" },
+    { "id": "S013", "title": "List of bank failures in the United States (2008-present) — Wikipedia", "url": "https://en.wikipedia.org/wiki/List_of_bank_failures_in_the_United_States_(2008%E2%80%93present)", "type": "encyclopedic", "reliability": "medium" },
+    { "id": "S014", "title": "Crisis and Response: An FDIC History, 2008-2013 | FDIC", "url": "https://www.fdic.gov/media/18626", "type": "institutional", "reliability": "high", "notes": "FDIC's own crisis history report." }
+  ],
+  "facts": [
+    { "id": "F001", "claim": "The 2008 financial crisis began with the collapse of the U.S. housing bubble and subprime mortgage market, triggering the worst global downturn since the Great Depression.", "sources": ["S001", "S002"], "status": "VERIFIED", "scriptCritical": true, "isNumber": false, "notes": "Main claim of the video." },
+    { "id": "F002", "claim": "Years of loose mortgage lending inflated home prices; when prices stopped rising, borrowers defaulted, the mortgage-backed securities built on those loans lost value, and the losses spread through the banking system.", "sources": ["S001", "S002"], "status": "VERIFIED", "scriptCritical": true, "isNumber": false, "notes": "The cause-effect chain — used for the flow-diagram-scene." },
+    { "id": "F003", "claim": "Lehman Brothers filed for bankruptcy on September 15, 2008, with $639 billion in assets — the largest bankruptcy filing in U.S. history.", "sources": ["S003", "S004"], "status": "VERIFIED", "scriptCritical": true, "isNumber": true },
+    { "id": "F004", "claim": "The Dow Jones Industrial Average fell about 54%, from a peak of 14,164.53 on October 9, 2007, to a low of 6,547.05 on March 9, 2009.", "sources": ["S005", "S006"], "status": "VERIFIED", "scriptCritical": true, "isNumber": true },
+    { "id": "F005", "claim": "Congress authorized $700 billion for the Troubled Asset Relief Program (TARP) in October 2008 to stabilize the financial system.", "sources": ["S007", "S008"], "status": "VERIFIED", "scriptCritical": true, "isNumber": true },
+    { "id": "F006", "claim": "TARP's final lifetime cost to taxpayers was about $31 billion, a small fraction of the $700 billion originally authorized.", "sources": ["S007", "S008"], "status": "VERIFIED", "scriptCritical": true, "isNumber": true },
+    { "id": "F007", "claim": "The government's rescue of AIG totaled about $182 billion, combining Treasury and Federal Reserve commitments.", "sources": ["S009", "S010"], "status": "VERIFIED", "scriptCritical": true, "isNumber": true },
+    { "id": "F008", "claim": "The AIG bailout was later fully recovered, with the government realizing a $22.7 billion positive return for taxpayers.", "sources": ["S009", "S010"], "status": "VERIFIED", "scriptCritical": true, "isNumber": true },
+    { "id": "F009", "claim": "U.S. unemployment peaked at 10.0% in October 2009, roughly double the 5% rate from December 2007.", "sources": ["S011", "S012"], "status": "VERIFIED", "scriptCritical": true, "isNumber": true },
+    { "id": "F010", "claim": "Regulators closed 414 U.S. banks between 2008 and 2011 (25 in 2008, 140 in 2009, 157 in 2010, 92 in 2011).", "sources": ["S013", "S014"], "status": "VERIFIED", "scriptCritical": true, "isNumber": true }
+  ]
+}

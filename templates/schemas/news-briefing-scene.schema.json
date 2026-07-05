@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "news-briefing-scene.schema.json",
+  "title": "news-briefing-scene props",
+  "description": "News-desk framing: a BREAKING-style tag, a headline, and an optional scrolling ticker line. Delivers a claim as a dispatched update rather than narration-over-scene.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["headline"],
+  "properties": {
+    "tag": { "type": "string", "default": "BREAKING" },
+    "headline": { "type": "string", "minLength": 1 },
+    "ticker": { "type": "string" },
+    "aspectRatio": { "enum": ["16:9", "9:16"], "default": "16:9" }
+  }
+}

@@ -1,6 +1,8 @@
 # Template Gaps & New Template Proposals
 
-Proposing a new template must be hard. The 12-template catalog is the product; every addition raises Phase 2 render cost permanently.
+Proposing a new template must be hard. The 16-template catalog is the product; every addition raises Phase 2 render cost permanently.
+
+Note: the escalation ladder and proposal threshold below govern how **03-visual-scene-skill** may propose a template while mapping a specific video's scenes. They do not limit the human's ability to commission a template directly (as happened 2026-07-05 — see the `flow-diagram-scene` / `scale-comparison-scene` / `evidence-board-scene` / `news-briefing-scene` entry below) — "until the human approves" in the Proposal format section already carves that out.
 
 ## Escalation ladder (in order, per scene)
 

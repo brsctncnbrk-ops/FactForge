@@ -41,3 +41,5 @@ jobs:
           python scripts/sync_manifest_usage.py --self-test
           python scripts/quality-gate.py --self-test
           python scripts/build_captions.py --self-test
+          python scripts/prepare_visual_qc.py --self-test
+          python scripts/check_visual_qc_report.py --self-test

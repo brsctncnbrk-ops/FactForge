@@ -1,0 +1,1566 @@
+{
+  "videoSlug": "why-the-roman-empire-really-collapsed",
+  "sceneCount": 68,
+  "instructions": "Advisory Layer-2 visual QC packet. For EACH scene below, answer the checklistQuestions using the narration/template/props/assets context plus /templates/STYLE-GUIDE.md. This is a human or review-agent judgment pass — never a mechanical pass/fail. Flag any scene that fails a question for re-templating or a props rework; do not rewrite quality-gate.py to enforce this.",
+  "styleGuideRef": "/templates/STYLE-GUIDE.md",
+  "checklistRef": "/templates/VISUAL-QC-CHECKLIST.md",
+  "checklistQuestions": [
+    "Does this scene visualize the specific claim being narrated right now?",
+    "Does the scene carry meaning on its own, without the narration?",
+    "Is the composition clean and readable?",
+    "Is all on-screen text readable at a glance against its background?",
+    "Is this scene visually distinct from the immediately preceding one?",
+    "Is there at least one visible motion/change event during the scene?",
+    "Does the scene match /templates/STYLE-GUIDE.md?",
+    "Does the scene look amateur, empty, or like a generic stock/placeholder image?",
+    "Is any single asset reused so often it starts to feel repetitive?",
+    "Is there a real risk this scene bores the viewer?"
+  ],
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "template": "text-emphasis",
+      "narration": "September, 476 AD. The Roman Empire falls. And almost nobody notices.",
+      "props": {
+        "text": "476 AD: NOBODY NOTICED",
+        "emphasisWords": [
+          "NOBODY NOTICED"
+        ],
+        "animation": "impact"
+      },
+      "assetsUsed": [],
+      "duration": 6.42,
+      "precedingTemplate": null,
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 2,
+      "template": "silhouette-scene",
+      "narration": "No burning city. No final battle. Just a boy emperor, quietly told to go home.",
+      "props": {
+        "figures": [
+          {
+            "asset": "figure-emperor",
+            "action": "static",
+            "position": "foreground"
+          }
+        ],
+        "onScreenText": "NO BATTLE. NO FIRE."
+      },
+      "assetsUsed": [
+        "figure-emperor"
+      ],
+      "duration": 5.5,
+      "precedingTemplate": "text-emphasis",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "figure-emperor": 0.059
+      }
+    },
+    {
+      "sceneNumber": 3,
+      "template": "timeline-scene",
+      "narration": "Because the empire didn't die that day. It had been dying for three hundred years.",
+      "props": {
+        "title": "A 300-Year Collapse",
+        "events": [
+          {
+            "label": "The rot sets in",
+            "date": "235 CE"
+          },
+          {
+            "label": "The \"fall\" of Rome",
+            "date": "476 CE"
+          }
+        ],
+        "highlightIndex": 1
+      },
+      "assetsUsed": [],
+      "duration": 4.86,
+      "precedingTemplate": "silhouette-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 4,
+      "template": "transition-break",
+      "narration": "This is the real story of how Rome collapsed, and why everyone remembers it wrong.",
+      "props": {
+        "title": "THE REAL STORY",
+        "subtitle": "Why the Roman Empire Really Collapsed",
+        "chapterNumber": 1,
+        "style": "zoom"
+      },
+      "assetsUsed": [],
+      "duration": 5.0,
+      "precedingTemplate": "timeline-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 5,
+      "template": "map-scene",
+      "narration": "Picture the empire everyone imagines: endless legions, marble cities, roads that ruled the world.",
+      "props": {
+        "region": "roman-empire-max-extent",
+        "camera": "slow-zoom-out",
+        "mapAsset": "map-roman-empire",
+        "highlights": [
+          "borders"
+        ],
+        "onScreenText": "THE ETERNAL EMPIRE"
+      },
+      "assetsUsed": [
+        "map-roman-empire"
+      ],
+      "duration": 6.32,
+      "precedingTemplate": "transition-break",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "map-roman-empire": 0.147
+      }
+    },
+    {
+      "sceneNumber": 6,
+      "template": "list-reveal",
+      "narration": "But an empire isn't marble. It's a machine: an army, paid by taxes, paid in silver.",
+      "props": {
+        "title": "The Machine",
+        "items": [
+          "An army",
+          "Paid by taxes",
+          "Collected in silver"
+        ],
+        "numbered": false
+      },
+      "assetsUsed": [],
+      "duration": 6.46,
+      "precedingTemplate": "map-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 7,
+      "template": "stat-card",
+      "narration": "That army numbered somewhere between four hundred thousand and six hundred thousand men.",
+      "props": {
+        "value": "400,000–600,000",
+        "label": "soldiers in the late Roman army",
+        "secondaryText": "modern estimates of its total size",
+        "icon": "icon-soldier",
+        "countUp": false
+      },
+      "assetsUsed": [
+        "icon-soldier"
+      ],
+      "duration": 4.92,
+      "precedingTemplate": "list-reveal",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "icon-soldier": 0.015
+      }
+    },
+    {
+      "sceneNumber": 8,
+      "template": "icon-grid",
+      "narration": "Soldiers expected pay and supplies, every single year. Multiply that by half a million men.",
+      "props": {
+        "icon": "icon-coin",
+        "count": 50,
+        "label": "1 icon = 10,000 soldiers",
+        "columns": 10
+      },
+      "assetsUsed": [
+        "icon-coin"
+      ],
+      "duration": 6.6,
+      "precedingTemplate": "stat-card",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "icon-coin": 0.074
+      }
+    },
+    {
+      "sceneNumber": 9,
+      "template": "text-emphasis",
+      "narration": "It was the single biggest expense the Roman state had. And the bill kept growing.",
+      "props": {
+        "text": "ONE EXPENSE ABOVE ALL",
+        "emphasisWords": [
+          "ABOVE ALL"
+        ],
+        "animation": "impact"
+      },
+      "assetsUsed": [],
+      "duration": 4.5,
+      "precedingTemplate": "icon-grid",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 10,
+      "template": "transition-break",
+      "narration": "Break the machine that pays that army, and you break Rome. So let's break it.",
+      "props": {
+        "title": "BREAK THE MACHINE",
+        "chapterNumber": 2,
+        "style": "wipe"
+      },
+      "assetsUsed": [],
+      "duration": 4.5,
+      "precedingTemplate": "text-emphasis",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 11,
+      "template": "stat-card",
+      "narration": "Start in the year 235. Over the next fifty years, Rome burned through at least twenty-six emperors.",
+      "props": {
+        "value": 26,
+        "label": "emperors in fifty years",
+        "secondaryText": "235–284 CE",
+        "countUp": true
+      },
+      "assetsUsed": [],
+      "duration": 6.12,
+      "precedingTemplate": "transition-break",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 12,
+      "template": "silhouette-scene",
+      "narration": "Twenty-six men in fifty years. The throne had stopped being a prize. It was a death sentence.",
+      "props": {
+        "figures": [
+          {
+            "asset": "figure-emperor",
+            "action": "fall",
+            "position": "center"
+          }
+        ],
+        "onScreenText": "A DEATH SENTENCE"
+      },
+      "assetsUsed": [
+        "figure-emperor"
+      ],
+      "duration": 6.18,
+      "precedingTemplate": "stat-card",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "figure-emperor": 0.059
+      }
+    },
+    {
+      "sceneNumber": 13,
+      "template": "map-scene",
+      "narration": "Every general with an army could crown himself. So every general did. Civil war became routine.",
+      "props": {
+        "region": "roman-empire-max-extent",
+        "camera": "drift",
+        "mapAsset": "map-roman-empire",
+        "highlights": [
+          "interior-conflict"
+        ],
+        "onScreenText": "CIVIL WAR ON REPEAT"
+      },
+      "assetsUsed": [
+        "map-roman-empire"
+      ],
+      "duration": 6.14,
+      "precedingTemplate": "silhouette-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "map-roman-empire": 0.147
+      }
+    },
+    {
+      "sceneNumber": 14,
+      "template": "icon-grid",
+      "narration": "And while Romans fought Romans, the borders went unguarded, and the treasury bled dry.",
+      "props": {
+        "icon": "icon-coin",
+        "count": 16,
+        "highlightCount": 16,
+        "label": "TREASURY BLED DRY",
+        "columns": 8
+      },
+      "assetsUsed": [
+        "icon-coin"
+      ],
+      "duration": 5.96,
+      "precedingTemplate": "map-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "icon-coin": 0.074
+      }
+    },
+    {
+      "sceneNumber": 15,
+      "template": "text-emphasis",
+      "narration": "Which brings us to the silver. Watch the silver, because this is where empires really die.",
+      "props": {
+        "text": "FOLLOW THE SILVER",
+        "emphasisWords": [
+          "SILVER"
+        ],
+        "animation": "typewriter"
+      },
+      "assetsUsed": [],
+      "duration": 5.86,
+      "precedingTemplate": "icon-grid",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 16,
+      "template": "stat-card",
+      "narration": "Rome's standard coin, the denarius, was once more than ninety percent pure silver.",
+      "props": {
+        "value": "90%",
+        "label": "silver in the early denarius",
+        "countUp": true
+      },
+      "assetsUsed": [],
+      "duration": 5.4,
+      "precedingTemplate": "text-emphasis",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 17,
+      "template": "list-reveal",
+      "narration": "Each time an emperor ran short of cash, he melted the coins and added cheap metal.",
+      "props": {
+        "title": "The Debasement Cycle",
+        "items": [
+          "Run short of cash",
+          "Melt the coins",
+          "Add cheap metal",
+          "Re-mint and repeat"
+        ],
+        "numbered": true
+      },
+      "assetsUsed": [],
+      "duration": 4.82,
+      "precedingTemplate": "stat-card",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 18,
+      "template": "chart-scene",
+      "narration": "By the 270s, the denarius was around five percent silver. A shiny coating over junk.",
+      "props": {
+        "chartType": "line",
+        "title": "Silver Content of the Denarius",
+        "data": {
+          "labels": [
+            "Early empire",
+            "Early 270s"
+          ],
+          "series": [
+            {
+              "name": "% silver",
+              "values": [
+                90,
+                5
+              ]
+            }
+          ]
+        },
+        "yAxisLabel": "% silver",
+        "highlightIndex": 1,
+        "animationStyle": "draw"
+      },
+      "assetsUsed": [],
+      "duration": 6.4,
+      "precedingTemplate": "list-reveal",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 19,
+      "template": "silhouette-scene",
+      "narration": "Imagine getting paid in coins that lose their value faster than you can spend them.",
+      "props": {
+        "figures": [
+          {
+            "asset": "figure-civilian",
+            "action": "static",
+            "position": "center"
+          }
+        ],
+        "onScreenText": "YOUR PAY, EVAPORATING"
+      },
+      "assetsUsed": [
+        "figure-civilian"
+      ],
+      "duration": 5.0,
+      "precedingTemplate": "chart-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "figure-civilian": 0.044
+      }
+    },
+    {
+      "sceneNumber": 20,
+      "template": "text-emphasis",
+      "narration": "Prices exploded across the empire. When money itself stops being trusted, everything built on it wobbles.",
+      "props": {
+        "text": "INFLATION EATS ROME",
+        "emphasisWords": [
+          "EATS"
+        ],
+        "animation": "impact"
+      },
+      "assetsUsed": [],
+      "duration": 6.68,
+      "precedingTemplate": "silhouette-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 21,
+      "template": "list-reveal",
+      "narration": "Emperor Diocletian tried to fix inflation by outlawing it. High prices became a capital crime.",
+      "props": {
+        "title": "Diocletian's Price Edict",
+        "items": [
+          "Price ceilings on everything",
+          "Death penalty for overcharging",
+          "Empire-wide enforcement"
+        ],
+        "numbered": false
+      },
+      "assetsUsed": [],
+      "duration": 6.28,
+      "precedingTemplate": "text-emphasis",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 22,
+      "template": "silhouette-scene",
+      "narration": "It failed spectacularly. Merchants stopped selling, and goods simply vanished into the black market.",
+      "props": {
+        "figures": [
+          {
+            "asset": "figure-civilian",
+            "action": "walk",
+            "position": "left"
+          },
+          {
+            "asset": "figure-civilian",
+            "action": "walk",
+            "position": "background"
+          }
+        ],
+        "onScreenText": "THE MARKETS WENT DARK"
+      },
+      "assetsUsed": [
+        "figure-civilian"
+      ],
+      "duration": 6.76,
+      "precedingTemplate": "list-reveal",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "figure-civilian": 0.044
+      }
+    },
+    {
+      "sceneNumber": 23,
+      "template": "transition-break",
+      "narration": "Then came the part nobody could control: disease.",
+      "props": {
+        "title": "THEN CAME PLAGUE",
+        "chapterNumber": 3,
+        "style": "fade"
+      },
+      "assetsUsed": [],
+      "duration": 3.44,
+      "precedingTemplate": "silhouette-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 24,
+      "template": "map-scene",
+      "narration": "Two great plagues swept the empire, emptying farms and thinning the army's recruiting pool.",
+      "props": {
+        "region": "roman-empire-max-extent",
+        "camera": "drift",
+        "mapAsset": "map-roman-empire",
+        "highlights": [
+          "plague-spread"
+        ],
+        "onScreenText": "PLAGUE EMPTIES THE EMPIRE"
+      },
+      "assetsUsed": [
+        "map-roman-empire"
+      ],
+      "duration": 5.36,
+      "precedingTemplate": "transition-break",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "map-roman-empire": 0.147
+      }
+    },
+    {
+      "sceneNumber": 25,
+      "template": "comparison-split",
+      "narration": "Fewer farmers meant less tax. Fewer recruits meant a more expensive army. The squeeze tightened.",
+      "props": {
+        "heading": "The Squeeze",
+        "left": {
+          "title": "Fewer farmers",
+          "items": [
+            "Less tax collected"
+          ]
+        },
+        "right": {
+          "title": "Fewer recruits",
+          "items": [
+            "A costlier army"
+          ]
+        }
+      },
+      "assetsUsed": [],
+      "duration": 6.92,
+      "precedingTemplate": "map-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 26,
+      "template": "silhouette-scene",
+      "narration": "So Rome found a shortcut. If you can't recruit enough Romans, hire the barbarians.",
+      "props": {
+        "figures": [
+          {
+            "asset": "figure-warrior",
+            "action": "march",
+            "position": "left"
+          },
+          {
+            "asset": "figure-warrior",
+            "action": "march",
+            "position": "center"
+          },
+          {
+            "asset": "figure-warrior",
+            "action": "march",
+            "position": "right"
+          }
+        ],
+        "onScreenText": "ROME'S DANGEROUS SHORTCUT"
+      },
+      "assetsUsed": [
+        "figure-warrior"
+      ],
+      "duration": 5.74,
+      "precedingTemplate": "comparison-split",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "figure-warrior": 0.088
+      }
+    },
+    {
+      "sceneNumber": 27,
+      "template": "comparison-split",
+      "narration": "Whole units now fought under their own chiefs, loyal to their leaders and their paychecks.",
+      "props": {
+        "heading": "LOYALTY FOR HIRE",
+        "left": {
+          "title": "ROME",
+          "icon": "icon-warning",
+          "items": [
+            "A distant capital",
+            "No guaranteed pay"
+          ]
+        },
+        "right": {
+          "title": "THEIR COMMANDER",
+          "icon": "icon-coin",
+          "items": [
+            "Present, in charge",
+            "Pays them directly"
+          ]
+        }
+      },
+      "assetsUsed": [
+        "icon-warning",
+        "icon-coin"
+      ],
+      "duration": 4.82,
+      "precedingTemplate": "silhouette-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "icon-warning": 0.029,
+        "icon-coin": 0.074
+      }
+    },
+    {
+      "sceneNumber": 28,
+      "template": "text-emphasis",
+      "narration": "Not to Rome. Remember that detail. It comes back at the very end of this story.",
+      "props": {
+        "text": "REMEMBER THIS DETAIL",
+        "emphasisWords": [
+          "REMEMBER"
+        ],
+        "animation": "typewriter"
+      },
+      "assetsUsed": [],
+      "duration": 5.7,
+      "precedingTemplate": "comparison-split",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 29,
+      "template": "map-scene",
+      "narration": "In 378, at Adrianople, the arrangement blew up. Gothic forces destroyed much of the eastern field army.",
+      "props": {
+        "region": "thrace-adrianople",
+        "camera": "slow-zoom-in",
+        "mapAsset": "map-roman-empire",
+        "onScreenText": "ADRIANOPLE, 378 AD"
+      },
+      "assetsUsed": [
+        "map-roman-empire"
+      ],
+      "duration": 7.3,
+      "precedingTemplate": "text-emphasis",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "map-roman-empire": 0.147
+      }
+    },
+    {
+      "sceneNumber": 30,
+      "template": "silhouette-scene",
+      "narration": "The emperor Valens died on that battlefield, along with Rome's aura of invincibility.",
+      "props": {
+        "figures": [
+          {
+            "asset": "figure-emperor",
+            "action": "fall",
+            "position": "center"
+          },
+          {
+            "asset": "figure-warrior",
+            "action": "static",
+            "position": "background"
+          }
+        ],
+        "onScreenText": "AN EMPEROR FALLS"
+      },
+      "assetsUsed": [
+        "figure-emperor",
+        "figure-warrior"
+      ],
+      "duration": 5.02,
+      "precedingTemplate": "map-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "figure-emperor": 0.059,
+        "figure-warrior": 0.088
+      }
+    },
+    {
+      "sceneNumber": 31,
+      "template": "map-scene",
+      "narration": "Afterward, for the first time, entire barbarian nations settled inside the empire under their own kings.",
+      "props": {
+        "region": "roman-empire-balkan-frontier",
+        "camera": "slow-zoom-out",
+        "mapAsset": "map-roman-empire",
+        "highlights": [
+          "federate-settlements"
+        ],
+        "onScreenText": "NATIONS INSIDE THE EMPIRE"
+      },
+      "assetsUsed": [
+        "map-roman-empire"
+      ],
+      "duration": 5.96,
+      "precedingTemplate": "silhouette-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "map-roman-empire": 0.147
+      }
+    },
+    {
+      "sceneNumber": 32,
+      "template": "comparison-split",
+      "narration": "The bargain was simple and desperate: fight for us, and we'll pay you and give you land.",
+      "props": {
+        "heading": "The Federate Bargain",
+        "left": {
+          "title": "Rome gives",
+          "items": [
+            "Pay",
+            "Land inside the empire"
+          ]
+        },
+        "right": {
+          "title": "The federates give",
+          "items": [
+            "Soldiers",
+            "Loyalty — to their own kings"
+          ]
+        }
+      },
+      "assetsUsed": [],
+      "duration": 5.28,
+      "precedingTemplate": "map-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 33,
+      "template": "text-emphasis",
+      "narration": "Rome no longer commanded these people. It negotiated with them, inside its own borders.",
+      "props": {
+        "text": "COMMAND BECOMES NEGOTIATION",
+        "emphasisWords": [
+          "NEGOTIATION"
+        ],
+        "animation": "fade-scale"
+      },
+      "assetsUsed": [],
+      "duration": 5.46,
+      "precedingTemplate": "comparison-split",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 34,
+      "template": "map-scene",
+      "narration": "In 395, the emperor Theodosius died, and the empire was split between his two sons. Permanently.",
+      "props": {
+        "region": "roman-empire-east-west-split",
+        "camera": "slow-zoom-out",
+        "mapAsset": "map-roman-empire",
+        "highlights": [
+          "east-west-divide"
+        ],
+        "onScreenText": "ONE EMPIRE BECOMES TWO"
+      },
+      "assetsUsed": [
+        "map-roman-empire"
+      ],
+      "duration": 7.46,
+      "precedingTemplate": "text-emphasis",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "map-roman-empire": 0.147
+      }
+    },
+    {
+      "sceneNumber": 35,
+      "template": "comparison-split",
+      "narration": "The East got the wealth and the defensible capital. The West got the exposed frontiers.",
+      "props": {
+        "heading": "Two Empires, Two Fates",
+        "left": {
+          "title": "The West",
+          "items": [
+            "The exposed frontiers"
+          ]
+        },
+        "right": {
+          "title": "The East",
+          "items": [
+            "The wealth",
+            "The defensible capital"
+          ]
+        }
+      },
+      "assetsUsed": [],
+      "duration": 5.5,
+      "precedingTemplate": "map-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 36,
+      "template": "stat-card",
+      "narration": "And the West's new emperor, Honorius, was ten years old.",
+      "props": {
+        "value": 10,
+        "label": "years old — the West's new emperor",
+        "secondaryText": "Honorius, 395 CE",
+        "countUp": true
+      },
+      "assetsUsed": [],
+      "duration": 3.44,
+      "precedingTemplate": "comparison-split",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 37,
+      "template": "list-reveal",
+      "narration": "A child on the throne, a broke treasury, and an army that worked for whoever paid.",
+      "props": {
+        "title": "A Perfect Storm",
+        "items": [
+          "A child on the throne",
+          "A broke treasury",
+          "An army loyal to whoever paid"
+        ],
+        "numbered": true
+      },
+      "assetsUsed": [],
+      "duration": 5.28,
+      "precedingTemplate": "stat-card",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 38,
+      "template": "silhouette-scene",
+      "narration": "Then, in 410, the unthinkable. Alaric's Visigoths marched into Rome itself and sacked it.",
+      "props": {
+        "figures": [
+          {
+            "asset": "figure-warrior",
+            "action": "march",
+            "position": "left"
+          },
+          {
+            "asset": "figure-warrior",
+            "action": "march",
+            "position": "center"
+          },
+          {
+            "asset": "figure-warrior",
+            "action": "march",
+            "position": "right"
+          }
+        ],
+        "onScreenText": "ROME SACKED, 410 AD"
+      },
+      "assetsUsed": [
+        "figure-warrior"
+      ],
+      "duration": 7.18,
+      "precedingTemplate": "list-reveal",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "figure-warrior": 0.088
+      }
+    },
+    {
+      "sceneNumber": 39,
+      "template": "stat-card",
+      "narration": "The city had not fallen to a foreign enemy in nearly eight hundred years.",
+      "props": {
+        "value": "800",
+        "label": "years since a foreign enemy took Rome",
+        "secondaryText": "nearly eight centuries of safety, ended in 410 CE",
+        "countUp": true
+      },
+      "assetsUsed": [],
+      "duration": 4.08,
+      "precedingTemplate": "silhouette-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 40,
+      "template": "quote-card",
+      "narration": "One church father, Jerome, wrote: the city which had taken the whole world was itself taken.",
+      "props": {
+        "quote": "The city which had taken the whole world was itself taken.",
+        "attribution": "Jerome, 410 CE",
+        "emphasisWords": [
+          "itself taken"
+        ]
+      },
+      "assetsUsed": [],
+      "duration": 5.92,
+      "precedingTemplate": "stat-card",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 41,
+      "template": "text-emphasis",
+      "narration": "But here's the detail everyone misses: Rome wasn't even the capital anymore.",
+      "props": {
+        "text": "NOT EVEN THE CAPITAL",
+        "emphasisWords": [
+          "CAPITAL"
+        ],
+        "animation": "impact"
+      },
+      "assetsUsed": [],
+      "duration": 4.96,
+      "precedingTemplate": "quote-card",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 42,
+      "template": "timeline-scene",
+      "narration": "The court had already moved, first to Milan, and then to the safer city of Ravenna.",
+      "props": {
+        "title": "The Moving Court",
+        "events": [
+          {
+            "label": "Court leaves Rome for Milan",
+            "date": "286 CE"
+          },
+          {
+            "label": "Court moves to Ravenna",
+            "date": "402 CE"
+          },
+          {
+            "label": "Rome is sacked",
+            "date": "410 CE"
+          }
+        ],
+        "highlightIndex": 2
+      },
+      "assetsUsed": [],
+      "duration": 4.68,
+      "precedingTemplate": "text-emphasis",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 43,
+      "template": "text-emphasis",
+      "narration": "The sack of 410 was a symbol, and symbols matter. But symbols don't pay armies.",
+      "props": {
+        "text": "SYMBOLS DON'T PAY ARMIES",
+        "emphasisWords": [
+          "DON'T PAY"
+        ],
+        "animation": "impact"
+      },
+      "assetsUsed": [],
+      "duration": 5.98,
+      "precedingTemplate": "timeline-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 44,
+      "template": "transition-break",
+      "narration": "Because the real death blow came a generation later, and almost no one talks about it.",
+      "props": {
+        "title": "THE REAL DEATH BLOW",
+        "chapterNumber": 4,
+        "style": "zoom"
+      },
+      "assetsUsed": [],
+      "duration": 5.02,
+      "precedingTemplate": "text-emphasis",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 45,
+      "template": "map-scene",
+      "narration": "In 439, the Vandals captured Carthage, the crown jewel of Roman North Africa.",
+      "props": {
+        "region": "north-africa-carthage",
+        "camera": "slow-zoom-in",
+        "mapAsset": "map-roman-empire",
+        "onScreenText": "CARTHAGE FALLS, 439 AD"
+      },
+      "assetsUsed": [
+        "map-roman-empire"
+      ],
+      "duration": 5.91,
+      "precedingTemplate": "transition-break",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "map-roman-empire": 0.147
+      }
+    },
+    {
+      "sceneNumber": 46,
+      "template": "icon-grid",
+      "narration": "Africa fed the West with grain and filled its treasury with taxes.",
+      "props": {
+        "icon": "icon-coin",
+        "count": 10,
+        "label": "ROME'S BREADBASKET: GRAIN + TAXES",
+        "columns": 5
+      },
+      "assetsUsed": [
+        "icon-coin"
+      ],
+      "duration": 4.26,
+      "precedingTemplate": "map-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "icon-coin": 0.074
+      }
+    },
+    {
+      "sceneNumber": 47,
+      "template": "text-emphasis",
+      "narration": "Lose Africa, and the math stops working. No taxes, no army. No army, no empire.",
+      "props": {
+        "text": "NO TAXES, NO ARMY",
+        "emphasisWords": [
+          "NO ARMY"
+        ],
+        "animation": "impact"
+      },
+      "assetsUsed": [],
+      "duration": 6.46,
+      "precedingTemplate": "icon-grid",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 48,
+      "template": "comparison-split",
+      "narration": "This is the equation historians point to: the West didn't lose its will. It lost its income.",
+      "props": {
+        "heading": "The Real Equation",
+        "left": {
+          "title": "The West kept",
+          "items": [
+            "The will to fight"
+          ]
+        },
+        "right": {
+          "title": "The West lost",
+          "items": [
+            "The income to pay for it"
+          ]
+        }
+      },
+      "assetsUsed": [],
+      "duration": 6.16,
+      "precedingTemplate": "text-emphasis",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 49,
+      "template": "map-scene",
+      "narration": "As the fifth century wore on, province after province slipped away, taking the tax base with them.",
+      "props": {
+        "region": "western-provinces",
+        "camera": "slow-zoom-in",
+        "mapAsset": "map-roman-empire",
+        "highlights": [
+          "provinces-lost"
+        ],
+        "onScreenText": "PROVINCE AFTER PROVINCE, GONE"
+      },
+      "assetsUsed": [
+        "map-roman-empire"
+      ],
+      "duration": 6.06,
+      "precedingTemplate": "comparison-split",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "map-roman-empire": 0.147
+      }
+    },
+    {
+      "sceneNumber": 50,
+      "template": "list-reveal",
+      "narration": "Every lost province meant fewer taxes, which meant fewer soldiers, which meant more lost provinces.",
+      "props": {
+        "title": "The Death Spiral",
+        "items": [
+          "Lose a province",
+          "Lose its taxes",
+          "Field fewer soldiers",
+          "Lose the next province"
+        ],
+        "numbered": true
+      },
+      "assetsUsed": [],
+      "duration": 5.94,
+      "precedingTemplate": "map-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 51,
+      "template": "text-emphasis",
+      "narration": "The Western Empire now had an army it could not pay, made of men whose loyalty was for sale.",
+      "props": {
+        "text": "AN ARMY WITH NO PAYMASTER",
+        "emphasisWords": [
+          "NO PAYMASTER"
+        ],
+        "animation": "impact"
+      },
+      "assetsUsed": [],
+      "duration": 5.74,
+      "precedingTemplate": "list-reveal",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 52,
+      "template": "transition-break",
+      "narration": "Which brings us back to 476, and the fall that wasn't really a fall.",
+      "props": {
+        "title": "BACK TO 476",
+        "subtitle": "The fall that wasn't really a fall",
+        "style": "fade"
+      },
+      "assetsUsed": [],
+      "duration": 5.36,
+      "precedingTemplate": "text-emphasis",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 53,
+      "template": "silhouette-scene",
+      "narration": "The emperor was Romulus Augustulus, a boy named, incredibly, after Rome's own founder.",
+      "props": {
+        "figures": [
+          {
+            "asset": "figure-emperor",
+            "action": "static",
+            "position": "center"
+          }
+        ],
+        "onScreenText": "ROMULUS: FIRST AND LAST"
+      },
+      "assetsUsed": [
+        "figure-emperor"
+      ],
+      "duration": 6.28,
+      "precedingTemplate": "transition-break",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "figure-emperor": 0.059
+      }
+    },
+    {
+      "sceneNumber": 54,
+      "template": "text-emphasis",
+      "narration": "History even remembers him by a mocking nickname: Augustulus, the little Augustus.",
+      "props": {
+        "text": "\"THE LITTLE AUGUSTUS\"",
+        "emphasisWords": [
+          "LITTLE"
+        ],
+        "animation": "typewriter"
+      },
+      "assetsUsed": [],
+      "duration": 5.98,
+      "precedingTemplate": "silhouette-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 55,
+      "template": "silhouette-scene",
+      "narration": "The men who ended his reign weren't invaders storming the gates. They were Rome's own federate soldiers.",
+      "props": {
+        "figures": [
+          {
+            "asset": "figure-warrior",
+            "action": "march",
+            "position": "left"
+          },
+          {
+            "asset": "figure-warrior",
+            "action": "march",
+            "position": "center"
+          },
+          {
+            "asset": "figure-warrior",
+            "action": "march",
+            "position": "right"
+          }
+        ],
+        "onScreenText": "ROME'S OWN SOLDIERS"
+      },
+      "assetsUsed": [
+        "figure-warrior"
+      ],
+      "duration": 5.96,
+      "precedingTemplate": "text-emphasis",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "figure-warrior": 0.088
+      }
+    },
+    {
+      "sceneNumber": 56,
+      "template": "comparison-split",
+      "narration": "They had asked for land in Italy to settle on. Their general, Orestes, said no.",
+      "props": {
+        "heading": "The Last Demand",
+        "left": {
+          "title": "The soldiers asked",
+          "items": [
+            "Land in Italy to settle on"
+          ]
+        },
+        "right": {
+          "title": "Orestes answered",
+          "items": [
+            "No"
+          ]
+        }
+      },
+      "assetsUsed": [],
+      "duration": 4.92,
+      "precedingTemplate": "silhouette-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 57,
+      "template": "silhouette-scene",
+      "narration": "So they mutinied, chose their commander Odoacer as king, and deposed the boy emperor.",
+      "props": {
+        "figures": [
+          {
+            "asset": "figure-warrior",
+            "action": "raise-arm",
+            "position": "left"
+          },
+          {
+            "asset": "figure-warrior",
+            "action": "raise-arm",
+            "position": "center"
+          },
+          {
+            "asset": "figure-warrior",
+            "action": "raise-arm",
+            "position": "right"
+          }
+        ],
+        "onScreenText": "A MUTINY, NOT INVASION"
+      },
+      "assetsUsed": [
+        "figure-warrior"
+      ],
+      "duration": 5.16,
+      "precedingTemplate": "comparison-split",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "figure-warrior": 0.088
+      }
+    },
+    {
+      "sceneNumber": 58,
+      "template": "map-scene",
+      "narration": "No successor was named. The imperial insignia were simply sent east, to Constantinople.",
+      "props": {
+        "region": "italy-to-constantinople",
+        "camera": "slow-pan-right",
+        "mapAsset": "map-roman-empire",
+        "onScreenText": "THE CROWN GOES EAST"
+      },
+      "assetsUsed": [
+        "map-roman-empire"
+      ],
+      "duration": 5.88,
+      "precedingTemplate": "silhouette-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "map-roman-empire": 0.147
+      }
+    },
+    {
+      "sceneNumber": 59,
+      "template": "silhouette-scene",
+      "narration": "Odoacer didn't even bother to claim the imperial title for himself. He didn't need it.",
+      "props": {
+        "figures": [
+          {
+            "asset": "figure-warrior",
+            "action": "static",
+            "position": "center"
+          }
+        ],
+        "onScreenText": "NO EMPEROR NEEDED"
+      },
+      "assetsUsed": [
+        "figure-warrior"
+      ],
+      "duration": 4.52,
+      "precedingTemplate": "map-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "figure-warrior": 0.088
+      }
+    },
+    {
+      "sceneNumber": 60,
+      "template": "text-emphasis",
+      "narration": "The Roman Empire in the West ended not with a battle, but with a payroll dispute.",
+      "props": {
+        "text": "DEATH BY PAYROLL DISPUTE",
+        "emphasisWords": [
+          "PAYROLL DISPUTE"
+        ],
+        "animation": "impact"
+      },
+      "assetsUsed": [],
+      "duration": 4.46,
+      "precedingTemplate": "silhouette-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 61,
+      "template": "silhouette-scene",
+      "narration": "And here's the strangest part: in Italy, life simply went on.",
+      "props": {
+        "figures": [
+          {
+            "asset": "figure-civilian",
+            "action": "walk",
+            "position": "left"
+          },
+          {
+            "asset": "figure-civilian",
+            "action": "static",
+            "position": "right"
+          }
+        ],
+        "onScreenText": "LIFE WENT ON"
+      },
+      "assetsUsed": [
+        "figure-civilian"
+      ],
+      "duration": 3.66,
+      "precedingTemplate": "text-emphasis",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "figure-civilian": 0.044
+      }
+    },
+    {
+      "sceneNumber": 62,
+      "template": "list-reveal",
+      "narration": "Odoacer kept the Roman administration. The Senate kept meeting. Latin remained the language of government.",
+      "props": {
+        "title": "The Day After 476",
+        "items": [
+          "Roman administration: kept",
+          "The Senate: still meeting",
+          "Latin: still the language of government"
+        ],
+        "numbered": false
+      },
+      "assetsUsed": [],
+      "duration": 5.86,
+      "precedingTemplate": "silhouette-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 63,
+      "template": "text-emphasis",
+      "narration": "The fall of Rome, the moment every textbook circles, happened without most Romans noticing.",
+      "props": {
+        "text": "NOBODY NOTICED THE FALL",
+        "emphasisWords": [
+          "NOBODY NOTICED"
+        ],
+        "animation": "impact"
+      },
+      "assetsUsed": [],
+      "duration": 6.08,
+      "precedingTemplate": "list-reveal",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 64,
+      "template": "flow-diagram-scene",
+      "narration": "Because empires don't die the way movies show. They rot quietly: money first, then loyalty, then everything.",
+      "props": {
+        "title": "HOW EMPIRES DIE",
+        "steps": [
+          {
+            "label": "Money first",
+            "icon": "icon-coin"
+          },
+          {
+            "label": "Then loyalty",
+            "icon": "icon-warning"
+          },
+          {
+            "label": "Then everything"
+          }
+        ],
+        "highlightIndex": 2
+      },
+      "assetsUsed": [
+        "icon-coin",
+        "icon-warning"
+      ],
+      "duration": 7.4,
+      "precedingTemplate": "text-emphasis",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "icon-coin": 0.074,
+        "icon-warning": 0.029
+      }
+    },
+    {
+      "sceneNumber": 65,
+      "template": "map-scene",
+      "narration": "And half of Rome never fell at all. The Eastern Empire carried on for nearly a thousand years.",
+      "props": {
+        "region": "eastern-roman-empire",
+        "camera": "slow-zoom-in",
+        "mapAsset": "map-roman-empire",
+        "highlights": [
+          "east-survives"
+        ],
+        "onScreenText": "HALF OF ROME LIVED ON"
+      },
+      "assetsUsed": [
+        "map-roman-empire"
+      ],
+      "duration": 6.52,
+      "precedingTemplate": "flow-diagram-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {
+        "map-roman-empire": 0.147
+      }
+    },
+    {
+      "sceneNumber": 66,
+      "template": "timeline-scene",
+      "narration": "Roman emperors ruled from Constantinople until 1453, almost a millennium after the West quietly faded.",
+      "props": {
+        "title": "Rome After Rome",
+        "events": [
+          {
+            "label": "The West fades",
+            "date": "476 CE"
+          },
+          {
+            "label": "Constantinople falls",
+            "date": "1453 CE"
+          }
+        ],
+        "highlightIndex": 1
+      },
+      "assetsUsed": [],
+      "duration": 7.52,
+      "precedingTemplate": "map-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 67,
+      "template": "text-emphasis",
+      "narration": "So Rome didn't fall. It faded, so slowly that the fall itself was just a formality.",
+      "props": {
+        "text": "ROME DIDN'T FALL. IT FADED.",
+        "emphasisWords": [
+          "FADED"
+        ],
+        "animation": "impact"
+      },
+      "assetsUsed": [],
+      "duration": 5.9,
+      "precedingTemplate": "timeline-scene",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    },
+    {
+      "sceneNumber": 68,
+      "template": "transition-break",
+      "narration": "If this changed how you see history, there's more where that came from. Subscribe for the next story.",
+      "props": {
+        "title": "SUBSCRIBE FOR MORE",
+        "chapterNumber": 5,
+        "style": "fade"
+      },
+      "assetsUsed": [],
+      "duration": 5.85,
+      "precedingTemplate": "text-emphasis",
+      "sameTemplateAsPrevious": false,
+      "consecutiveRunLength": 1,
+      "assetShareInVideo": {}
+    }
+  ]
+}

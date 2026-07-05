@@ -18,10 +18,16 @@ markdown):
       < 2s WARN; alignment-mode confidence < 0.80 WARN, < 0.60 FAIL
   PC  Script Hook Promise section missing = FAIL; Hook Promise Audit
       PENDING = WARN
+  DV  Scene diversity (mechanical only — see /templates/VISUAL-QC-CHECKLIST.md
+      for the judgmental half): same `template` in 3+ consecutive scenes =
+      WARN; a single library asset used in > half the scenes (5+ scene
+      videos) = WARN
   +   sync_manifest_usage staleness = WARN with command
 
-NO judgmental checks: title/thumbnail/description claim support belongs to
-the Layer 2 human checklist (patch Section 12), never to this script.
+NO judgmental checks: title/thumbnail/description claim support, and
+whether a scene "looks amateur/boring", belong to the Layer 2 human
+checklist (patch Section 12 / /templates/VISUAL-QC-CHECKLIST.md), never to
+this script.
 
 STATUS.md: this script rewrites ONLY the block between the QG markers (see
 patch Section 10); Video Info, Session Notes, Quota Notes and everything
@@ -44,6 +50,7 @@ import re
 import shutil
 import sys
 import tempfile
+from collections import Counter
 from pathlib import Path
 
 try:
@@ -62,6 +69,9 @@ CONF_WARN = 0.80
 CONF_FAIL = 0.60
 LONG_SCENE_S = 12.0
 SHORT_SCENE_S = 2.0
+DIVERSITY_RUN_WARN = 3       # same template N+ scenes running -> WARN
+DIVERSITY_MIN_SCENES = 5     # asset-share check only applies past this size
+DIVERSITY_ASSET_SHARE = 0.5  # single asset in > this share of scenes -> WARN
 
 
 class SetupError(Exception):
@@ -255,6 +265,37 @@ def gate(out_dir, root=None, bootstrap=False):
             validated.append(f"{path.name}: FAIL")
     info["validated"] = " | ".join(validated) if validated else "n/a"
 
+    # DV — scene diversity (mechanical only; "does it look boring/amateur"
+    # stays in the human VISUAL-QC-CHECKLIST.md, never here)
+    dv_scenes = sorted(scenes, key=lambda s: s.get("sceneNumber", 0))
+    run_template, run_len, flagged_templates = None, 0, set()
+    for s in dv_scenes:
+        t = s.get("template")
+        run_len = run_len + 1 if t is not None and t == run_template else 1
+        run_template = t
+        if run_len == DIVERSITY_RUN_WARN and t not in flagged_templates:
+            flagged_templates.add(t)
+            warn("DV1", f"template {t!r} used in {run_len}+ consecutive "
+                        f"scenes (through scene {s.get('sceneNumber')}) — "
+                        "low scene-type diversity, vary the template")
+    asset_counts = Counter()
+    for s in dv_scenes:
+        for a in (s.get("assets") or {}).get("fromLibrary") or []:
+            if isinstance(a, str):
+                asset_counts[a] += 1
+    total_scenes = len(dv_scenes)
+    overused = sorted(
+        a for a, c in asset_counts.items()
+        if total_scenes >= DIVERSITY_MIN_SCENES
+        and c / total_scenes > DIVERSITY_ASSET_SHARE)
+    for a in overused:
+        c = asset_counts[a]
+        warn("DV2", f"asset {a!r} used in {c}/{total_scenes} scenes "
+                    f"({c / total_scenes:.0%}) — consider more asset variety")
+    info["diversity"] = (
+        f"consecutive-template warnings: {len(flagged_templates)} | "
+        f"overused assets: {', '.join(overused) if overused else 'none'}")
+
     # asset summary for the QG block
     used_lib, new_ids = set(), set()
     for s in scenes:
@@ -378,6 +419,7 @@ def build_qg_block(fails, warns, info, bootstrap):
         f"{info.get('validated')}",
         f"Fact Status        : {info.get('facts')}",
         f"Asset Status       : {info.get('assets')}",
+        f"Diversity Status   : {info.get('diversity')}",
         f"Timing Status      : timingMode: {info.get('timing_mode')} | "
         f"audio file present: {info.get('audio_present')} | "
         f"min scene confidence: "
@@ -628,7 +670,7 @@ def self_test():
                   used2=("F002",), facts=FACTS, manifest=MANIFEST,
                   packaging=PACKAGING, audit="PASS — matches the promise",
                   timing=None, timing_name="04-scenes-final-estimated.json",
-                  drop=(), vo_override=None):
+                  drop=(), vo_override=None, scenes_override=None):
             case_counter[0] += 1
             out = root / "outputs" / f"case-{case_counter[0]}" / "sample-video"
             # each case gets its own outputs tree so sync stays deterministic
@@ -639,7 +681,7 @@ def self_test():
             annotated = ANNOTATED_TMPL.format(
                 narr2=narr2, wc2=len(narr2.split()), used2=used_lines,
                 audit=audit)
-            scenes = _scenes_doc(narr2, list(used2))
+            scenes = scenes_override or _scenes_doc(narr2, list(used2))
             vo_text = derive_vo.derive(annotated)[0]
             files = {
                 "01-research.md": "# Research\n\nStatus notes may mention "
@@ -773,6 +815,55 @@ def self_test():
         fails, _, _ = run_gate(build(drop=("05-packaging.md",)), sync_root=root)
         check("missing 05-packaging.md -> FP FAIL",
               has(fails, "FP", "05-packaging.md"))
+
+        # DV — scene diversity (mechanical repetition only; the judgmental
+        # half of this lives in /templates/VISUAL-QC-CHECKLIST.md, never here)
+        dv_doc = {
+            "videoSlug": "sample-video", "fps": 30, "resolution": "1920x1080",
+            "scenes": [
+                {"sceneNumber": 1,
+                 "narration": "Rome ruled from Britain to Egypt.",
+                 "wordCount": 6, "template": "map-scene",
+                 "props": {"region": "roman-empire-max-extent",
+                           "camera": "static"},
+                 "assets": {"fromLibrary": ["map-roman-empire"],
+                            "newAssets": []}},
+                {"sceneNumber": 2,
+                 "narration": "Its borders stretched for thousands of miles.",
+                 "wordCount": 7, "template": "map-scene",
+                 "props": {"region": "roman-empire-max-extent",
+                           "camera": "slow-pan-left"},
+                 "assets": {"fromLibrary": ["map-roman-empire"],
+                            "newAssets": []}},
+                {"sceneNumber": 3,
+                 "narration": "Defending that frontier took an army.",
+                 "wordCount": 6, "template": "map-scene",
+                 "props": {"region": "roman-empire-max-extent",
+                           "camera": "slow-pan-right"},
+                 "assets": {"fromLibrary": ["map-roman-empire"],
+                            "newAssets": []}},
+                {"sceneNumber": 4, "narration": "A THOUSAND-YEAR EMPIRE.",
+                 "wordCount": 3, "template": "text-emphasis",
+                 "props": {"text": "A THOUSAND-YEAR EMPIRE",
+                           "animation": "impact"},
+                 "assets": {"fromLibrary": ["map-roman-empire"],
+                            "newAssets": []}},
+                {"sceneNumber": 5,
+                 "narration": "Nine percent of that army guarded the Rhine.",
+                 "wordCount": 8, "template": "stat-card",
+                 "props": {"value": "9%", "label": "OF LEGIONS ON THE RHINE"},
+                 "assets": {"fromLibrary": [], "newAssets": []}},
+            ],
+        }
+        out = build(scenes_override=dv_doc,
+                    timing=_timing_doc(dv_doc, "word-count-estimate"))
+        fails, warns, info = run_gate(out, sync_root=root)
+        check("3x consecutive map-scene -> DV1 WARN",
+              has(warns, "DV1", "map-scene"))
+        check("map-roman-empire in 4/5 scenes -> DV2 WARN",
+              has(warns, "DV2", "map-roman-empire"))
+        check("diversity info populated",
+              "consecutive-template warnings: 1" in info["diversity"])
 
     print()
     if failures:

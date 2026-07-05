@@ -4,11 +4,15 @@
 import type { Scene } from "../types/generated";
 import { ChartScene } from "./ChartScene";
 import { ComparisonSplit } from "./ComparisonSplit";
+import { EvidenceBoardScene } from "./EvidenceBoardScene";
+import { FlowDiagramScene } from "./FlowDiagramScene";
 import { IconGrid } from "./IconGrid";
 import { ImageSpotlight } from "./ImageSpotlight";
 import { ListReveal } from "./ListReveal";
 import { MapScene } from "./MapScene";
+import { NewsBriefingScene } from "./NewsBriefingScene";
 import { QuoteCard } from "./QuoteCard";
+import { ScaleComparisonScene } from "./ScaleComparisonScene";
 import { SilhouetteScene } from "./SilhouetteScene";
 import { StatCard } from "./StatCard";
 import { TextEmphasis } from "./TextEmphasis";
@@ -45,6 +49,14 @@ export const renderScene = (scene: Scene): React.ReactElement => {
       return <ImageSpotlight p={p} />;
     case "transition-break":
       return <TransitionBreak p={p} />;
+    case "flow-diagram-scene":
+      return <FlowDiagramScene p={p} />;
+    case "scale-comparison-scene":
+      return <ScaleComparisonScene p={p} />;
+    case "evidence-board-scene":
+      return <EvidenceBoardScene p={p} />;
+    case "news-briefing-scene":
+      return <NewsBriefingScene p={p} />;
     default:
       throw new Error(`Unknown template "${scene.template}"`);
   }

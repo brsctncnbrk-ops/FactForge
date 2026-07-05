@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520">
+  <!-- Generic, topic-agnostic world map: simplified/schematic continent
+       shapes (not traced from a real atlas, not politically accurate),
+       drawn deliberately stylized so it never claims cartographic
+       precision. FactForge project-original asset (CC0). Rendered through
+       map-scene's existing grayscale + flat-card treatment, so colors here
+       only need to read cleanly once desaturated. Fill/stroke are
+       currentColor-independent (fixed tones) since this asset is always
+       shown grayscaled by the template, unlike the figure assets. -->
+  <rect x="0" y="0" width="1000" height="520" fill="#BFD7EA"/>
+  <g fill="#4C7A57" stroke="#2E4A36" stroke-width="3" stroke-linejoin="round">
+    <!-- North America -->
+    <path d="M70 90 Q120 55 190 60 Q250 55 280 95 Q300 130 270 165
+             Q290 195 260 220 Q220 245 190 220 Q150 235 120 200
+             Q80 190 70 150 Q55 115 70 90 Z"/>
+    <!-- South America -->
+    <path d="M195 250 Q235 235 255 265 Q270 300 250 340
+             Q245 380 220 415 Q205 440 190 410 Q175 370 180 330
+             Q165 290 195 250 Z"/>
+    <!-- Europe -->
+    <path d="M445 75 Q490 55 535 70 Q560 85 545 110 Q560 130 535 150
+             Q500 165 470 145 Q440 130 445 100 Z"/>
+    <!-- Africa -->
+    <path d="M460 165 Q520 155 560 185 Q580 220 565 260
+             Q575 300 550 340 Q530 385 500 375 Q480 350 485 310
+             Q460 270 465 225 Q445 195 460 165 Z"/>
+    <!-- Asia -->
+    <path d="M570 60 Q650 45 740 65 Q830 60 890 100 Q920 130 895 160
+             Q900 195 860 210 Q810 230 760 205 Q710 225 665 200
+             Q610 210 585 175 Q560 130 570 95 Z"/>
+    <!-- Australia -->
+    <path d="M760 330 Q815 315 860 335 Q885 360 865 385
+             Q825 405 785 390 Q750 370 760 330 Z"/>
+  </g>
+</svg>
